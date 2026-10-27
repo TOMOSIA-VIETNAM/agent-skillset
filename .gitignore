@@ -1,0 +1,9 @@
+# File bio sinh ra khi chạy thử skill
+short-bio-*.md
+profile-*.md
+# Tài liệu demo nội bộ (kịch bản, dữ liệu CV, output dự phòng)
+docs/demo/
+.DS_Store
+# Kết quả chạy eval (transcript, report)
+generate-short-bio/evals/results/
+__pycache__/

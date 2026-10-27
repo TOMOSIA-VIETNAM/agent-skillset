@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 789" width="800" height="789" role="img" aria-label="Đầu vào: lệnh gọi skill kèm file CV (Laravel 4 năm, có JLPT N3 được giữ, học vấn và số điện thoại bị bỏ qua, dự án ZAIKO-NAVI chưa rõ vai trò và phần đã làm) và file JD Senior Backend yêu cầu 5+ năm và 3 năm AWS">
+<style>
+  text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 13px; }
+  .win { fill: #ffffff; stroke: #d0d7de; } .bar { fill: #f6f8fa; } .sep { stroke: #d0d7de; }
+  .title { fill: #59636e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; }
+  .ink { fill: #1f2328; } .muted { fill: #59636e; } .head { fill: #0550ae; font-weight: 600; } .sub { fill: #0550ae; }
+  .label { fill: #1f2328; font-weight: 700; } .hl { fill: #8250df; font-weight: 700; } .anno { fill: #8250df; font-style: italic; }
+  .ph { fill: #9a6700; font-style: italic; } .drop { fill: #8c959f; text-decoration: line-through; } .you { fill: #1a7f37; font-weight: 700; }
+  .ok { fill: #1a7f37; font-weight: 700; } .warnh { fill: #9a6700; font-weight: 700; } .fileh { fill: #59636e; font-weight: 600; }
+  .box-warn { fill: #fff8c5; stroke: #d4a72c; } .box-file { fill: #f6f8fa; stroke: #d0d7de; } .box-form { fill: #ddf4ff; stroke: #54aeff; }
+  @media (prefers-color-scheme: dark) {
+    .win { fill: #0d1117; stroke: #3d444d; } .bar { fill: #151b23; } .sep { stroke: #3d444d; } .title { fill: #9198a1; }
+    .ink { fill: #e6edf3; } .muted { fill: #9198a1; } .head { fill: #4493f8; } .sub { fill: #4493f8; } .label { fill: #e6edf3; }
+    .hl { fill: #ab7df8; } .anno { fill: #ab7df8; } .ph { fill: #d29922; } .drop { fill: #656c76; } .you { fill: #3fb950; }
+    .ok { fill: #3fb950; } .warnh { fill: #d29922; } .fileh { fill: #9198a1; }
+    .box-warn { fill: #272115; stroke: #9e6a03; } .box-file { fill: #151b23; stroke: #3d444d; } .box-form { fill: #0c2d4a; stroke: #1f6feb; }
+  }
+</style>
+<rect class="win" x="0.5" y="0.5" width="799" height="788" rx="10"/>
+<path class="bar" d="M1 11a10 10 0 0 1 10-10h778a10 10 0 0 1 10 10v23H1z"/>
+<line class="sep" x1="1" y1="34" x2="799" y2="34"/>
+<circle cx="20" cy="17.5" r="6" fill="#ff5f57"/><circle cx="40" cy="17.5" r="6" fill="#febc2e"/><circle cx="60" cy="17.5" r="6" fill="#28c840"/>
+<text class="title" x="400" y="22" text-anchor="middle">Đầu vào · CV + JD</text>
+<rect class="box-file" x="24" y="79" width="752" height="491" rx="6"/>
+<rect class="box-file" x="24" y="572" width="752" height="197" rx="6"/>
+<text x="28" y="67" xml:space="preserve"><tspan class="muted">› </tspan><tspan class="ink">/generate-short-bio ./cv-nguyen-van-d.md JD: ./jd-senior-backend.md</tspan></text>
+<text x="42" y="98" xml:space="preserve"><tspan class="fileh">cv-nguyen-van-d.md</tspan></text>
+<text x="42" y="119" xml:space="preserve"><tspan class="head"># NGUYỄN VĂN D</tspan></text>
+<text x="42" y="140" xml:space="preserve"><tspan class="ink">Backend Developer</tspan></text>
+<text x="42" y="161" xml:space="preserve"><tspan class="ink">Email: d.nguyen@example.com | DOB: 05/09/1997 | </tspan><tspan class="drop">Phone: 0905 123 456</tspan></text>
+<text x="42" y="182" xml:space="preserve"><tspan class="drop">Education: Đại học Bách Khoa Đà Nẵng — Kỹ sư CNTT (2015–2019)</tspan><tspan class="anno">  ← bỏ qua</tspan></text>
+<text x="42" y="203" xml:space="preserve"><tspan class="hl">Japanese: JLPT N3</tspan><tspan class="anno">  ← giữ, đưa vào header</tspan></text>
+<text x="42" y="224" xml:space="preserve"><tspan class="head">## Summary</tspan></text>
+<text x="42" y="245" xml:space="preserve"><tspan class="hl">4 years</tspan><tspan class="ink"> of experience in web backend development with PHP/Laravel.</tspan></text>
+<text x="42" y="266" xml:space="preserve"><tspan class="ink">Worked on projects for Japanese clients.</tspan></text>
+<text x="42" y="287" xml:space="preserve"><tspan class="head">## Skills</tspan></text>
+<text x="42" y="308" xml:space="preserve"><tspan class="ink">PHP, </tspan><tspan class="hl">Laravel (4 years)</tspan><tspan class="ink">, MySQL, Redis, Docker, Git, RESTful API, PHPUnit,</tspan></text>
+<text x="42" y="329" xml:space="preserve"><tspan class="ink">Vue.js (basic)</tspan></text>
+<text x="42" y="350" xml:space="preserve"><tspan class="head">## Projects</tspan></text>
+<text x="42" y="371" xml:space="preserve"><tspan class="sub">### HANAYOYAKU — Booking platform for beauty salons (Japan)</tspan></text>
+<text x="42" y="392" xml:space="preserve"><tspan class="ink">Period: 03/2024 – now · Role: Backend Developer · Team size: 6</tspan></text>
+<text x="42" y="413" xml:space="preserve"><tspan class="ink">Responsibilities: Built booking &amp; cancellation API, staff shift scheduling,</tspan></text>
+<text x="42" y="434" xml:space="preserve"><tspan class="ink">email/LINE notification via queue (Redis). Joined from basic design to …</tspan></text>
+<text x="42" y="455" xml:space="preserve"><tspan class="ink">Tech: PHP 8, Laravel 10, MySQL, Redis, Docker</tspan></text>
+<text x="42" y="476" xml:space="preserve"><tspan class="sub">### ZAIKO-NAVI — Inventory management for retail chain</tspan></text>
+<text x="42" y="497" xml:space="preserve"><tspan class="ink">Period: 06/2021 – 02/2024 · Team size: 10</tspan><tspan class="anno">   ← không ghi vai trò</tspan></text>
+<text x="42" y="518" xml:space="preserve"><tspan class="ink">Description: Inventory management system for a retail chain with 40 stores …</tspan></text>
+<text x="42" y="539" xml:space="preserve"><tspan class="ink">Responsibilities: Developed backend features.</tspan><tspan class="anno">   ← chưa rõ phần đã làm</tspan></text>
+<text x="42" y="560" xml:space="preserve"><tspan class="ink">Tech: PHP 7, Laravel 8, MySQL, Vue.js 2</tspan></text>
+<text x="42" y="591" xml:space="preserve"><tspan class="fileh">jd-senior-backend.md</tspan></text>
+<text x="42" y="612" xml:space="preserve"><tspan class="head">[JD] Senior Backend Engineer (Laravel) — client: Japanese HR-tech company</tspan></text>
+<text x="42" y="633" xml:space="preserve"><tspan class="label">Requirements:</tspan></text>
+<text x="42" y="654" xml:space="preserve"><tspan class="ink">- </tspan><tspan class="hl">5+ years</tspan><tspan class="ink"> of backend development experience</tspan></text>
+<text x="42" y="675" xml:space="preserve"><tspan class="ink">- Strong experience with Laravel</tspan></text>
+<text x="42" y="696" xml:space="preserve"><tspan class="ink">- </tspan><tspan class="hl">3 years of experience with AWS</tspan><tspan class="ink"> (EC2, RDS, S3)</tspan><tspan class="anno">   ← CV chưa có</tspan></text>
+<text x="42" y="717" xml:space="preserve"><tspan class="ink">- Experience with MySQL, Redis, queue processing</tspan></text>
+<text x="42" y="738" xml:space="preserve"><tspan class="ink">- Unit testing (PHPUnit)</tspan></text>
+<text x="42" y="759" xml:space="preserve"><tspan class="ink">Nice to have: Docker, CI/CD (GitHub Actions)</tspan></text>
+</svg>

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1095" width="800" height="1095" role="img" aria-label="Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, PHP và MySQL suy từ thời gian dự án), Project Examples giữ stack thật và dùng câu trả lời của member, dòng Đã lưu và khối nhắc liệt kê mọi điều chỉnh">
+<style>
+  text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 13px; }
+  .win { fill: #ffffff; stroke: #d0d7de; } .bar { fill: #f6f8fa; } .sep { stroke: #d0d7de; }
+  .title { fill: #59636e; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; }
+  .ink { fill: #1f2328; } .muted { fill: #59636e; } .head { fill: #0550ae; font-weight: 600; } .sub { fill: #0550ae; }
+  .label { fill: #1f2328; font-weight: 700; } .hl { fill: #8250df; font-weight: 700; } .anno { fill: #8250df; font-style: italic; }
+  .ph { fill: #9a6700; font-style: italic; } .drop { fill: #8c959f; text-decoration: line-through; } .you { fill: #1a7f37; font-weight: 700; }
+  .ok { fill: #1a7f37; font-weight: 700; } .warnh { fill: #9a6700; font-weight: 700; } .fileh { fill: #59636e; font-weight: 600; }
+  .box-warn { fill: #fff8c5; stroke: #d4a72c; } .box-file { fill: #f6f8fa; stroke: #d0d7de; } .box-form { fill: #ddf4ff; stroke: #54aeff; }
+  @media (prefers-color-scheme: dark) {
+    .win { fill: #0d1117; stroke: #3d444d; } .bar { fill: #151b23; } .sep { stroke: #3d444d; } .title { fill: #9198a1; }
+    .ink { fill: #e6edf3; } .muted { fill: #9198a1; } .head { fill: #4493f8; } .sub { fill: #4493f8; } .label { fill: #e6edf3; }
+    .hl { fill: #ab7df8; } .anno { fill: #ab7df8; } .ph { fill: #d29922; } .drop { fill: #656c76; } .you { fill: #3fb950; }
+    .ok { fill: #3fb950; } .warnh { fill: #d29922; } .fileh { fill: #9198a1; }
+    .box-warn { fill: #272115; stroke: #9e6a03; } .box-file { fill: #151b23; stroke: #3d444d; } .box-form { fill: #0c2d4a; stroke: #1f6feb; }
+  }
+</style>
+<rect class="win" x="0.5" y="0.5" width="799" height="1094" rx="10"/>
+<path class="bar" d="M1 11a10 10 0 0 1 10-10h778a10 10 0 0 1 10 10v23H1z"/>
+<line class="sep" x1="1" y1="34" x2="799" y2="34"/>
+<circle cx="20" cy="17.5" r="6" fill="#ff5f57"/><circle cx="40" cy="17.5" r="6" fill="#febc2e"/><circle cx="60" cy="17.5" r="6" fill="#28c840"/>
+<text class="title" x="400" y="22" text-anchor="middle">Đầu ra · file bio + khối nhắc</text>
+<rect class="box-file" x="24" y="48" width="752" height="692" rx="6"/>
+<rect class="box-warn" x="24" y="773" width="752" height="302" rx="6"/>
+<text x="42" y="67" xml:space="preserve"><tspan class="fileh">short-bio-nguyen-van-d-2026-10-27.md</tspan></text>
+<text x="42" y="88" xml:space="preserve"><tspan class="head"># Nguyễn Văn D</tspan></text>
+<text x="42" y="109" xml:space="preserve"><tspan class="label">Vị trí: </tspan><tspan class="ink">Backend Developer</tspan><tspan class="muted">  ·  </tspan><tspan class="label">Email: </tspan><tspan class="ink">d.nguyen@example.com</tspan></text>
+<text x="42" y="130" xml:space="preserve"><tspan class="label">Ngày sinh: </tspan><tspan class="ink">05/09/1997</tspan><tspan class="muted">  ·  </tspan><tspan class="label">Ngoại ngữ: </tspan><tspan class="hl">JLPT N3</tspan><tspan class="anno">   ← giữ đúng như CV</tspan></text>
+<text x="42" y="151" xml:space="preserve"><tspan class="head">## Short Bio</tspan></text>
+<text x="42" y="172" xml:space="preserve"><tspan class="ink">Backend Developer với 5 năm phát triển web backend bằng PHP và Laravel, phần lớn</tspan></text>
+<text x="42" y="193" xml:space="preserve"><tspan class="ink">cho khách hàng Nhật Bản. Các sản phẩm đã làm gồm nền tảng đặt lịch cho salon làm</tspan></text>
+<text x="42" y="214" xml:space="preserve"><tspan class="ink">đẹp và hệ thống quản lý tồn kho cho chuỗi bán lẻ 40 cửa hàng.</tspan></text>
+<text x="42" y="241" xml:space="preserve"><tspan class="hl">Tự làm trọn feature từ thiết kế DB và API tới deploy</tspan><tspan class="ink">, như API đặt và hủy lịch, xếp ca</tspan></text>
+<text x="42" y="262" xml:space="preserve"><tspan class="ink">nhân viên, nhập xuất kho hay import dữ liệu CSV.</tspan><tspan class="anno">   ← việc member đã xác nhận ở form</tspan></text>
+<text x="42" y="283" xml:space="preserve"><tspan class="ink">Lưu dữ liệu nghiệp vụ trên MySQL và dùng Redis làm queue để gửi thông báo email,</tspan></text>
+<text x="42" y="304" xml:space="preserve"><tspan class="ink">LINE bất đồng bộ. Đóng gói ứng dụng bằng Docker, triển khai trên AWS với EC2, RDS</tspan></text>
+<text x="42" y="325" xml:space="preserve"><tspan class="ink">và S3.</tspan></text>
+<text x="42" y="352" xml:space="preserve"><tspan class="ink">Tham gia dự án từ basic design, qua detailed design tới implementation, làm việc</tspan></text>
+<text x="42" y="373" xml:space="preserve"><tspan class="ink">trong team từ 6 đến 10 người. Viết unit test bằng PHPUnit cho phần backend đảm</tspan></text>
+<text x="42" y="394" xml:space="preserve"><tspan class="ink">nhận.</tspan></text>
+<text x="42" y="415" xml:space="preserve"><tspan class="head">## Core Skills</tspan></text>
+<text x="42" y="436" xml:space="preserve"><tspan class="label">Backend/Framework: </tspan><tspan class="hl">Laravel (5 năm)</tspan><tspan class="ink">, PHP (5 năm), Eloquent ORM</tspan><tspan class="anno">  ← 4 → 5 năm</tspan></text>
+<text x="42" y="457" xml:space="preserve"><tspan class="label">Cloud: </tspan><tspan class="hl">AWS (3 năm)</tspan><tspan class="ink">, EC2, RDS, S3</tspan><tspan class="anno">   ← thêm theo JD</tspan></text>
+<text x="42" y="478" xml:space="preserve"><tspan class="label">Database: </tspan><tspan class="ink">MySQL (5 năm)</tspan><tspan class="anno">   ← suy từ thời gian dự án</tspan></text>
+<text x="42" y="499" xml:space="preserve"><tspan class="label">Caching &amp; Queue: </tspan><tspan class="ink">Redis</tspan><tspan class="muted">  ·  </tspan><tspan class="label">Testing: </tspan><tspan class="ink">PHPUnit</tspan></text>
+<text x="42" y="520" xml:space="preserve"><tspan class="label">DevOps/CI/CD: </tspan><tspan class="ink">Docker, GitHub Actions</tspan><tspan class="muted">  ·  </tspan><tspan class="label">API Integration: </tspan><tspan class="ink">RESTful API</tspan></text>
+<text x="42" y="541" xml:space="preserve"><tspan class="head">## Project Examples</tspan></text>
+<text x="42" y="562" xml:space="preserve"><tspan class="sub">### Project 1 — HANAYOYAKU</tspan></text>
+<text x="42" y="583" xml:space="preserve"><tspan class="label">Thời gian: </tspan><tspan class="ink">2 năm 7 tháng (đang làm)</tspan><tspan class="muted">  ·  </tspan><tspan class="label">Vị trí: </tspan><tspan class="ink">Backend Developer</tspan></text>
+<text x="42" y="604" xml:space="preserve"><tspan class="label">Tính năng đảm nhiệm: </tspan><tspan class="ink">API đặt lịch và hủy lịch · Xếp ca làm việc cho nhân viên ·</tspan></text>
+<text x="42" y="625" xml:space="preserve"><tspan class="ink">Gửi thông báo email / LINE qua queue (Redis)</tspan></text>
+<text x="42" y="646" xml:space="preserve"><tspan class="label">Tech Stack: </tspan><tspan class="ink">PHP 8, Laravel 10, MySQL, Redis, Docker</tspan><tspan class="anno">   ← giữ stack thật</tspan></text>
+<text x="42" y="667" xml:space="preserve"><tspan class="sub">### Project 2 — ZAIKO-NAVI</tspan></text>
+<text x="42" y="688" xml:space="preserve"><tspan class="label">Thời gian: </tspan><tspan class="ink">2 năm 8 tháng</tspan><tspan class="muted">  ·  </tspan><tspan class="label">Vị trí: </tspan><tspan class="ink">Backend Developer</tspan><tspan class="anno">   ← member chọn ở form</tspan></text>
+<text x="42" y="709" xml:space="preserve"><tspan class="label">Tính năng đảm nhiệm: </tspan><tspan class="ink">Nhập / xuất kho · Import dữ liệu CSV</tspan><tspan class="anno">   ← member chọn ở form</tspan></text>
+<text x="42" y="730" xml:space="preserve"><tspan class="label">Tech Stack: </tspan><tspan class="ink">PHP 7, Laravel 8, MySQL, Vue.js 2</tspan></text>
+<text x="28" y="761" xml:space="preserve"><tspan class="ok">Đã lưu: </tspan><tspan class="ink">short-bio-nguyen-van-d-2026-10-27.md</tspan></text>
+<text x="42" y="792" xml:space="preserve"><tspan class="warnh">⚠ File short-bio-nguyen-van-d-2026-10-27.md cần kiểm tra trước khi gửi khách:</tspan></text>
+<text x="42" y="813" xml:space="preserve"><tspan class="ink">- Thêm theo JD (chưa có trong profile): AWS (3 năm) với EC2, RDS, S3 (Short Bio có</tspan></text>
+<text x="42" y="834" xml:space="preserve"><tspan class="ink">  câu deploy lên AWS), GitHub Actions. Bạn nên chuẩn bị trước, vì khách thường hỏi</tspan></text>
+<text x="42" y="855" xml:space="preserve"><tspan class="ink">  sâu về AWS.</tspan></text>
+<text x="42" y="876" xml:space="preserve"><tspan class="ink">- Companion skill thêm vào (CV chưa ghi): Eloquent ORM.</tspan></text>
+<text x="42" y="897" xml:space="preserve"><tspan class="ink">- Điều chỉnh theo JD: Vue.js và Git bị bỏ khỏi Core Skills vì JD không yêu cầu</tspan></text>
+<text x="42" y="918" xml:space="preserve"><tspan class="ink">  (vẫn giữ ở Tech Stack của ZAIKO-NAVI).</tspan></text>
+<text x="42" y="939" xml:space="preserve"><tspan class="ink">- Điều chỉnh theo câu trả lời của bạn: tổng kinh nghiệm 4 → 5 năm (CV ghi 4).</tspan></text>
+<text x="42" y="960" xml:space="preserve"><tspan class="ink">- Suy luận: Laravel, PHP và MySQL 5 năm. CV ghi Laravel 4 năm, còn số 5 năm tính</tspan></text>
+<text x="42" y="981" xml:space="preserve"><tspan class="ink">  theo mốc 06/2021 vì cả hai dự án đều dùng các công nghệ này.</tspan></text>
+<text x="42" y="1002" xml:space="preserve"><tspan class="ink">- Chưa thể hiện (yêu cầu Senior Backend): review code cho team, dẫn dắt / mentor</tspan></text>
+<text x="42" y="1023" xml:space="preserve"><tspan class="ink">  thành viên, làm requirement / estimate với khách, xử lý sự cố / hiệu năng</tspan></text>
+<text x="42" y="1044" xml:space="preserve"><tspan class="ink">  production. …</tspan></text>
+<text x="42" y="1065" xml:space="preserve"><tspan class="ink">Bổ sung trực tiếp vào file trước khi gửi khách hàng.</tspan></text>
+</svg>

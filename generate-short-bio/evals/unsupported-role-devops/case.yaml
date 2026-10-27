@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: unsupported-role-devops
+expected_outcome: |
+  The member's role is DevOps, which is unsupported. The skill says it supports Backend / Frontend /
+  Fullstack / Mobile / QA, offers up to 3 closest roles (one recommended) plus a stop option, and does not
+  map the role silently.

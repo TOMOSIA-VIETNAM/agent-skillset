@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: role-mismatch-frontend-laravel
+expected_outcome: |
+  The member says Frontend but the stack is entirely backend (Laravel, PHP, MySQL). The skill asks with a
+  form whether to change to Backend (recommended, with the stack as reason) or keep Frontend, and does not
+  silently switch the role.

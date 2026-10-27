@@ -1,0 +1,9 @@
+schema_version: "1.1"
+name: uc8-sparse-cv-flutter-jd-relative
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  Sparse CV (Mobile, 2 years, Flutter, project names only) plus a Flutter JD asking 4+ years Flutter and
+  Firebase, at relative match. The skill offers to add project details with a skip option, raises Flutter to
+  max(2, 80% x 4), adds Firebase and lists it in the reminder, writes a 2-paragraph bio linked to the JD,
+  keeps project names with placeholders in Project Examples, ignores education, keeps JLPT N3 in the header.

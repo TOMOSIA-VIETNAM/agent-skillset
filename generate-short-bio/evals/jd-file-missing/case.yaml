@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: jd-file-missing
+expected_outcome: |
+  The member points to a JD file that does not exist. The skill reports that the file cannot be read,
+  suggests pasting the JD content, asks the JD question again, and never invents JD requirements.
