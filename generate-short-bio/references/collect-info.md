@@ -22,6 +22,7 @@ Bắt buộc:
 Tùy chọn:
 - Ngày sinh
 - Ngoại ngữ (chứng chỉ hoặc trình độ, VD JLPT N3, TOEIC 750, IELTS 6.5)
+- Chứng chỉ chuyên môn (VD AWS Certified Solutions Architect – Associate, PMP, ISTQB)
 - Domain đã làm (EC, logistics, HR, fintech...)
 - Dự án nổi bật: tên, thời gian, vai trò, mô tả, tính năng đã đảm nhiệm, tech stack, kết quả
 ```
@@ -56,9 +57,10 @@ Không đọc được CV từ: [link member đưa] ([lý do])
 kèm danh sách field Câu 1 (từ `Bắt buộc:`). Câu trả lời tiếp theo xử lý như câu trả lời Câu 1.
 
 ### Trích xuất
-Chỉ lấy các field của Câu 1; bỏ qua phần *Ngoài phạm vi* (học vấn, bằng cấp, lương...) và giới tính, địa chỉ, SĐT, ảnh, sở thích.
+Chỉ lấy các field của Câu 1; bỏ qua phần *Ngoài phạm vi* (học vấn, bằng đại học, lương...) và giới tính, địa chỉ, SĐT, ảnh, sở thích.
 - **Số năm kinh nghiệm:** lấy số CV ghi rõ; chỉ có năm bắt đầu hoặc không ghi → tính từ công việc IT đầu tiên tới hiện tại, làm tròn xuống, không cộng chồng giai đoạn trùng.
 - **Ngoại ngữ:** ghi đúng chứng chỉ / mức CV ghi (JLPT N2, TOEIC 800, IELTS 6.5, "tiếng Nhật giao tiếp"), kèm năm đạt nếu có. Không suy, không quy đổi giữa các thang.
+- **Chứng chỉ chuyên môn:** ghi đúng tên chứng chỉ CV ghi, kèm năm đạt nếu có (VD `AWS Certified Developer – Associate (2024)`). Không suy từ skill, không gộp hay đổi tên.
 - **Role:** chức danh member tự ghi ở đầu CV → chức danh công việc gần nhất → suy từ stack (ghi chú trong tóm tắt).
 - **Tech stack:** gộp mục Skills với stack các dự án, bỏ trùng.
 - **Số năm skill chính** (framework, ngôn ngữ, database, cloud chính — `output.md` §2): số CV ghi; không có → suy từ khoảng thời gian các dự án dùng skill đó.
@@ -76,6 +78,7 @@ Thông tin đọc từ CV:
 - Tech stack: [...]
 - Ngày sinh: [... | chưa có]
 - Ngoại ngữ: [... | chưa có]
+- Chứng chỉ: [... | chưa có]
 - Domain: [... | chưa có]
 - Dự án: [tên 1] ([thời gian]), [tên 2] ([thời gian])... | chưa có
 

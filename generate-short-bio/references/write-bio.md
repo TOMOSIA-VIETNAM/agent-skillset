@@ -53,7 +53,7 @@ Mỗi đoạn 2–3 câu. en / ja độ dài tương đương.
 | 5 | **Cách phối hợp:** với BE / FE / QA / designer, review, test | Rút ra được từ input | Đoạn 3 |
 | 6 | **Kết quả, số liệu** | Chỉ khi input có — không bao giờ tự tạo | Đoạn 2 |
 | 7 | **Kết nối JD** | Có JD | Câu đầu |
-| 8 | **Ngoại ngữ** (VD "giao tiếp tiếng Nhật, JLPT N3") | JD yêu cầu ngoại ngữ và member có | Đoạn 1 hoặc 3 |
+| 8 | **Ngoại ngữ / chứng chỉ** (VD "giao tiếp tiếng Nhật, JLPT N3", "có chứng chỉ AWS Developer") | JD yêu cầu ngoại ngữ / chứng chỉ đó và member có | Đoạn 1 hoặc 3 |
 
 Sơ sài: ý 1, 2, 7 ở đoạn 1; ý 3 ở đoạn 2; ý 4–6 thường không có → bỏ.
 

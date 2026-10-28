@@ -144,7 +144,7 @@ Không có CI/CD setup ở mọi cấp — QA chạy test trong pipeline, không
 
 Rà trước khi lưu, sai thì sửa rồi mới lưu:
 
-- **Header:** đủ Vị trí (role dạng đầy đủ), Email, Ngày sinh hoặc placeholder; dòng Ngoại ngữ khi input / CV có.
+- **Header:** đủ Vị trí (role dạng đầy đủ), Email, Ngày sinh hoặc placeholder; dòng Ngoại ngữ, Chứng chỉ khi input / CV có.
 - **Short Bio:** đạt `write-bio.md` §5.
 - **Core Skills:** nhãn domain in đậm; skill chính (framework / platform, ngôn ngữ, database, cloud) có số năm hoặc `(_… năm/tháng_)`, skill phụ chỉ ghi tên, skill JD yêu cầu số năm ghi theo JD (`output.md` §2); có JD thì domain khớp JD đứng trước; số năm không vượt tổng.
 - **Project Examples:** chỉ có khi input có dự án; 1–2 dự án; nhãn `Tính năng đảm nhiệm` chỉ chứa phần member làm; Tech Stack là stack thật.

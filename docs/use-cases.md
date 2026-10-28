@@ -129,7 +129,7 @@ Lý do: dự án là thông tin cụ thể mà khách có thể hỏi lại. Ph�
 Cách đọc từng loại link / file, bảng lỗi, quy tắc trích xuất và mẫu tóm tắt: `collect-info.md` §2.
 
 **Chung cho UC5–UC8:**
-1. Đọc CV → trích theo các field của Câu 1; bỏ học vấn, lương, giới tính, SĐT, địa chỉ, ảnh, sở thích. Ngoại ngữ thì giữ (Q24).
+1. Đọc CV → trích theo các field của Câu 1; bỏ học vấn, lương, giới tính, SĐT, địa chỉ, ảnh, sở thích. Ngoại ngữ và chứng chỉ chuyên môn thì giữ (Q24, Q25).
 2. In tóm tắt rồi đi tiếp ngay, không hỏi `ok`. Cùng lượt: hỏi field bắt buộc còn thiếu (nếu có) và form tự vấn. Member sửa tóm tắt qua ô "Other" hoặc nhắn kèm → merge, đánh giá lại mức chi tiết.
 3. CV chỉ mô tả tính năng của sản phẩm, không rõ phần member làm → câu multiSelect `Ở dự án [Dự án], bạn trực tiếp làm những tính năng nào?` trong form tự vấn.
 4. Kiểm tra role.
@@ -216,7 +216,7 @@ Không có gì để nhắc → không in. Xong là kết thúc — không hỏi
 - Tự vấn **tối đa 1 form** mỗi lượt chạy; bổ sung dự án tối đa 1 lần. Mục bỏ qua → placeholder + khối nhắc, không hỏi lại.
 - **Short Bio:** 2–3 câu mỗi đoạn, không bullet, ~110–160 từ (chi tiết) / ~80–120 từ (sơ sài); không đại từ, không tên member, không tên dự án, không câu bị động; luôn qua humanizer; không bịa (JD chỉ dùng để chọn và bổ sung skill, không tạo dự án).
 - Toàn bộ output theo ngôn ngữ output, kể cả nội dung lấy từ CV ở ngôn ngữ khác.
-- Không dùng học vấn, lương, bậc lương / level nội bộ. Ngoại ngữ có trong input / CV thì đưa vào header (Q24).
+- Không dùng học vấn, lương, bậc lương / level nội bộ. Ngoại ngữ, chứng chỉ chuyên môn có trong input / CV thì đưa vào header (Q24, Q25).
 
 ---
 
@@ -266,5 +266,6 @@ Không có gì để nhắc → không in. Xong là kết thúc — không hỏi
 | Q22 | Checklist khi cross-role và JD đã biết ở bước 2 | Chỉ hỏi việc dùng chung giữa hai role; chọn 3 trong 5 theo thứ tự: thống nhất API → review code → mentor → viết test → requirement / estimate (bỏ mục đã có bằng chứng; JD nhấn mạnh mục nào thì đưa lên) |
 | Q23 | Email | **Bắt buộc** (field thứ 5) — không bao giờ là placeholder |
 | Q24 | Ngoại ngữ (JLPT, TOEIC, IELTS...) | **Đưa vào nếu input / CV có**: dòng `Ngoại ngữ` ở header, ghi đúng chứng chỉ / mức member ghi; không hỏi ở tự vấn, không để placeholder. JD yêu cầu ngoại ngữ: member có → nhắc trong bio; chưa có hoặc thấp hơn → khối nhắc. Không nâng theo JD |
+| Q25 | Chứng chỉ chuyên môn (AWS Certified, PMP, ISTQB...) | Xử lý như ngoại ngữ (Q24): có trong input / CV → dòng `Chứng chỉ` ở header, ghi đúng tên và năm đạt; không hỏi, không thêm theo JD. Học vấn / bằng đại học vẫn bỏ qua |
 | Q24 | Field bắt buộc chỉ gõ tay được (họ tên, email, tech stack) | Luôn hiện trong form tự vấn: gộp 1 câu, gõ ở ô Other, ưu tiên cao nhất; không đề xuất giá trị. Chỉ hỏi bằng dòng chữ khi member chọn `Gửi ở tin nhắn sau` |
 | Q25 | Số năm framework / ngôn ngữ khi JD ghi mốc riêng (VD "6 năm PHP / Laravel") | `max(thực tế, mốc theo mức của skill đó)`, không nâng theo tổng; mốc gộp áp cho mọi skill trong nhóm. Chỉ framework chính JD không ghi mốc riêng mới nâng theo tổng mới. Tránh Vue 4 → 8 khi JD đòi 7, hay Laravel 7 nhưng PHP 6 |

@@ -15,6 +15,7 @@ In nội dung file ra màn hình rồi lưu (§4). Giữ đúng thứ tự:
 **Email:** [email]
 **Ngày sinh:** [DD/MM/YYYY hoặc MM/YYYY như member nhập | _(chưa có — vui lòng bổ sung)_]
 **Ngoại ngữ:** [chứng chỉ / trình độ đúng như member ghi, VD JLPT N3 · TOEIC 750]   ← chỉ khi có; không có thì bỏ dòng
+**Chứng chỉ:** [chứng chỉ chuyên môn đúng như member ghi, VD AWS Certified Developer – Associate (2024)]   ← chỉ khi có; không có thì bỏ dòng
 
 ---
 
@@ -155,6 +156,7 @@ Heading `Short Bio` / `Core Skills` / `Project Examples` giữ nguyên ở mọi
 | Email | Email | メール |
 | Ngày sinh | Date of birth | 生年月日 |
 | Ngoại ngữ | Languages | 語学 |
+| Chứng chỉ | Certifications | 資格 |
 | Thời gian | Duration | 期間 |
 | Mô tả | Description | 概要 |
 | Tính năng đảm nhiệm | Features Delivered | 担当機能 |

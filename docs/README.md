@@ -3,7 +3,7 @@
 | File | Dành cho | Nội dung |
 |---|---|---|
 | [example.md](./example.md) | Người dùng | Một lần chạy mẫu: lệnh gọi, file bio sinh ra, khối nhắc |
-| [use-cases.md](./use-cases.md) | Người sửa skill | Hành vi theo từng use case (UC1–UC8), xử lý ngoại lệ, các quyết định đã chốt (Q1–Q24) |
+| [use-cases.md](./use-cases.md) | Người sửa skill | Hành vi theo từng use case (UC1–UC8), xử lý ngoại lệ, các quyết định đã chốt (Q1–Q25) |
 | [images/flow.svg](./images/flow.svg) | README | Sơ đồ flow 7 bước |
 | [images/demo-*.svg](./images/) | README | 3 ảnh demo đầu vào → quy trình → đầu ra, dựng từ một lần chạy thật bằng [images/src/build.py](./images/src/build.py) |
 

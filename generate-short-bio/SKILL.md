@@ -67,7 +67,7 @@ Lưu file + in khối nhắc (nếu có) là **kết thúc**. Không hỏi tạo
 
 Không hỏi, không đưa vào file, bỏ qua khi đọc CV:
 - Lương, bậc lương / level nội bộ, mức lương mong muốn
-- Học vấn, bằng cấp, chứng chỉ trường học (ngoại ngữ thì **không** thuộc nhóm này: có trong input / CV thì đưa vào header, xem `references/output.md` §1)
+- Học vấn, bằng đại học / cao đẳng (chứng chỉ ngoại ngữ và chứng chỉ chuyên môn thì **không** thuộc nhóm này: có trong input / CV thì đưa vào header, xem `references/output.md` §1)
 - Portfolio, GitHub — trừ khi JD yêu cầu và input / CV có
 - CI/CD setup cho QA — QA chạy test trong pipeline, không sở hữu infrastructure
 - Role ngoài 5 role hỗ trợ (DevOps, BrSE, PM, Data/AI, Designer...)

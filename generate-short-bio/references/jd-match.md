@@ -92,6 +92,6 @@ Trong lúc adjustment, ghi lại để in ở khối nhắc (`output.md` §4):
 - Mọi skill member **chưa có** mà được thêm: skill riêng của JD, companion skills, skill sinh mới khi cross-role.
 - Số năm được nâng so với thực tế (VD `Laravel: thực tế 4 năm → ghi 5 năm theo JD`).
 - Stack được thay (VD `Vue → React theo JD`).
-- JD yêu cầu ngoại ngữ mà member chưa có hoặc thấp hơn (VD `JD yêu cầu JLPT N2, profile: N3`). Không nâng hay thêm chứng chỉ ngoại ngữ theo JD.
+- JD yêu cầu ngoại ngữ / chứng chỉ mà member chưa có hoặc thấp hơn (VD `JD yêu cầu JLPT N2, profile: N3`, `JD ưu tiên AWS Certified, profile chưa có`). Không nâng hay thêm ngoại ngữ / chứng chỉ theo JD.
 
 Member cần biết những chỗ này để chuẩn bị khi khách hỏi.

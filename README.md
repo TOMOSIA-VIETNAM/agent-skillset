@@ -46,7 +46,7 @@ Chữ tím in nghiêng trong ảnh là chú thích thêm, không phải output. 
 - Bio của Junior, Middle và Senior được viết khác nhau. Nếu Level của bạn cần thể hiện một việc mà CV chưa nhắc tới, skill sẽ hỏi chứ không tự viết vào.
 - Khi có JD, bạn chọn mức bám sát. Số năm kinh nghiệm chỉ được nâng lên theo JD, không bao giờ bị hạ xuống, và skill xử lý được cả trường hợp bạn ứng tuyển sang Role khác.
 - Ý nào trong bio cũng lấy từ CV, thông tin bạn nhập hoặc JD. Thiếu thông tin thì skill để trống và nhắc bạn điền.
-- Chứng chỉ ngoại ngữ (JLPT, TOEIC, IELTS...) có trong CV được đưa vào hồ sơ đúng như bạn ghi. Học vấn, lương và thông tin cá nhân khác thì bỏ qua.
+- Chứng chỉ ngoại ngữ (JLPT, TOEIC, IELTS...) và chứng chỉ chuyên môn (AWS Certified, PMP...) có trong CV được đưa vào hồ sơ đúng như bạn ghi. Học vấn, lương và thông tin cá nhân khác thì bỏ qua.
 - Bio viết theo kiểu giới thiệu hồ sơ: không xưng "tôi", không nêu tên dự án, nói skill dùng để làm gì thay vì chỉ liệt kê, và được chạy qua [humanizer](https://github.com/blader/humanizer) để bớt giọng máy.
 
 ## Cài đặt
