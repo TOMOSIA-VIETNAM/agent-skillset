@@ -53,7 +53,7 @@ Gợi ý chọn mức đề xuất: cùng role và member đã có phần lớn 
    - **Project Examples giữ stack thật** — dự án là thông tin khách có thể hỏi lại. Trong bio, câu gắn stack với loại sản phẩm đã làm (VD "hệ thống cloud kế toán bằng ReactJS") cũng giữ stack thật.
 4. **Skill "nice to have"** (JD ghi nice to have / preferred / plus / ưu tiên): member đã có → xử lý như skill khớp JD bình thường. Member chưa có → Hoàn toàn / Tương đối: chỉ thêm vào Core Skills (chỉ ghi tên) và khối nhắc, **không viết vào Short Bio như kinh nghiệm đã làm**; Tổng quát: không thêm. JD tự coi đây là điểm cộng, nên viết thành kinh nghiệm là nói quá mức cần thiết.
 5. **Companion skills:** thêm theo role JD và số năm đã chốt — `companions.md`. Companion skill chỉ ghi tên ở Core Skills (không phải framework chính), trừ khi chính nó là framework.
-6. **Định hình output:** câu mở bio kết nối nhu cầu khách; Core Skills đưa domain khớp JD lên trước. Hoàn toàn khớp: chỉ liệt kê skill / domain khớp JD (companion skills của role JD tính là khớp). Skill nền như Git, Docker, Jira cũng bỏ nếu JD không nhắc và không phải companion của mốc số năm — không có ngoại lệ "skill phổ biến".
+6. **Định hình output:** câu mở bio kết nối nhu cầu khách; Core Skills đưa domain khớp JD lên trước. Hoàn toàn khớp: chỉ liệt kê skill / domain khớp JD (companion skills của role JD tính là khớp). Skill nền như Git, Docker, Jira cũng bỏ nếu JD không nhắc và không phải companion của mốc số năm — không có ngoại lệ "skill phổ biến". Ngoại lệ duy nhất: 2 dòng AI member đã chọn (`output.md` §2) luôn giữ.
 
 ---
 

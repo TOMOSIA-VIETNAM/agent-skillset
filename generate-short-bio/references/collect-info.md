@@ -131,6 +131,7 @@ Sau khi có đủ thông tin thô, tự rà xem file bio sẽ còn chỗ nào tr
 | # | Chỗ thiếu / mơ hồ | Câu hỏi gợi ý | Lựa chọn đề xuất lấy từ đâu |
 |---|---|---|---|
 | 1 | Field bắt buộc còn thiếu: 1 câu gộp các field gõ tay (họ tên, email, tech stack) + mỗi field chọn (role, số năm) 1 câu | xem §3 | stack, mốc thời gian CV; field gõ tay không đề xuất giá trị |
+| 1b | **AI-assisted development** — input chưa có đủ 2 dòng AI (`output.md` §2). Luôn hỏi khi thiếu, giữ suất ngay sau câu bắt buộc | `Bạn có dùng AI trong lúc phát triển không? Có thì mình thêm 2 dòng AI vào Core Skills và 1 đoạn về cách dùng AI ở cuối bio.` (header `AI`) | `Có, thêm đủ 2 dòng AI (Đề xuất)` — description liệt kê 2 dòng · `Có, nhưng chỉ ghi công cụ mình gõ ở Other` · `Không thêm` |
 | 2 | Thông tin sơ sài: không có dự án / dự án chỉ có tên | `Bạn có muốn thêm 1–2 dự án không? Có dự án thì bio đủ 3 đoạn và có phần Project Examples.` | `Có, nhập ở tin nhắn sau` · `Không cần, bio 2 đoạn là được` |
 | 2b | Yêu cầu nội dung của role × cấp chưa có bằng chứng (VD Senior Backend chưa thấy review code, thiết kế) | 1 câu **multiSelect** theo `checklist.md` §1 | tối đa 3 yêu cầu còn thiếu + `Chưa làm việc nào trong số này` |
 | 3 | Số năm skill chính chưa rõ, không suy được từ dự án | Framework chính: `Bạn đã dùng [Laravel] được bao lâu?` · Skill chính khác: 1 câu gộp `Bạn đã dùng [PHP, MySQL] được bao lâu? Gõ theo dạng "PHP 5, MySQL 4".` | Framework: `[X] năm, bằng tổng kinh nghiệm` · thời gian các dự án dùng nó · `Chưa chắc, để trống`. Câu gộp: `Gõ vào ô Other` · `Để trống, mình điền sau` |

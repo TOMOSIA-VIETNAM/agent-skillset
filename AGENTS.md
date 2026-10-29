@@ -77,13 +77,14 @@ Flow: lấy thông tin → bổ sung / tự vấn → kiểm tra role → JD →
 | Việc member xác nhận ở checklist chỉ vào bio, không vào Core Skills (trừ khi member gõ tên công cụ) | Core Skills là danh sách công cụ, không phải hoạt động |
 | Cross-role + JD đã biết ở bước 2 → checklist chỉ hỏi việc dùng chung giữa hai role | Yêu cầu riêng của role cũ sẽ bị xóa khi cross-role |
 | Core Skills: nhãn domain in đậm; **skill chính luôn có số năm** (framework / platform, ngôn ngữ, database, cloud chính): lấy từ input → suy từ thời gian dự án → hỏi ở tự vấn → framework chính dùng tổng số năm, skill chính khác để `(_… năm/tháng_)` + khối nhắc; **skill phụ đi kèm chỉ ghi tên**; skill JD ghi số năm theo JD; chỉ ghi tên công nghệ / công cụ cụ thể | Ở phần skill, khách quan tâm số năm của skill chính; số năm ở mọi thư viện, công cụ làm rối; tên hoạt động ("Caching") không phải skill |
+| Luôn đề xuất 2 dòng AI cuối Core Skills (`AI / AI-assisted Development`, `AI-driven Software Development`, nội dung cố định ở `output.md` §2): input chưa có → câu `AI` ở form tự vấn ngay sau câu bắt buộc; member chọn mới thêm; role develop (không QA) có thêm đoạn AI 2 câu cuối Short Bio theo mẫu ở `write-bio.md` §1; giữ ở mọi mức match | Khách quan tâm cách member dùng AI trong phát triển; không tự thêm khi member chưa xác nhận |
 | Project Examples: "Tính năng đảm nhiệm" — chỉ phần member làm; giữ stack thật kể cả khi có JD | Khách sẽ hỏi lại phần member làm |
 | JD adjustment chỉ nâng số năm, không hạ (`max(thực tế, mốc theo mức)`) | Không hạ giá trị member senior |
 | Hoàn toàn khớp: chỉ skill / domain khớp JD, bỏ cả Git / Docker / Jira nếu JD không nhắc và không phải companion | Mức này nghĩa là chỉ nêu cái JD cần |
 | Nice to have member chưa có → chỉ Core Skills + khối nhắc, không viết vào bio | JD tự coi là điểm cộng; viết thành kinh nghiệm là nói quá |
 | Cross-role: xóa skill role cũ, sinh mới theo role JD; số năm framework mới = N / 80% × N / placeholder, không lấy số năm framework cũ; dự án role cũ chỉ nhắc như nghiệp vụ / domain | Không pha trộn role; không đưa con số member không bảo vệ được |
 | Companion skills scale theo số năm (đủ 4 mốc 1-2 / 3-4 / 5-6 / 7+) | Tránh skill 1 năm mà có microservices |
-| Bio: 3 đoạn / ~110–160 từ (chi tiết) hoặc 2 đoạn / ~80–120 từ (sơ sài), 2–3 câu mỗi đoạn; không đại từ, không tên member, không tên dự án, không câu bị động | Hợp cả 3 ngôn ngữ, đúng dù member tự gửi hay BD chuyển cho khách |
+| Bio: 3 đoạn / ~110–160 từ (chi tiết) hoặc 2 đoạn / ~80–120 từ (sơ sài), 2–3 câu mỗi đoạn, cộng đoạn AI nếu có; không đại từ, không tên member, không tên dự án, không câu bị động | Hợp cả 3 ngôn ngữ, đúng dù member tự gửi hay BD chuyển cho khách |
 | Luôn humanize Short Bio qua skill `humanizer` (embedded mode) | Ràng buộc của skill (số liệu, không đại từ, số câu) ưu tiên hơn humanizer |
 | Output chỉ có file bio `short-bio-[ten-kebab]-[YYYY-MM-DD].md`; trùng tên → form ghi đè / tạo `-vN` | Member chủ động, không mất bản cũ |
 | Khối nhắc sau khi lưu: placeholder, ý suy luận, điều chỉnh theo JD, skill thêm chưa có, yêu cầu theo cấp chưa có bằng chứng | Member biết chỗ cần kiểm tra trước khi gửi khách |
@@ -117,6 +118,7 @@ Template đầy đủ ở `references/output.md` §1. Tóm tắt:
 **Backend/Framework:** Laravel (5 năm), PHP (5 năm), Eloquent ORM
 **Database:** MySQL (5 năm)
 **Caching & Queue:** Redis
+**AI / AI-assisted Development:** Claude, Cursor, MCP, ...   (2 dòng AI, khi member chọn)
 ---
 ## Project Examples   (1–2 dự án, chỉ khi đầu vào có dự án)
 ### Project 1 — [Tên]

@@ -27,6 +27,8 @@ In nội dung file ra màn hình rồi lưu (§4). Giữ đúng thứ tự:
 
 [Đoạn 3]   ← chỉ khi mức chi tiết
 
+[Đoạn AI]   ← chỉ role develop có dòng AI (`write-bio.md` §1)
+
 ---
 
 ## Core Skills
@@ -74,12 +76,23 @@ Skill chính dưới 1 năm (VD MongoDB 6 tháng) → chỉ ghi tên: con số n
 
 **Chỉ ghi tên công nghệ / công cụ cụ thể** (Redis, Jest, RabbitMQ), không ghi tên hoạt động hay khái niệm (`Unit test`, `Queue processing`, `Caching`, `Code review`). Hoạt động member đã làm, kể cả việc xác nhận ở checklist, thuộc về bio. Domain như `Caching & Queue` vẫn dùng làm nhãn, nhưng skill trong dòng phải là tên công cụ.
 
+**Dòng AI — luôn đề xuất.** Khách ngày càng hỏi member dùng AI thế nào trong phát triển, nên mọi bio đều đề xuất 2 dòng này, đặt cuối Core Skills:
+```
+**AI / AI-assisted Development:** Claude, Cursor, MCP, Prompt Engineering, AI-driven Development Workflow
+**AI-driven Software Development:** AI-assisted Requirement Analysis, Specification & Planning, Code Generation, Code Review, Test Case Generation, Refactoring
+```
+- Input đã có → dùng đúng nội dung member ghi. Chưa có → hỏi ở form tự vấn (`collect-info.md` §5, mục 1b); không tự thêm khi member chưa chọn.
+- Member chọn thêm đủ → 2 dòng như trên. Chỉ gõ công cụ ở Other → dòng 1 chỉ gồm công cụ đó, bỏ dòng 2. `Không thêm` → bỏ cả hai, không nhắc AI trong bio.
+- Hai dòng này là ngoại lệ của quy tắc chỉ ghi tên công cụ (mục dòng 2 là hoạt động) và không ghi số năm.
+- Có JD: giữ ở mọi mức match, kể cả Hoàn toàn khớp; vẫn đứng sau các domain khớp JD.
+- Có dòng AI và role develop → Short Bio có đoạn AI cuối cùng (`write-bio.md` §1). QA chỉ có dòng AI ở Core Skills.
+
 **Skill chính là gì:** thứ member dùng ở phần lớn dự án hoặc tự ghi là chính, thuộc 4 nhóm framework / platform, ngôn ngữ / runtime, database, cloud. Mỗi nhóm thường chỉ 1–2 skill chính; phần còn lại là skill phụ.
 
 **Cách lấy số năm skill chính**, theo thứ tự: số member / CV ghi → suy từ thời gian các dự án dùng skill đó (ghi vào khối nhắc là ý suy luận) → hỏi ở form tự vấn (`collect-info.md` §5, ưu tiên 3) → vẫn không có: framework chính của role ghi bằng tổng số năm; skill chính khác để `(_… năm/tháng_)` và liệt kê trong khối nhắc. Không tự đoán.
 
 **Domain:**
-- BE / FE / Fullstack: Backend/Framework, Frontend, API Integration, Database, Caching & Queue, Testing, DevOps/CI/CD, Cloud, UI/UX Design, AI
+- BE / FE / Fullstack: Backend/Framework, Frontend, API Integration, Database, Caching & Queue, Testing, DevOps/CI/CD, Cloud, UI/UX Design, rồi 2 dòng AI (trên). Mobile, QA cũng thêm 2 dòng AI ở cuối
 - Mobile: Mobile Platform, UI Framework, State Management, Networking, Testing, CI/CD & Deployment
 - QA: Testing Type, Automation Framework, Test Management, API Testing, Performance Testing — **không có CI/CD**
 

@@ -15,6 +15,13 @@ Short Bio là phần khách đọc đầu tiên và thường đọc lướt gi�
 
 Mỗi đoạn 2–3 câu. en / ja độ dài tương đương.
 
+**Đoạn AI — chỉ role develop (Backend / Frontend / Fullstack / Mobile), khi Core Skills có dòng AI (`output.md` §2).** Thêm 1 đoạn cuối Short Bio, 2 câu, ~40–60 từ, không tính vào độ dài ở bảng trên. QA không có đoạn này. Viết sát mẫu, thay công cụ theo dòng AI của member:
+> Có kinh nghiệm ứng dụng AI vào quy trình phát triển phần mềm, sử dụng Claude, Cursor và MCP để hỗ trợ phân tích yêu cầu, xây dựng specification, lập kế hoạch, implementation, code review và testing. Chủ động xây dựng AI-driven development workflow nhằm nâng cao hiệu suất phát triển, giảm lỗi và đảm bảo tính nhất quán giữa yêu cầu, code và test case.
+
+- Member chỉ ghi công cụ (không có dòng 2) → chỉ câu 1, bỏ danh sách các bước: `Có kinh nghiệm ứng dụng AI vào quy trình phát triển phần mềm với [công cụ].` Câu 2 chỉ có khi dòng AI có `AI-driven Development Workflow`.
+- Humanize chỉ được đổi cách nói, giữ đủ công cụ và các bước. en / ja dịch sát nghĩa, cùng 2 câu.
+- Các đoạn trên không nhắc lại AI.
+
 **Sơ sài — 2 đoạn, mọi role.** Không có dự án thì đoạn thứ 3 chỉ có thể là câu chung chung hoặc bịa, nên bỏ.
 - Đoạn 1: role, số năm, stack chính, domain (nếu có). Có JD: nối vào nhu cầu JD.
 - Đoạn 2: năng lực theo nhóm Core Skills, viết tự nhiên. Không JD: chỉ skill member đã nhập. Có JD: ưu tiên skill khớp JD, kể cả skill bổ sung.
@@ -54,6 +61,7 @@ Mỗi đoạn 2–3 câu. en / ja độ dài tương đương.
 | 6 | **Kết quả, số liệu** | Chỉ khi input có — không bao giờ tự tạo | Đoạn 2 |
 | 7 | **Kết nối JD** | Có JD | Câu đầu |
 | 8 | **Ngoại ngữ / chứng chỉ** (VD "giao tiếp tiếng Nhật, JLPT N3", "có chứng chỉ AWS Developer") | JD yêu cầu ngoại ngữ / chứng chỉ đó và member có | Đoạn 1 hoặc 3 |
+| 9 | **AI trong quy trình** (mẫu ở §1) | Role develop và Core Skills có dòng AI (`output.md` §2) | Đoạn AI, cuối bio |
 
 Sơ sài: ý 1, 2, 7 ở đoạn 1; ý 3 ở đoạn 2; ý 4–6 thường không có → bỏ.
 
