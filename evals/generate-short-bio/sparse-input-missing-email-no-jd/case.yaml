@@ -1,0 +1,7 @@
+schema_version: "1.1"
+name: sparse-input-missing-email-no-jd
+expected_outcome: |
+  Sparse manual input missing the email. The skill asks for the email (required), offers to add projects
+  with a skip option, the member gives the email, skips projects and has no JD. Output is a 2-paragraph bio
+  (80-120 words), bold Core Skills where React carries 3 năm and TypeScript a year count or placeholder, Tailwind / Redux names only, no Projects section,
+  file short-bio-tran-thi-k-<date>.md, and no question about making en/ja versions.

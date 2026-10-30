@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 955" width="800" height="955" role="img" aria-label="Quy trình: skill tóm tắt CV (có JLPT N3) và nêu chỗ mâu thuẫn, hỏi một form tự vấn 4 câu có đáp án đề xuất, member trả lời bằng cách chọn, skill so profile với JD và hỏi mức match, member chọn Hoàn toàn khớp, skill in dòng xác nhận">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1101" width="800" height="1101" role="img" aria-label="Quy trình: skill tóm tắt CV (có JLPT N3) và nêu chỗ mâu thuẫn, hỏi một form tự vấn có đáp án đề xuất, member trả lời bằng cách chọn, skill so profile với JD và hỏi mức match, member chọn Hoàn toàn khớp, skill hỏi form dự án ZAIKO-NAVI (việc đã làm, vị trí, stack), rồi in dòng xác nhận">
 <style>
   text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 13px; }
   .win { fill: #ffffff; stroke: #d0d7de; } .bar { fill: #f6f8fa; } .sep { stroke: #d0d7de; }
@@ -16,13 +16,14 @@
     .box-warn { fill: #272115; stroke: #9e6a03; } .box-file { fill: #151b23; stroke: #3d444d; } .box-form { fill: #0c2d4a; stroke: #1f6feb; }
   }
 </style>
-<rect class="win" x="0.5" y="0.5" width="799" height="954" rx="10"/>
+<rect class="win" x="0.5" y="0.5" width="799" height="1100" rx="10"/>
 <path class="bar" d="M1 11a10 10 0 0 1 10-10h778a10 10 0 0 1 10 10v23H1z"/>
 <line class="sep" x1="1" y1="34" x2="799" y2="34"/>
 <circle cx="20" cy="17.5" r="6" fill="#ff5f57"/><circle cx="40" cy="17.5" r="6" fill="#febc2e"/><circle cx="60" cy="17.5" r="6" fill="#28c840"/>
-<text class="title" x="400" y="22" text-anchor="middle">Quy trình · tự vấn → mức match → xác nhận</text>
-<rect class="box-form" x="24" y="289" width="752" height="281" rx="6"/>
-<rect class="box-form" x="24" y="718" width="752" height="134" rx="6"/>
+<text class="title" x="400" y="22" text-anchor="middle">Quy trình · tự vấn → mức match → dự án → xác nhận</text>
+<rect class="box-form" x="24" y="289" width="752" height="176" rx="6"/>
+<rect class="box-form" x="24" y="613" width="752" height="134" rx="6"/>
+<rect class="box-form" x="24" y="780" width="752" height="218" rx="6"/>
 <text x="28" y="67" xml:space="preserve"><tspan class="label">Thông tin đọc từ CV:</tspan></text>
 <text x="28" y="88" xml:space="preserve"><tspan class="ink">- Tên: Nguyễn Văn D · Email: d.nguyen@example.com · Role: Backend</tspan></text>
 <text x="28" y="109" xml:space="preserve"><tspan class="ink">- Số năm kinh nghiệm: 4 năm (theo Summary trong CV)</tspan></text>
@@ -39,27 +40,33 @@
 <text x="42" y="350" xml:space="preserve"><tspan class="label">   những việc dưới đây chưa. Bạn đã làm việc nào? (chọn được nhiều)</tspan></text>
 <text x="42" y="371" xml:space="preserve"><tspan class="ink">   a. Làm trọn feature từ yêu cầu tới deploy  b. Thiết kế DB / API cho feature</tspan></text>
 <text x="42" y="392" xml:space="preserve"><tspan class="ink">   c. Chưa làm việc nào trong số này</tspan></text>
-<text x="42" y="413" xml:space="preserve"><tspan class="label">2. Ở dự án ZAIKO-NAVI, bạn trực tiếp làm những tính năng nào?</tspan></text>
-<text x="42" y="434" xml:space="preserve"><tspan class="ink">   a. Nhập / xuất kho  b. Quét barcode  c. Báo cáo hàng tháng  d. Import CSV</tspan></text>
-<text x="42" y="455" xml:space="preserve"><tspan class="label">3. Ở dự án ZAIKO-NAVI, bạn giữ vai trò gì?</tspan></text>
-<text x="42" y="476" xml:space="preserve"><tspan class="ink">   a. </tspan><tspan class="hl">Backend Developer (Đề xuất)</tspan><tspan class="ink">. Phần trách nhiệm ghi &quot;backend features&quot; …</tspan></text>
-<text x="42" y="497" xml:space="preserve"><tspan class="ink">   b. Fullstack Developer, vì dự án có dùng Vue.js 2  c. Để trống, mình điền sau</tspan></text>
-<text x="42" y="518" xml:space="preserve"><tspan class="label">4. CV ghi 4 năm kinh nghiệm, còn các dự án bắt đầu từ 06/2021, tức khoảng</tspan></text>
-<text x="42" y="539" xml:space="preserve"><tspan class="label">   5 năm. Bạn muốn lấy số nào?</tspan></text>
-<text x="42" y="560" xml:space="preserve"><tspan class="ink">   a. </tspan><tspan class="hl">Giữ 4 năm như CV (Đề xuất)</tspan><tspan class="ink">. Đây là số CV ghi rõ  b. Ghi 5 năm, …</tspan></text>
-<text x="28" y="591" xml:space="preserve"><tspan class="muted">› </tspan><tspan class="you">1: a,b · 2: a,d · 3: a · 4: b</tspan><tspan class="anno">   ← member chỉ cần chọn</tspan></text>
-<text x="28" y="622" xml:space="preserve"><tspan class="ink">Đã cập nhật: tổng kinh nghiệm là 5 năm, nên giờ bạn được tính theo cấp Senior</tspan></text>
-<text x="28" y="643" xml:space="preserve"><tspan class="ink">Backend. Bạn đã xác nhận làm trọn feature tới deploy và thiết kế DB / API. …</tspan></text>
-<text x="28" y="664" xml:space="preserve"><tspan class="ink">Mình đã so profile với JD Senior Backend Engineer (Laravel). Role giống nhau, và bạn</tspan></text>
-<text x="28" y="685" xml:space="preserve"><tspan class="ink">đã có hầu hết skill bắt buộc … Bạn chỉ còn thiếu 3 năm AWS (EC2, RDS, S3), cộng</tspan></text>
-<text x="28" y="706" xml:space="preserve"><tspan class="ink">GitHub Actions ở mục nice to have.</tspan></text>
-<text x="42" y="737" xml:space="preserve"><tspan class="fileh">Form mức match</tspan></text>
-<text x="42" y="758" xml:space="preserve"><tspan class="label">5. Bạn muốn bio bám sát JD tới mức nào?</tspan></text>
-<text x="42" y="779" xml:space="preserve"><tspan class="ink">   a. </tspan><tspan class="hl">Hoàn toàn khớp (Đề xuất)</tspan><tspan class="ink">: ghi 5 năm và Laravel 5 năm. Thêm AWS (EC2,</tspan></text>
-<text x="42" y="800" xml:space="preserve"><tspan class="ink">      RDS, S3) 3 năm theo JD, GitHub Actions chỉ ghi tên. Chỉ nêu skill khớp JD, …</tspan></text>
-<text x="42" y="821" xml:space="preserve"><tspan class="ink">   b. Tương đối khớp: vẫn ghi 5 năm. Thêm AWS 2 năm (80% mốc JD) …</tspan></text>
-<text x="42" y="842" xml:space="preserve"><tspan class="ink">   c. Tổng quát: giữ đúng profile thật, không thêm AWS hay GitHub Actions. …</tspan></text>
-<text x="28" y="873" xml:space="preserve"><tspan class="muted">› </tspan><tspan class="you">a</tspan></text>
-<text x="28" y="904" xml:space="preserve"><tspan class="label">Xác nhận: </tspan><tspan class="ink">Nguyễn Văn D · Role: Backend · Mức độ: chi tiết · JD: có · Match: hoàn toàn</tspan></text>
-<text x="28" y="925" xml:space="preserve"><tspan class="ink">          File: short-bio-nguyen-van-d-2026-10-27.md</tspan></text>
+<text x="42" y="413" xml:space="preserve"><tspan class="label">2. CV ghi 4 năm kinh nghiệm, còn các dự án bắt đầu từ 06/2021, tức khoảng</tspan></text>
+<text x="42" y="434" xml:space="preserve"><tspan class="label">   5 năm. Bạn muốn lấy số nào?</tspan></text>
+<text x="42" y="455" xml:space="preserve"><tspan class="ink">   a. </tspan><tspan class="hl">Giữ 4 năm như CV (Đề xuất)</tspan><tspan class="ink">. Đây là số CV ghi rõ  b. Ghi 5 năm, …</tspan></text>
+<text x="28" y="486" xml:space="preserve"><tspan class="muted">› </tspan><tspan class="you">1: a,b · 2: b</tspan><tspan class="anno">   ← member chỉ cần chọn</tspan></text>
+<text x="28" y="517" xml:space="preserve"><tspan class="ink">Đã cập nhật: tổng kinh nghiệm là 5 năm, nên giờ bạn được tính theo cấp Senior</tspan></text>
+<text x="28" y="538" xml:space="preserve"><tspan class="ink">Backend. Bạn đã xác nhận làm trọn feature tới deploy và thiết kế DB / API. …</tspan></text>
+<text x="28" y="559" xml:space="preserve"><tspan class="ink">Mình đã so profile với JD Senior Backend Engineer (Laravel). Role giống nhau, và bạn</tspan></text>
+<text x="28" y="580" xml:space="preserve"><tspan class="ink">đã có hầu hết skill bắt buộc … Bạn chỉ còn thiếu 3 năm AWS (EC2, RDS, S3), cộng</tspan></text>
+<text x="28" y="601" xml:space="preserve"><tspan class="ink">GitHub Actions ở mục nice to have.</tspan></text>
+<text x="42" y="632" xml:space="preserve"><tspan class="fileh">Form mức match</tspan></text>
+<text x="42" y="653" xml:space="preserve"><tspan class="label">3. Bạn muốn bio bám sát JD tới mức nào?</tspan></text>
+<text x="42" y="674" xml:space="preserve"><tspan class="ink">   a. </tspan><tspan class="hl">Hoàn toàn khớp (Đề xuất)</tspan><tspan class="ink">: ghi 5 năm và Laravel 5 năm. Thêm AWS (EC2,</tspan></text>
+<text x="42" y="695" xml:space="preserve"><tspan class="ink">      RDS, S3) 3 năm theo JD, GitHub Actions chỉ ghi tên. Chỉ nêu skill khớp JD, …</tspan></text>
+<text x="42" y="716" xml:space="preserve"><tspan class="ink">   b. Tương đối khớp: vẫn ghi 5 năm. Thêm AWS 2 năm (80% mốc JD) …</tspan></text>
+<text x="42" y="737" xml:space="preserve"><tspan class="ink">   c. Tổng quát: giữ đúng profile thật, không thêm AWS hay GitHub Actions. …</tspan></text>
+<text x="28" y="768" xml:space="preserve"><tspan class="muted">› </tspan><tspan class="you">a</tspan></text>
+<text x="42" y="799" xml:space="preserve"><tspan class="fileh">Form dự án · ZAIKO-NAVI</tspan><tspan class="anno">   ← HANAYOYAKU đã đủ thông tin, không hỏi</tspan></text>
+<text x="42" y="820" xml:space="preserve"><tspan class="label">4. Ở dự án ZAIKO-NAVI, bạn đã làm những việc nào? (chọn được nhiều)</tspan></text>
+<text x="42" y="841" xml:space="preserve"><tspan class="ink">   a. Làm nhập / xuất kho  b. Làm quét barcode  c. Làm báo cáo hàng tháng</tspan></text>
+<text x="42" y="862" xml:space="preserve"><tspan class="ink">   d. Import dữ liệu CSV</tspan><tspan class="anno">   ← lấy từ mô tả trong CV</tspan></text>
+<text x="42" y="883" xml:space="preserve"><tspan class="label">5. Ở dự án ZAIKO-NAVI, bạn giữ vị trí gì?</tspan></text>
+<text x="42" y="904" xml:space="preserve"><tspan class="ink">   a. </tspan><tspan class="hl">Backend Developer (Đề xuất)</tspan><tspan class="ink">. Phần trách nhiệm ghi &quot;backend features&quot; …</tspan></text>
+<text x="42" y="925" xml:space="preserve"><tspan class="ink">   b. Fullstack Developer, vì dự án có dùng Vue.js 2  c. Để trống, mình điền sau</tspan></text>
+<text x="42" y="946" xml:space="preserve"><tspan class="label">6. Tech stack của ZAIKO-NAVI trong CV là PHP 7, Laravel 8, MySQL, Vue.js 2.</tspan></text>
+<text x="42" y="967" xml:space="preserve"><tspan class="label">   Dự án có dùng thêm công nghệ nào dưới đây không? (chọn được nhiều)</tspan></text>
+<text x="42" y="988" xml:space="preserve"><tspan class="ink">   a. Redis  b. Docker</tspan><tspan class="anno">   ← có trong Core Skills</tspan><tspan class="ink">  c. Không, stack như CV là đủ</tspan></text>
+<text x="28" y="1019" xml:space="preserve"><tspan class="muted">› </tspan><tspan class="you">4: a,d · 5: a · 6: c</tspan></text>
+<text x="28" y="1050" xml:space="preserve"><tspan class="label">Xác nhận: </tspan><tspan class="ink">Nguyễn Văn D · Role: Backend · Mức độ: chi tiết · JD: có · Match: hoàn toàn</tspan></text>
+<text x="28" y="1071" xml:space="preserve"><tspan class="ink">          File: short-bio-nguyen-van-d-2026-10-27.md</tspan></text>
 </svg>

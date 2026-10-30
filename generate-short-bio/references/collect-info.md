@@ -64,9 +64,9 @@ Chỉ lấy các field của Câu 1; bỏ qua phần *Ngoài phạm vi* (học v
 - **Role:** chức danh member tự ghi ở đầu CV → chức danh công việc gần nhất → suy từ stack (ghi chú trong tóm tắt).
 - **Tech stack:** gộp mục Skills với stack các dự án, bỏ trùng.
 - **Số năm skill chính** (framework, ngôn ngữ, database, cloud chính — `output.md` §2): số CV ghi; không có → suy từ khoảng thời gian các dự án dùng skill đó.
-- **Dự án:** tên, thời gian, vai trò, mô tả, tính năng member đảm nhiệm, tech stack. Thời gian ưu tiên mốc tháng/năm; số tháng = (năm cuối − năm đầu) × 12 + (tháng cuối − tháng đầu), VD `02/2025 – 12/2025` = 10 tháng. Lệch quá 1 tháng so với thời lượng CV ghi riêng → dùng mốc tháng/năm, nêu trong Lưu ý.
-- **Vai trò trong dự án:** chỉ khi CV ghi rõ chức danh trong dự án (VD "Frontend Developer", "Team Lead"). Số người trong team hay các giai đoạn tham gia không phải vai trò.
-- **Tính năng đảm nhiệm:** tính năng CV ghi là member làm / phụ trách. CV chỉ mô tả tính năng của sản phẩm, không rõ phần nào member làm → đưa vào tự vấn (§5).
+- **Dự án:** tên, thời gian, vị trí, quy mô team, mô tả, việc member làm, tech stack. Thời gian ưu tiên mốc tháng/năm; số tháng = (năm cuối − năm đầu) × 12 + (tháng cuối − tháng đầu), VD `02/2025 – 12/2025` = 10 tháng. Lệch quá 1 tháng so với thời lượng CV ghi riêng → dùng mốc tháng/năm, nêu trong Lưu ý.
+- **Vị trí trong dự án:** chỉ khi CV ghi rõ chức danh trong dự án (VD "Frontend Developer", "Team Lead"). Số người trong team (→ quy mô team) hay các giai đoạn tham gia không phải vị trí.
+- **Việc member làm trong dự án:** dòng mô tả công việc, tính năng CV ghi là member làm, giai đoạn được tick. Chỗ còn mỏng không hỏi ở bước này — để bước 6 (`projects.md`) hỏi cho đúng 1–2 dự án được chọn.
 
 ### Tóm tắt — in rồi đi tiếp ngay
 ```
@@ -94,13 +94,14 @@ Không hỏi `ok`. Ngay trong cùng lượt: §3 (nếu thiếu field bắt bu�
 | Field | Nhận diện | Cách hỏi khi thiếu |
 |---|---|---|
 | Họ tên | Tên riêng đầy đủ | Câu gõ ở ô Other (dưới) |
-| Email | Có `@` | Câu gõ ở ô Other (dưới) |
+| Email | Có `@` | Đã có họ tên → câu riêng, đề xuất email theo quy ước Tomosia (dưới); chưa có họ tên → gộp vào câu gõ ở ô Other |
 | Role | Backend / Frontend / Fullstack / Mobile / QA | Form — đề xuất role suy từ stack (bảng §6) |
 | Số năm kinh nghiệm | Số hoặc khoảng ("3 năm", "3-4 năm") | Form — đề xuất số suy từ CV / dự án nếu có; không có dữ liệu → các mốc `1-2 năm`, `3-4 năm`, `5-6 năm`, `7+ năm`, member chọn hoặc gõ số chính xác |
 | Tech stack | Ít nhất 1 ngôn ngữ hoặc framework | Câu gõ ở ô Other (dưới) |
 
 **Mọi field bắt buộc còn thiếu đều nằm trong form tự vấn §5**, kể cả field chỉ gõ tay được — không hỏi bằng dòng chữ riêng trước hay sau form. Member nhìn một form là thấy hết những gì còn thiếu; hỏi rải rác khiến form trông như bỏ sót, và member dễ trả lời xong form rồi bỏ đi.
-- **Field gõ tay gộp vào 1 câu** để giữ suất cho các câu khác: câu hỏi liệt kê đúng các field thiếu, VD `Bạn cho biết họ tên và email nhé. Gõ vào ô Other theo dạng "Họ tên, email".` (header `Bắt buộc`). Lựa chọn: `Gõ vào ô Other` · `Gửi ở tin nhắn sau` (description: bio chỉ được tạo sau khi có đủ). Không đề xuất giá trị (VD email đoán theo tên) — đó là bịa.
+- **Field gõ tay gộp vào 1 câu** để giữ suất cho các câu khác: câu hỏi liệt kê đúng các field thiếu, VD `Bạn cho biết họ tên và email nhé. Gõ vào ô Other theo dạng "Họ tên, email".` (header `Bắt buộc`). Lựa chọn: `Gõ vào ô Other` · `Gửi ở tin nhắn sau` (description: bio chỉ được tạo sau khi có đủ). Không đề xuất giá trị cho họ tên, tech stack.
+- **Email thiếu nhưng đã có họ tên → câu riêng có đề xuất** theo quy ước email Tomosia `tên.họ@tomosia.com`: `tên` là chữ cuối của họ tên, `họ` là chữ đầu; bỏ dấu, `đ` → `d`, chữ thường (VD `Trần Đình Thiện` / `Tran Dinh Thien` → `thien.tran@tomosia.com`, `Võ Thành Qui` → `qui.vo@tomosia.com`). Câu hỏi `Email để khách liên hệ có phải là [email] không? Nếu khác, bạn gõ email đúng ở Other.` (header `Email`). Lựa chọn: `[email] (Đề xuất)` — description `theo quy ước tên.họ@tomosia.com; trùng tên thì email có thể khác, bạn kiểm tra lại` · `Gửi ở tin nhắn sau`. Member chọn đề xuất là đã xác nhận, không cần khối nhắc. Họ tên chưa có → email nằm trong câu gộp ở trên, không đề xuất.
 - Field có lựa chọn (role, số năm) → mỗi field một câu như bảng trên.
 - Các câu bắt buộc chiếm suất trước mọi câu không bắt buộc.
 - Member chọn `Gửi ở tin nhắn sau` hoặc chọn `Gõ vào ô Other` mà để trống → sau form in đúng 1 dòng `Bạn gửi giúp [các field còn thiếu] nhé:`. Đây là trường hợp duy nhất hỏi field bắt buộc ngoài form.
@@ -118,7 +119,7 @@ Khoảng ("3-4 năm") → tính bằng cận trên.
 | **Chi tiết** | Có ≥ 1 dự án kèm mô tả (sản phẩm làm gì, vai trò hoặc stack dùng). Kết quả, số liệu là điểm cộng. |
 | **Sơ sài** | Chỉ có field bắt buộc (± ngày sinh, domain), hoặc mọi dự án chỉ có tên. |
 
-Quyết định số đoạn bio (`write-bio.md`) và việc có Project Examples (`output.md`). Đánh giá lại sau mỗi lần member bổ sung.
+Quyết định số đoạn bio (`write-bio.md`) và việc có phần Projects (`projects.md`). Đánh giá lại sau mỗi lần member bổ sung.
 
 ---
 
@@ -130,22 +131,20 @@ Sau khi có đủ thông tin thô, tự rà xem file bio sẽ còn chỗ nào tr
 
 | # | Chỗ thiếu / mơ hồ | Câu hỏi gợi ý | Lựa chọn đề xuất lấy từ đâu |
 |---|---|---|---|
-| 1 | Field bắt buộc còn thiếu: 1 câu gộp các field gõ tay (họ tên, email, tech stack) + mỗi field chọn (role, số năm) 1 câu | xem §3 | stack, mốc thời gian CV; field gõ tay không đề xuất giá trị |
+| 1 | Field bắt buộc còn thiếu: 1 câu gộp các field gõ tay (họ tên, email, tech stack) + mỗi field chọn (role, số năm) 1 câu | xem §3 | stack, mốc thời gian CV; email đề xuất theo `tên.họ@tomosia.com` khi đã có họ tên; họ tên, tech stack không đề xuất giá trị |
 | 1b | **AI-assisted development** — input chưa có đủ 2 dòng AI (`output.md` §2). Luôn hỏi khi thiếu, giữ suất ngay sau câu bắt buộc | `Bạn có dùng AI trong lúc phát triển không? Có thì mình thêm 2 dòng AI vào Core Skills và 1 đoạn về cách dùng AI ở cuối bio.` (header `AI`) | `Có, thêm đủ 2 dòng AI (Đề xuất)` — description liệt kê 2 dòng · `Có, nhưng chỉ ghi công cụ mình gõ ở Other` · `Không thêm` |
-| 2 | Thông tin sơ sài: không có dự án / dự án chỉ có tên | `Bạn có muốn thêm 1–2 dự án không? Có dự án thì bio đủ 3 đoạn và có phần Project Examples.` | `Có, nhập ở tin nhắn sau` · `Không cần, bio 2 đoạn là được` |
+| 2 | Thông tin sơ sài: không có dự án / dự án chỉ có tên | `Bạn có muốn thêm 1–2 dự án không? Có dự án thì bio đủ 3 đoạn và có phần Projects.` | `Có, nhập ở tin nhắn sau` · `Không cần, bio 2 đoạn là được` |
 | 2b | Yêu cầu nội dung của role × cấp chưa có bằng chứng (VD Senior Backend chưa thấy review code, thiết kế) | 1 câu **multiSelect** theo `checklist.md` §1 | tối đa 3 yêu cầu còn thiếu + `Chưa làm việc nào trong số này` |
 | 3 | Số năm skill chính chưa rõ, không suy được từ dự án | Framework chính: `Bạn đã dùng [Laravel] được bao lâu?` · Skill chính khác: 1 câu gộp `Bạn đã dùng [PHP, MySQL] được bao lâu? Gõ theo dạng "PHP 5, MySQL 4".` | Framework: `[X] năm, bằng tổng kinh nghiệm` · thời gian các dự án dùng nó · `Chưa chắc, để trống`. Câu gộp: `Gõ vào ô Other` · `Để trống, mình điền sau` |
-| 4 | Tính năng member đảm nhiệm chưa rõ (CV chỉ mô tả sản phẩm) | `Ở dự án [Dự án], bạn trực tiếp làm những tính năng nào?` — **multiSelect** | các tính năng CV liệt kê (tối đa 4) |
-| 5 | Vai trò trong dự án thiếu | `Ở dự án [Dự án], bạn giữ vai trò gì?` | suy từ stack dự án (VD chỉ Laravel → `Backend Developer`), role tổng của member, `Team Lead` nếu CV nhắc dẫn dắt |
-| 6 | Domain chưa có nhưng suy được | `Các dự án của bạn chủ yếu thuộc lĩnh vực nào?` | suy từ tên / mô tả dự án (VD "BillCheck — kế toán" → `Kế toán / fintech`) |
-| 7 | Ý đang phải suy luận (role suy từ stack, số năm tính từ mốc) | `Có phải [ý suy luận] không?` | `Đúng vậy (Đề xuất)` · lựa chọn khác hợp lý |
-| 8 | Ngày sinh thiếu | `Bạn có muốn ghi ngày sinh vào hồ sơ không?` | `Để trống, mình điền sau` · `Gõ vào ô Other` (DD/MM/YYYY) |
+| 4 | Domain chưa có nhưng suy được | `Các dự án của bạn chủ yếu thuộc lĩnh vực nào?` | suy từ tên / mô tả dự án (VD "BillCheck — kế toán" → `Kế toán / fintech`) |
+| 5 | Ý đang phải suy luận (role suy từ stack, số năm tính từ mốc) | `Có phải [ý suy luận] không?` | `Đúng vậy (Đề xuất)` · lựa chọn khác hợp lý |
+| 6 | Ngày sinh thiếu | `Bạn có muốn ghi ngày sinh vào hồ sơ không?` | `Để trống, mình điền sau` · `Gõ vào ô Other` (DD/MM/YYYY) |
 
 Cách làm:
 - **Một form, tối đa 4 câu**, gom các mục ưu tiên cao nhất. Mục còn lại → placeholder + khối nhắc. Không mở form thứ hai cho phần không bắt buộc — hỏi dồn nhiều lượt làm member mệt và bỏ ngang.
 - Mỗi câu có lựa chọn `Bỏ qua` khi field không bắt buộc. Có đáp án suy ra đáng tin → đặt đầu, nhãn kèm `(Đề xuất)`, `description` nêu căn cứ.
 - **Chỉ đề xuất điều suy được từ dữ liệu.** Không tạo lựa chọn chứa tính năng, domain hay kết quả mà input không gợi ra — lựa chọn đề xuất cũng là một dạng bịa nếu không có căn cứ.
-- Member chọn `Có, nhập ở tin nhắn sau` (bổ sung dự án) → in 1 dòng: `Bạn nhập 1–2 dự án nhé: tên, thời gian, vai trò, mô tả, tính năng bạn làm và tech stack.` — đây là lần hỏi bổ sung duy nhất; xong đánh giá lại §4, không hỏi thêm dù vẫn sơ sài.
+- Member chọn `Có, nhập ở tin nhắn sau` (bổ sung dự án) → in 1 dòng: `Bạn nhập 1–2 dự án nhé: tên, thời gian, vị trí, mô tả, việc bạn làm và tech stack.` — đây là lần hỏi bổ sung duy nhất; xong đánh giá lại §4, không hỏi thêm dù vẫn sơ sài.
 - Không còn chỗ thiếu → bỏ qua §5, đi tiếp.
 - Kiểm tra role (§6) phát hiện được ngay từ dữ liệu → có thể đặt làm câu cuối của cùng form nếu còn suất, để giảm một lượt hỏi.
 - **Không đưa câu JD hay mức match vào form này** — chúng thuộc bước 4–5 (`jd-match.md`), hỏi sau khi profile đã chốt.
@@ -164,6 +163,6 @@ Role member nhập là nguồn chính; stack chỉ để kiểm tra chéo. Chỉ
 - **Fullstack** — cả BE lẫn FE/Mobile đều là stack chính (mỗi phía ≥ nửa tổng số năm, hoặc có ở phần lớn dự án). Một phía chỉ xuất hiện ở 1 dự án / ít năm → role theo phía chiếm ưu thế, skill phía phụ vẫn ghi ở Core Skills.
 
 **Các trường hợp:**
-- Role chung chung ("Software Engineer", "Web Developer") hoặc CV không ghi chức danh → suy từ stack, không hỏi riêng (đã hiện trong tóm tắt; có thể xác nhận ở mục 7 của §5).
+- Role chung chung ("Software Engineer", "Web Developer") hoặc CV không ghi chức danh → suy từ stack, không hỏi riêng (đã hiện trong tóm tắt; có thể xác nhận ở mục 5 của §5).
 - **Role lệch stack** (VD ghi "Fullstack" nhưng chỉ có Laravel) → form: `Bạn ghi role là [X], nhưng stack chủ yếu là [Y]. Bạn muốn ghi role nào?` · `Đổi thành [Z] (Đề xuất)` — description nêu căn cứ · `Giữ [X], gõ thêm stack còn thiếu ở Other`. Không tự đổi.
 - **Role ngoài 5 loại** (DevOps, BrSE, PM, Data/AI, Designer...) → báo skill hỗ trợ Backend / Frontend / Fullstack / Mobile / QA; form gồm tối đa 3 role gần nhất với stack (role gần nhất ghi `(Đề xuất)`) + `Dừng`. Không map ngầm.

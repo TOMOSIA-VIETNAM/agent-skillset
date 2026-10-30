@@ -1,8 +1,0 @@
-schema_version: "1.1"
-name: uc1-backend-senior-detailed-no-jd
-expected_outcome: |
-  Detailed manual input for a 6-year Backend member with one described project and no JD. The skill does not
-  ask the JD question again, asks a Senior Backend checklist question, writes a 3-paragraph pronoun-free bio
-  (110-160 words) without the project name, Core Skills with years on main skills (Laravel; PHP and MySQL from the project or a placeholder) and names only on Redis / Docker, Project
-  Examples for Kintai Cloud with the real stack and only the listed features, and saves
-  short-bio-nguyen-van-b-<date>.md.

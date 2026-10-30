@@ -21,11 +21,12 @@ Mọi use case đi theo cùng một thứ tự. Use case chỉ khác nhau ở c�
 3. Kiểm tra role         role ↔ stack (có thể là câu cuối của form bước 2)
 4. JD                    form riêng: không có JD / paste / link / file
 5. Mức match             form riêng, có đề xuất (chỉ khi có JD)
-6. Sinh bio              JD adjustment (nếu có) → viết → humanize → tự kiểm tra
-7. Rà checklist + lưu    in bio → lưu file (trùng tên → form) → khối nhắc → kết thúc
+6. Dự án                 chọn 1–2 dự án → rà mô tả / vai trò / stack → mỗi dự án 1 form (chỉ khi có dự án)
+7. Sinh bio              JD adjustment (nếu có) → viết → humanize → tự kiểm tra
+8. Rà checklist + lưu    in bio → lưu file (trùng tên → form) → khối nhắc → kết thúc
 ```
 
-Cách hỏi (`SKILL.md` → *Cách hỏi*): ưu tiên form `AskUserQuestion`, 2–4 lựa chọn thật mỗi câu, tối đa 4 câu mỗi form, lựa chọn đề xuất đứng đầu kèm `(Đề xuất)`. Gom câu trong cùng một bước, không gom xuyên bước — câu JD và mức match luôn hỏi riêng. Thông tin member đã đưa sẵn (VD JD gõ kèm lệnh) thì không hỏi lại.
+Cách hỏi (`SKILL.md` → *Cách hỏi*): ưu tiên form `AskUserQuestion`, 2–4 lựa chọn thật mỗi câu, tối đa 4 câu mỗi form, lựa chọn đề xuất đứng đầu kèm `(Đề xuất)`. Gom câu trong cùng một bước, không gom xuyên bước — câu JD và mức match luôn hỏi riêng; câu dự án hỏi sau mức match, mỗi dự án một form. Thông tin member đã đưa sẵn (VD JD gõ kèm lệnh) thì không hỏi lại.
 
 ---
 
@@ -57,16 +58,17 @@ Cách hỏi (`SKILL.md` → *Cách hỏi*): ưu tiên form `AskUserQuestion`, 2�
 
 **Luồng:**
 1. Câu 1: in form, member nhập (hoặc gõ kèm lệnh).
-2. Validate 5 field bắt buộc; thiếu → hỏi đúng field thiếu **trong form tự vấn**: họ tên / email / tech stack gộp 1 câu gõ ở ô Other; role, số năm mỗi field 1 câu.
+2. Validate 5 field bắt buộc; thiếu → hỏi đúng field thiếu **trong form tự vấn**: họ tên / email / tech stack gộp 1 câu gõ ở ô Other; role, số năm mỗi field 1 câu. Email thiếu mà đã có họ tên → câu riêng đề xuất `tên.họ@tomosia.com`.
 3. Tự vấn: rà chỗ thiếu theo bảng ưu tiên (`collect-info.md` §5) — gồm checklist role × cấp — hỏi gộp 1 form.
 4. Kiểm tra role → JD: chọn `Không có, viết bio chung`, không hỏi mức match.
-5. Sinh bio → humanize → rà checklist → in → lưu file → khối nhắc.
+5. Dự án: form dự án (mục 6).
+6. Sinh bio → humanize → rà checklist → in → lưu file → khối nhắc.
 
 **Output:**
 - **Short Bio, 3 đoạn** theo cấu trúc của role (`write-bio.md` §1): định vị + domain → năng lực tổng hợp → cách làm việc. Không gọi tên dự án. Thể hiện các yêu cầu của role × cấp có bằng chứng.
 - **Core Skills:** đúng skill member nhập, không thêm skill đi kèm. Skill chính (framework / platform, ngôn ngữ, database, cloud) luôn có số năm, skill phụ đi kèm chỉ ghi tên (Q2, Q17, `output.md` §2).
 - **Số năm:** giữ nguyên thực tế.
-- **Project Examples:** mục 6.
+- **Projects:** mục 6.
 
 ### UC2 — Form chi tiết, kèm JD
 
@@ -80,7 +82,8 @@ Cách hỏi (`SKILL.md` → *Cách hỏi*): ưu tiên form `AskUserQuestion`, 2�
    - Nice to have member chưa có → chỉ Core Skills + khối nhắc, không vào bio (Q18).
    - Companion skills theo số năm đã chốt (`companions.md`).
    - Role JD khác role member → cross-role (`jd-match.md` §4, Q19).
-4. Sinh bio → humanize → rà checklist theo cấp **đã chốt sau JD** → in → lưu → khối nhắc.
+4. Dự án: chọn dự án khớp JD, form dự án (mục 6).
+5. Sinh bio → humanize → rà checklist theo cấp **đã chốt sau JD** → in → lưu → khối nhắc.
 
 **Output:**
 - **Short Bio, 3 đoạn:** câu mở kết nối nhu cầu JD; ưu tiên năng lực khớp JD.
@@ -88,7 +91,7 @@ Cách hỏi (`SKILL.md` → *Cách hỏi*): ưu tiên form `AskUserQuestion`, 2�
   - **Hoàn toàn khớp:** chỉ skill / domain khớp JD (companion tính là khớp); Git / Docker / Jira cũng bỏ nếu JD không nhắc (Q20).
   - **Tương đối:** highlight skill khớp, giữ điểm mạnh khác.
   - **Tổng quát:** JD là gợi ý nhẹ.
-- **Project Examples:** mục 6, ưu tiên dự án khớp JD.
+- **Projects:** mục 6, ưu tiên dự án khớp JD.
 
 **Stack khi có JD (áp dụng cho UC2/4/6/8):**
 
@@ -97,7 +100,7 @@ Cách hỏi (`SKILL.md` → *Cách hỏi*): ưu tiên form `AskUserQuestion`, 2�
 | Core Skills | Theo JD (đã thay stack cùng loại) |
 | Short Bio (năng lực tổng hợp) | Theo JD |
 | Short Bio, câu gắn stack với loại sản phẩm / domain đã làm | Stack thật |
-| Project Examples | Stack thật của dự án (Q10) |
+| Projects | Stack thật của dự án, cộng công nghệ member chọn ở form dự án (Q10) |
 
 Lý do: dự án là thông tin cụ thể mà khách có thể hỏi lại. Phần điều chỉnh theo JD nằm ở năng lực tổng quát.
 
@@ -105,22 +108,23 @@ Lý do: dự án là thông tin cụ thể mà khách có thể hỏi lại. Ph�
 
 **Luồng:**
 1. Câu 1 → validate.
-2. Tự vấn — câu bổ sung dự án nằm trong form: `Bạn có muốn thêm 1–2 dự án không? Có dự án thì bio đủ 3 đoạn và có phần Project Examples.` · `Có, nhập ở tin nhắn sau` · `Không cần, bio 2 đoạn là được`.
-   - Chọn `Có` → in 1 dòng `Bạn nhập 1–2 dự án nhé: tên, thời gian, vai trò, mô tả, tính năng bạn làm và tech stack.` — lần bổ sung duy nhất. Đủ chi tiết → chuyển sang **UC1**.
+2. Tự vấn — câu bổ sung dự án nằm trong form: `Bạn có muốn thêm 1–2 dự án không? Có dự án thì bio đủ 3 đoạn và có phần Projects.` · `Có, nhập ở tin nhắn sau` · `Không cần, bio 2 đoạn là được`.
+   - Chọn `Có` → in 1 dòng `Bạn nhập 1–2 dự án nhé: tên, thời gian, vị trí, mô tả, việc bạn làm và tech stack.` — lần bổ sung duy nhất. Đủ chi tiết → chuyển sang **UC1**.
    - Chọn `Bỏ qua` → tiếp tục UC3, không hỏi lại.
 3. Kiểm tra role → JD: không có.
-4. Sinh bio sơ sài → humanize → rà checklist → in → lưu → khối nhắc.
+4. Có dự án → form dự án (mục 6).
+5. Sinh bio sơ sài → humanize → rà checklist → in → lưu → khối nhắc.
 
 **Output:**
 - **Short Bio, 2 đoạn** (Q1). Không bịa dự án, kết quả hay cách làm việc. Việc member xác nhận ở checklist được viết vào bio.
 - **Core Skills:** đúng skill member nhập. Skill chính không có số năm → hỏi ở tự vấn; vẫn không có thì framework chính ghi bằng tổng số năm, skill chính khác → `_… năm/tháng_`; skill phụ chỉ ghi tên (Q2, Q17).
-- **Project Examples:** có ghi tên dự án → vẫn tạo, field thiếu để placeholder. Không có dự án → bỏ section.
+- **Projects:** có ghi tên dự án → vẫn tạo, hỏi ở form dự án; field còn thiếu để placeholder. Không có dự án → bỏ section.
 
 ### UC4 — Form sơ sài, kèm JD
 
 **Luồng:** như UC3 bước 1–3 (đủ chi tiết thì chuyển sang **UC2**), rồi JD → mức match → JD adjustment như UC2.
 
-**Output:** Short Bio 2 đoạn — đoạn 1 kết nối JD, đoạn 2 năng lực theo skill khớp JD (kể cả skill bổ sung). Core Skills như UC2. Project Examples như UC3.
+**Output:** Short Bio 2 đoạn — đoạn 1 kết nối JD, đoạn 2 năng lực theo skill khớp JD (kể cả skill bổ sung). Core Skills như UC2. Projects như UC3.
 
 ---
 
@@ -150,32 +154,43 @@ Như UC7, sau đó JD → mức match → JD adjustment → như **UC4**.
 
 ---
 
-## 6. Project Examples
+## 6. Projects
 
-Quy tắc đầy đủ: `output.md` §3.
+Quy tắc đầy đủ: `projects.md` (bước 6).
 
 | Đầu vào | Có sinh section? |
 |---|---|
 | Form / CV có ít nhất 1 dự án có tên | Có |
 | Không có dự án nào | **Không** — bỏ hẳn section (CV: nêu trong "Lưu ý" của tóm tắt) |
 
-Số dự án: 1–2 (Q8). Không JD: ưu tiên gần đây, có kết quả, quy mô lớn. Có JD: ưu tiên dự án khớp JD.
+**Chọn dự án** (Q8): 1–2 dự án, chọn sau khi có JD. Không JD: ưu tiên gần đây, quy mô lớn, mô tả rõ. Có JD: ưu tiên dự án khớp JD. CV có > 2 dự án → form 1 câu cho member chọn, 2 dự án đề xuất đứng đầu.
+
+**Form dự án** — mỗi dự án một form, tối đa 4 câu, chỉ hỏi field chưa đạt:
+1. **Vai trò trong dự án** (multiSelect): lựa chọn lấy từ dòng mô tả công việc, tính năng, giai đoạn được tick trong CV.
+2. **Mô tả**: chưa đủ sản phẩm / người dùng / chức năng chính → câu hỏi nêu ý còn thiếu kèm khung gợi ý; lựa chọn `Dùng mô tả viết từ CV (Đề xuất)` · `Để trống, mình điền sau`, bổ sung gõ ở Other.
+3. **Tech Stack** (multiSelect): công nghệ nhắc trong mô tả nhưng chưa có trong stack (đề xuất), skill của member thường đi cùng stack này, `Không, stack như CV là đủ`.
+4. **Thời gian / Vị trí**: mốc và thời lượng lệch nhau, hoặc thiếu vị trí.
 
 Ví dụ (dự án giả định):
 
 ```
 ### Project 1 — ShopNow
-**Thời gian:** 10 tháng
+**Thời gian:** 10 tháng (02/2025 – 12/2025)
 **Vị trí:** Frontend Developer
+**Team size:** 5 người
 **Mô tả:** Website thương mại điện tử bán đồ gia dụng cho khách hàng tại Nhật. Người dùng tìm kiếm sản phẩm, đặt hàng và theo dõi đơn hàng trên cùng một hệ thống.
-**Tính năng đảm nhiệm:**
-- Tìm kiếm và lọc sản phẩm
-- Giỏ hàng và thanh toán
+**Vai trò trong dự án:**
+- Dựng màn tìm kiếm và lọc sản phẩm
+- Làm giỏ hàng và luồng thanh toán
+- Tham gia basic design
+
 **Tech Stack:** NuxtJS, Pinia, Tailwind CSS
 ```
 
-- **Tính năng đảm nhiệm** chỉ gồm phần member làm / phụ trách (Q16), tối đa 5; không tự suy.
-- **Vị trí** thiếu → hỏi ở tự vấn (đề xuất suy từ stack dự án); bỏ qua → placeholder, không tự lấy role tổng (Q9).
+- **Mô tả** rà theo checklist `projects.md` §6: đủ sản phẩm / người dùng / chức năng chính, 2–3 câu (~30–60 từ), không kể việc member làm, không lặp stack / thời gian / team size, không phóng đại.
+- **Vai trò trong dự án** chỉ gồm việc member làm (Q16), 2–5 dòng mở đầu bằng động từ; không tự suy.
+- **Vị trí** thiếu → hỏi ở form dự án; bỏ qua → placeholder, không tự lấy role tổng (Q9).
+- **Team size** chỉ ghi khi input / CV có; không có thì bỏ dòng.
 - **Ngôn ngữ:** nội dung theo ngôn ngữ output, giữ nguyên tên dự án, tên công nghệ. Nhãn theo Q11.
 
 ---
@@ -198,7 +213,7 @@ In 1 khối duy nhất (không phải câu hỏi) nếu có ít nhất một m�
 ```
 ⚠ File short-bio-nguyen-van-a-2026-10-21.md cần kiểm tra trước khi gửi khách:
 - Header: Ngày sinh
-- Project 1 — LabPortal: Thời gian, Tính năng đảm nhiệm
+- Project 1 — LabPortal: Thời gian, Vai trò trong dự án
 - Short Bio (suy luận): "quản lý kho y tế" suy từ tên dự án MediVault
 - Thêm theo JD (chưa có trong profile): AWS (2 năm), Docker — chuẩn bị nếu khách hỏi
 - Điều chỉnh theo JD: tổng số năm 4 → 5 năm; Vue → React
@@ -249,15 +264,15 @@ Không có gì để nhắc → không in. Xong là kết thúc — không hỏi
 | Q5 | CV dạng ảnh hoặc PDF scan | Đọc bằng vision; vẫn in tóm tắt để member sửa |
 | Q6 | JD là link | Đọc giống link CV (cùng cách xử lý lỗi) |
 | Q7 | Role JD nằm ngoài 5 role hỗ trợ | Báo không hỗ trợ, cho chạy tiếp không JD |
-| Q8 | Số dự án tối đa trong Project Examples | **1 đến 2** |
-| Q9 | Thiếu vai trò trong dự án | Hỏi ở tự vấn với lựa chọn đề xuất; bỏ qua → placeholder |
-| Q10 | Có JD: Tech Stack trong Project Examples có thay theo JD không | **Không thay** |
-| Q11 | Nhãn Project Examples | vi: Thời gian, Vị trí, Mô tả, Tính năng đảm nhiệm, Tech Stack · en: Duration, Position, Description, Features Delivered, Tech Stack · ja: 期間, ポジション, 概要, 担当機能, 技術スタック |
+| Q8 | Số dự án tối đa trong phần Projects | **1 đến 2** |
+| Q9 | Thiếu vị trí trong dự án | Hỏi ở form dự án (bước 6) với lựa chọn đề xuất; bỏ qua → placeholder |
+| Q10 | Có JD: Tech Stack trong phần Projects có thay theo JD không | **Không thay.** Chỉ thêm công nghệ member chọn ở form dự án |
+| Q11 | Nhãn phần Projects (heading `## Projects` ở mọi ngôn ngữ) | vi: Thời gian, Vị trí, Team size, Mô tả, Vai trò trong dự án, Tech Stack · en: Duration, Position, Team size, Description, Responsibilities, Tech Stack · ja: 期間, ポジション, チーム規模, 概要, 担当業務, 技術スタック |
 | Q12 | JD ghi số năm cho một skill cụ thể (VD "3 năm AWS") | Mức 1 / 2: thêm hoặc nâng, số năm = N / 80% × N (≤ tổng số năm); mức 3: không thêm. Skill này được ghi số năm ở Core Skills dù không phải framework. Luôn liệt kê trong khối nhắc |
 | Q13 | Suy role từ CV có cả FE lẫn BE | Fullstack chỉ khi cả hai phía là stack chính; không thì lấy phía chiếm ưu thế |
 | Q14 | Domain Core Skills cho BE / FE / Fullstack | Có API Integration, Testing, UI/UX Design; chỉ in domain có skill |
 | Q15 | Cách hỏi | **Form `AskUserQuestion` có lựa chọn đề xuất** thay cho hỏi tuần tự bằng text. Gom câu trong cùng bước; JD và mức match hỏi riêng |
-| Q16 | Field "Tính năng chính" | Đổi thành **"Tính năng đảm nhiệm"** — chỉ phần member làm, khách sẽ hỏi lại |
+| Q16 | Field "Tính năng chính" | Đổi thành **"Vai trò trong dự án"** (trước đó là "Tính năng đảm nhiệm") — việc cụ thể member làm, chọn nhiều từ lựa chọn gợi ý lấy từ CV; khách sẽ hỏi lại |
 | Q17 | Core Skills | Nhãn domain in đậm; **skill chính luôn có số năm** (framework / platform, ngôn ngữ, database, cloud chính; skill JD ghi số năm), skill phụ đi kèm chỉ ghi tên; chỉ ghi tên công nghệ / công cụ cụ thể (không ghi "Caching", "Unit test") |
 | Q18 | Skill nice to have trong JD mà member chưa có | Mức 1 / 2: chỉ Core Skills + khối nhắc, không viết vào bio; mức 3: không thêm |
 | Q19 | Cross-role | Số năm framework mới = N / 80% × N / placeholder, không lấy số năm framework role cũ; dự án role cũ chỉ nhắc trong bio như kinh nghiệm nghiệp vụ / domain |
@@ -267,5 +282,5 @@ Không có gì để nhắc → không in. Xong là kết thúc — không hỏi
 | Q23 | Email | **Bắt buộc** (field thứ 5) — không bao giờ là placeholder |
 | Q24 | Ngoại ngữ (JLPT, TOEIC, IELTS...) | **Đưa vào nếu input / CV có**: dòng `Ngoại ngữ` ở header, ghi đúng chứng chỉ / mức member ghi; không hỏi ở tự vấn, không để placeholder. JD yêu cầu ngoại ngữ: member có → nhắc trong bio; chưa có hoặc thấp hơn → khối nhắc. Không nâng theo JD |
 | Q25 | Chứng chỉ chuyên môn (AWS Certified, PMP, ISTQB...) | Xử lý như ngoại ngữ (Q24): có trong input / CV → dòng `Chứng chỉ` ở header, ghi đúng tên và năm đạt; không hỏi, không thêm theo JD. Học vấn / bằng đại học vẫn bỏ qua |
-| Q24 | Field bắt buộc chỉ gõ tay được (họ tên, email, tech stack) | Luôn hiện trong form tự vấn: gộp 1 câu, gõ ở ô Other, ưu tiên cao nhất; không đề xuất giá trị. Chỉ hỏi bằng dòng chữ khi member chọn `Gửi ở tin nhắn sau` |
+| Q24 | Field bắt buộc chỉ gõ tay được (họ tên, email, tech stack) | Luôn hiện trong form tự vấn: gộp 1 câu, gõ ở ô Other, ưu tiên cao nhất; không đề xuất giá trị. Riêng email thiếu mà đã có họ tên → câu riêng đề xuất `tên.họ@tomosia.com` (VD `thien.tran@tomosia.com`), member chọn hoặc gõ email khác. Chỉ hỏi bằng dòng chữ khi member chọn `Gửi ở tin nhắn sau` |
 | Q25 | Số năm framework / ngôn ngữ khi JD ghi mốc riêng (VD "6 năm PHP / Laravel") | `max(thực tế, mốc theo mức của skill đó)`, không nâng theo tổng; mốc gộp áp cho mọi skill trong nhóm. Chỉ framework chính JD không ghi mốc riêng mới nâng theo tổng mới. Tránh Vue 4 → 8 khi JD đòi 7, hay Laravel 7 nhưng PHP 6 |

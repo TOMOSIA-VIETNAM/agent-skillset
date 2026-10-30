@@ -4,6 +4,8 @@ Nội dung lấy nguyên văn từ một lần chạy thật (2026-10-27, sau kh
 generate-short-bio/evals/cv-laravel-jd-full-match/files/ (cv-nguyen-van-d.md, jd-backend-senior.md;
 khi chạy đặt tên file JD là jd-senior-backend.md như trong ảnh), mức Hoàn toàn khớp.
 Chỗ rút gọn ghi "…"; chữ tím in nghiêng là chú thích thêm, không phải output.
+2026-10-29: chỉnh tay theo flow 8 bước (câu về ZAIKO-NAVI chuyển sang form dự án ở bước 6, section đổi thành
+"Projects", "Tính năng đảm nhiệm" → "Vai trò trong dự án"); chưa chạy lại thật.
 Chạy lại khi skill đổi cách trình bày:  python3 docs/images/src/build.py
 Dựng lại xong thì tăng số ?v=N ở 3 link ảnh demo trong README để trình xem không dùng bản cache cũ.
 """
@@ -64,6 +66,7 @@ h1 = render(os.path.join(OUT, "demo-1-input.svg"), "Đầu vào · CV + JD", inp
 # ---------- 2. Quy trình ----------
 FM = ("box", "form1", "box-form")
 FM2 = ("box", "form2", "box-form")
+FM3 = ("box", "form3", "box-form")
 proc = [
     line(("Thông tin đọc từ CV:", "label")),
     line(("- Tên: Nguyễn Văn D · Email: d.nguyen@example.com · Role: Backend", "ink")),
@@ -80,22 +83,17 @@ proc = [
     (FM, [("   những việc dưới đây chưa. Bạn đã làm việc nào? (chọn được nhiều)", "label")]),
     (FM, [("   a. Làm trọn feature từ yêu cầu tới deploy  b. Thiết kế DB / API cho feature", "ink")]),
     (FM, [("   c. Chưa làm việc nào trong số này", "ink")]),
-    (FM, [("2. Ở dự án ZAIKO-NAVI, bạn trực tiếp làm những tính năng nào?", "label")]),
-    (FM, [("   a. Nhập / xuất kho  b. Quét barcode  c. Báo cáo hàng tháng  d. Import CSV", "ink")]),
-    (FM, [("3. Ở dự án ZAIKO-NAVI, bạn giữ vai trò gì?", "label")]),
-    (FM, [("   a. ", "ink"), ("Backend Developer (Đề xuất)", "hl"), (". Phần trách nhiệm ghi \"backend features\" …", "ink")]),
-    (FM, [("   b. Fullstack Developer, vì dự án có dùng Vue.js 2  c. Để trống, mình điền sau", "ink")]),
-    (FM, [("4. CV ghi 4 năm kinh nghiệm, còn các dự án bắt đầu từ 06/2021, tức khoảng", "label")]),
+    (FM, [("2. CV ghi 4 năm kinh nghiệm, còn các dự án bắt đầu từ 06/2021, tức khoảng", "label")]),
     (FM, [("   5 năm. Bạn muốn lấy số nào?", "label")]),
     (FM, [("   a. ", "ink"), ("Giữ 4 năm như CV (Đề xuất)", "hl"), (". Đây là số CV ghi rõ  b. Ghi 5 năm, …", "ink")]),
     ("gap", None),
-    ("prompt", [("› ", "muted"), ("1: a,b · 2: a,d · 3: a · 4: b", "you"), ("   ← member chỉ cần chọn", "anno")]),
+    ("prompt", [("› ", "muted"), ("1: a,b · 2: b", "you"), ("   ← member chỉ cần chọn", "anno")]),
     ("gap", None),
     *wrap("Đã cập nhật: tổng kinh nghiệm là 5 năm, nên giờ bạn được tính theo cấp Senior Backend. Bạn đã xác nhận làm trọn feature tới deploy và thiết kế DB / API. …"),
     *wrap("Mình đã so profile với JD Senior Backend Engineer (Laravel). Role giống nhau, và bạn đã có hầu hết skill bắt buộc … Bạn chỉ còn thiếu 3 năm AWS (EC2, RDS, S3), cộng GitHub Actions ở mục nice to have."),
     ("gap", None),
     (FM2, [("Form mức match", "fileh")]),
-    (FM2, [("5. Bạn muốn bio bám sát JD tới mức nào?", "label")]),
+    (FM2, [("3. Bạn muốn bio bám sát JD tới mức nào?", "label")]),
     (FM2, [("   a. ", "ink"), ("Hoàn toàn khớp (Đề xuất)", "hl"), (": ghi 5 năm và Laravel 5 năm. Thêm AWS (EC2,", "ink")]),
     (FM2, [("      RDS, S3) 3 năm theo JD, GitHub Actions chỉ ghi tên. Chỉ nêu skill khớp JD, …", "ink")]),
     (FM2, [("   b. Tương đối khớp: vẫn ghi 5 năm. Thêm AWS 2 năm (80% mốc JD) …", "ink")]),
@@ -103,11 +101,24 @@ proc = [
     ("gap", None),
     ("prompt", [("› ", "muted"), ("a", "you")]),
     ("gap", None),
+    (FM3, [("Form dự án · ZAIKO-NAVI", "fileh"), ("   ← HANAYOYAKU đã đủ thông tin, không hỏi", "anno")]),
+    (FM3, [("4. Ở dự án ZAIKO-NAVI, bạn đã làm những việc nào? (chọn được nhiều)", "label")]),
+    (FM3, [("   a. Làm nhập / xuất kho  b. Làm quét barcode  c. Làm báo cáo hàng tháng", "ink")]),
+    (FM3, [("   d. Import dữ liệu CSV", "ink"), ("   ← lấy từ mô tả trong CV", "anno")]),
+    (FM3, [("5. Ở dự án ZAIKO-NAVI, bạn giữ vị trí gì?", "label")]),
+    (FM3, [("   a. ", "ink"), ("Backend Developer (Đề xuất)", "hl"), (". Phần trách nhiệm ghi \"backend features\" …", "ink")]),
+    (FM3, [("   b. Fullstack Developer, vì dự án có dùng Vue.js 2  c. Để trống, mình điền sau", "ink")]),
+    (FM3, [("6. Tech stack của ZAIKO-NAVI trong CV là PHP 7, Laravel 8, MySQL, Vue.js 2.", "label")]),
+    (FM3, [("   Dự án có dùng thêm công nghệ nào dưới đây không? (chọn được nhiều)", "label")]),
+    (FM3, [("   a. Redis  b. Docker", "ink"), ("   ← có trong Core Skills", "anno"), ("  c. Không, stack như CV là đủ", "ink")]),
+    ("gap", None),
+    ("prompt", [("› ", "muted"), ("4: a,d · 5: a · 6: c", "you")]),
+    ("gap", None),
     line(("Xác nhận: ", "label"), ("Nguyễn Văn D · Role: Backend · Mức độ: chi tiết · JD: có · Match: hoàn toàn", "ink")),
     line(("          File: short-bio-nguyen-van-d-2026-10-27.md", "ink")),
 ]
-h2 = render(os.path.join(OUT, "demo-2-process.svg"), "Quy trình · tự vấn → mức match → xác nhận", proc,
-            "Quy trình: skill tóm tắt CV (có JLPT N3) và nêu chỗ mâu thuẫn, hỏi một form tự vấn 4 câu có đáp án đề xuất, member trả lời bằng cách chọn, skill so profile với JD và hỏi mức match, member chọn Hoàn toàn khớp, skill in dòng xác nhận")
+h2 = render(os.path.join(OUT, "demo-2-process.svg"), "Quy trình · tự vấn → mức match → dự án → xác nhận", proc,
+            "Quy trình: skill tóm tắt CV (có JLPT N3) và nêu chỗ mâu thuẫn, hỏi một form tự vấn có đáp án đề xuất, member trả lời bằng cách chọn, skill so profile với JD và hỏi mức match, member chọn Hoàn toàn khớp, skill hỏi form dự án ZAIKO-NAVI (việc đã làm, vị trí, stack), rồi in dòng xác nhận")
 
 # ---------- 3. Đầu ra ----------
 B = ("box", "bio")
@@ -130,15 +141,17 @@ outp = [
     (B, [("Database: ", "label"), ("MySQL (5 năm)", "ink"), ("   ← suy từ thời gian dự án", "anno")]),
     (B, [("Caching & Queue: ", "label"), ("Redis", "ink"), ("  ·  ", "muted"), ("Testing: ", "label"), ("PHPUnit", "ink")]),
     (B, [("DevOps/CI/CD: ", "label"), ("Docker, GitHub Actions", "ink"), ("  ·  ", "muted"), ("API Integration: ", "label"), ("RESTful API", "ink")]),
-    (B, [("## Project Examples", "head")]),
+    (B, [("## Projects", "head")]),
     (B, [("### Project 1 — HANAYOYAKU", "sub")]),
-    (B, [("Thời gian: ", "label"), ("2 năm 7 tháng (đang làm)", "ink"), ("  ·  ", "muted"), ("Vị trí: ", "label"), ("Backend Developer", "ink")]),
-    (B, [("Tính năng đảm nhiệm: ", "label"), ("API đặt lịch và hủy lịch · Xếp ca làm việc cho nhân viên ·", "ink")]),
+    (B, [("Thời gian: ", "label"), ("2 năm 7 tháng (03/2024 – nay, đang làm)", "ink"), ("  ·  ", "muted"), ("Vị trí: ", "label"), ("Backend Developer", "ink")]),
+    (B, [("Team size: ", "label"), ("6 người", "ink")]),
+    (B, [("Vai trò trong dự án: ", "label"), ("Xây API đặt và hủy lịch · Xếp ca làm việc cho nhân viên ·", "ink")]),
     (B, [("Gửi thông báo email / LINE qua queue (Redis)", "ink")]),
     (B, [("Tech Stack: ", "label"), ("PHP 8, Laravel 10, MySQL, Redis, Docker", "ink"), ("   ← giữ stack thật", "anno")]),
     (B, [("### Project 2 — ZAIKO-NAVI", "sub")]),
-    (B, [("Thời gian: ", "label"), ("2 năm 8 tháng", "ink"), ("  ·  ", "muted"), ("Vị trí: ", "label"), ("Backend Developer", "ink"), ("   ← member chọn ở form", "anno")]),
-    (B, [("Tính năng đảm nhiệm: ", "label"), ("Nhập / xuất kho · Import dữ liệu CSV", "ink"), ("   ← member chọn ở form", "anno")]),
+    (B, [("Thời gian: ", "label"), ("2 năm 8 tháng (06/2021 – 02/2024)", "ink"), ("  ·  ", "muted"), ("Vị trí: ", "label"), ("Backend Developer", "ink"), ("  ← form dự án", "anno")]),
+    (B, [("Team size: ", "label"), ("10 người", "ink")]),
+    (B, [("Vai trò trong dự án: ", "label"), ("Làm nhập / xuất kho · Import dữ liệu CSV", "ink"), ("   ← member chọn ở form", "anno")]),
     (B, [("Tech Stack: ", "label"), ("PHP 7, Laravel 8, MySQL, Vue.js 2", "ink")]),
     ("gap", None),
     line(("Đã lưu: ", "ok"), ("short-bio-nguyen-van-d-2026-10-27.md", "ink")),
@@ -153,6 +166,6 @@ outp = [
     (WN, [("Bổ sung trực tiếp vào file trước khi gửi khách hàng.", "ink")]),
 ]
 h3 = render(os.path.join(OUT, "demo-3-output.svg"), "Đầu ra · file bio + khối nhắc", outp,
-            "Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, PHP và MySQL suy từ thời gian dự án), Project Examples giữ stack thật và dùng câu trả lời của member, dòng Đã lưu và khối nhắc liệt kê mọi điều chỉnh")
+            "Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, PHP và MySQL suy từ thời gian dự án), Projects giữ stack thật và dùng câu trả lời của member ở form dự án, dòng Đã lưu và khối nhắc liệt kê mọi điều chỉnh")
 
 print("input", h1, "process", h2, "output", h3)

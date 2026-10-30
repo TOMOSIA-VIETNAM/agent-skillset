@@ -1,4 +1,4 @@
-# JD và mức match (bước 4–6)
+# JD và mức match (bước 4–5, adjustment ở bước 7)
 
 Mục lục: §1 Nhận JD · §2 Mức match · §3 JD adjustment · §4 Cross-role · §5 Ghi nhận cho khối nhắc
 
@@ -50,7 +50,7 @@ Gợi ý chọn mức đề xuất: cùng role và member đã có phần lớn 
    - Áp dụng nhất quán giữa Short Bio và Core Skills.
 3. **Thay stack cùng danh mục:** JD yêu cầu X, profile có Y cùng danh mục → ghi X, xóa Y. VD PHP → Laravel / Symfony, Java → Spring Boot, Python → Django / FastAPI, React ↔ Vue ↔ Angular.
    - Phạm vi thay: Core Skills và Short Bio.
-   - **Project Examples giữ stack thật** — dự án là thông tin khách có thể hỏi lại. Trong bio, câu gắn stack với loại sản phẩm đã làm (VD "hệ thống cloud kế toán bằng ReactJS") cũng giữ stack thật.
+   - **Projects giữ stack thật** — dự án là thông tin khách có thể hỏi lại. Trong bio, câu gắn stack với loại sản phẩm đã làm (VD "hệ thống cloud kế toán bằng ReactJS") cũng giữ stack thật.
 4. **Skill "nice to have"** (JD ghi nice to have / preferred / plus / ưu tiên): member đã có → xử lý như skill khớp JD bình thường. Member chưa có → Hoàn toàn / Tương đối: chỉ thêm vào Core Skills (chỉ ghi tên) và khối nhắc, **không viết vào Short Bio như kinh nghiệm đã làm**; Tổng quát: không thêm. JD tự coi đây là điểm cộng, nên viết thành kinh nghiệm là nói quá mức cần thiết.
 5. **Companion skills:** thêm theo role JD và số năm đã chốt — `companions.md`. Companion skill chỉ ghi tên ở Core Skills (không phải framework chính), trừ khi chính nó là framework.
 6. **Định hình output:** câu mở bio kết nối nhu cầu khách; Core Skills đưa domain khớp JD lên trước. Hoàn toàn khớp: chỉ liệt kê skill / domain khớp JD (companion skills của role JD tính là khớp). Skill nền như Git, Docker, Jira cũng bỏ nếu JD không nhắc và không phải companion của mốc số năm — không có ngoại lệ "skill phổ biến". Ngoại lệ duy nhất: 2 dòng AI member đã chọn (`output.md` §2) luôn giữ.
@@ -65,7 +65,7 @@ Gợi ý chọn mức đề xuất: cùng role và member đã có phần lớn 
    - **Số năm framework chính mới** (VD React Native khi FE → Mobile): member chưa thực sự dùng nó, nên tính như skill JD yêu cầu mà member chưa có — Hoàn toàn khớp: N; Tương đối khớp: 80% × N (làm tròn như §3); Tổng quát hoặc JD không ghi N: `(_… năm/tháng_)` để member tự điền. Luôn ≤ tổng số năm. Không lấy số năm của framework role cũ (VD React 5 năm không thành React Native 5 năm) — chuyển số năm sang công nghệ member chưa làm là con số member không bảo vệ được khi khách hỏi.
    - Tổng số năm kinh nghiệm trong bio vẫn theo §3 bước 2 (chỉ nâng, không hạ).
 4. **Bio viết hoàn toàn từ góc nhìn role JD** — không nhắc background role cũ, không pha trộn. Bio nửa nọ nửa kia khiến khách thấy member không đúng người họ cần.
-5. **Không gắn tính năng của dự án role cũ vào role mới.** Dự án làm ở role cũ (VD web Frontend) chỉ được nhắc trong bio dưới dạng **kinh nghiệm nghiệp vụ / domain** ("am hiểu nghiệp vụ đặt lịch khám và thanh toán online trong mảng y tế"), không viết kiểu "đã phụ trách màn đặt lịch..." trong bio Mobile — câu đó khiến khách hiểu dự án web là app mobile, và member sẽ lúng túng khi khách hỏi về app đó. Chi tiết thật của dự án vẫn ở Project Examples.
+5. **Không gắn tính năng của dự án role cũ vào role mới.** Dự án làm ở role cũ (VD web Frontend) chỉ được nhắc trong bio dưới dạng **kinh nghiệm nghiệp vụ / domain** ("am hiểu nghiệp vụ đặt lịch khám và thanh toán online trong mảng y tế"), không viết kiểu "đã phụ trách màn đặt lịch..." trong bio Mobile — câu đó khiến khách hiểu dự án web là app mobile, và member sẽ lúng túng khi khách hỏi về app đó. Chi tiết thật của dự án vẫn ở phần Projects.
    - Nghiệp vụ role cũ chỉ đứng sau động từ hiểu biết ("am hiểu", "nắm nghiệp vụ", "quen với domain"), nhắc **một lần**. Không đặt tính năng / luồng của dự án cũ cạnh động từ làm hay trải nghiệm làm ("xây", "dựng", "phụ trách", "chú trọng trải nghiệm ở luồng...", "xử lý luồng...") — kể cả khi không nêu tên dự án, câu đó vẫn đọc như member đã làm luồng đó ở role mới.
 
 | Profile → JD | Xóa | Giữ | Sinh mới |
@@ -82,7 +82,7 @@ Gợi ý chọn mức đề xuất: cùng role và member đã có phần lớn 
 | QA → BE/FE/Mobile | Testing frameworks, test management | Ngôn ngữ lập trình, CI/CD | Skill role đích theo JD |
 | Fullstack → BE/FE | Skill phía không thuộc role JD | Skill phía khớp JD, Git, Docker | Companion của role JD |
 
-Mức match áp dụng bình thường sau khi đã xác định role đích. Project Examples vẫn giữ stack và vai trò thật.
+Mức match áp dụng bình thường sau khi đã xác định role đích. Phần Projects vẫn giữ stack và vị trí thật.
 
 ---
 

@@ -10,7 +10,7 @@ Khách đọc bio để trả lời một câu: "người này có làm được
 
 Checklist dùng ở hai chỗ trong flow:
 
-**Bước 2 — tự vấn (`collect-info.md` §5, mục 3):**
+**Bước 2 — tự vấn (`collect-info.md` §5, mục 2b):**
 1. Xác định role + cấp (§2) từ số năm **thực tế**.
 2. Lấy các yêu cầu của đúng role × cấp đó. Với mỗi yêu cầu, tìm bằng chứng trong input / CV (cột *Tín hiệu*).
 3. Yêu cầu chưa có bằng chứng → gom vào **một câu multiSelect** trong form tự vấn:
@@ -21,7 +21,7 @@ Checklist dùng ở hai chỗ trong flow:
 5. **Chỉ dùng yêu cầu của đúng cấp hiện tại**, không hỏi yêu cầu của cấp dưới (VD Middle không hỏi Scrum / Git của Junior). Việc cơ bản thường đã lộ ra từ CV, còn form chỉ có 4 câu nên dành chỗ cho việc thể hiện đúng tầm cấp.
 6. **JD đã biết từ lúc này** (member đưa kèm lệnh) **và role JD khác role member** → chỉ hỏi các yêu cầu **dùng chung giữa hai role**: review code / convention, dẫn dắt / mentor, làm requirement / estimate với khách, phối hợp / thống nhất API, viết test. Có 5 mục nhưng form chỉ chứa 3: bỏ trước mục đã có bằng chứng trong CV, rồi chọn theo đúng thứ tự vừa liệt kê, trừ khi JD nhấn mạnh một mục (VD JD ghi "mentor junior") thì đưa mục đó lên. Bỏ yêu cầu riêng của role cũ (VD `Thiết kế kiến trúc FE` khi sang Mobile) — cross-role sẽ xóa chúng nên hỏi là phí một lượt của member. JD chưa biết → hỏi theo role hiện tại như bình thường.
 
-**Bước 6–7 — trước khi lưu:**
+**Bước 7–8 — trước khi lưu:**
 - Rà output theo bảng của role × cấp **đã chốt sau JD** và §8. Yêu cầu có bằng chứng mà output chưa thể hiện → sửa output. Yêu cầu không có bằng chứng → ghi khối nhắc (`output.md` §4), **không viết vào bio**.
 - JD nâng số năm làm cấp tăng (VD 4 → 5 năm: Middle → Senior) → yêu cầu của cấp mới chưa có bằng chứng chỉ ghi khối nhắc, không mở thêm lượt hỏi (flow đã qua bước 2).
 
@@ -39,7 +39,7 @@ Checklist chạy ngầm, không in cho member. Mỗi yêu cầu chỉ cần th�
 
 Số năm là khoảng ("3-4 năm") → lấy cận trên như `collect-info.md` §3. Role Fullstack dùng bảng §5, không cộng hai bảng BE + FE.
 
-Cột *Thể hiện ở*: **B1/B2/B3** = đoạn 1/2/3 của Short Bio · **CS** = Core Skills · **PE** = Project Examples. Bio sơ sài (2 đoạn) → yêu cầu ghi B3 chuyển lên B2 nếu có bằng chứng.
+Cột *Thể hiện ở*: **B1/B2/B3** = đoạn 1/2/3 của Short Bio · **CS** = Core Skills · **PJ** = Projects. Bio sơ sài (2 đoạn) → yêu cầu ghi B3 chuyển lên B2 nếu có bằng chứng.
 
 ---
 
@@ -147,6 +147,6 @@ Rà trước khi lưu, sai thì sửa rồi mới lưu:
 - **Header:** đủ Vị trí (role dạng đầy đủ), Email, Ngày sinh hoặc placeholder; dòng Ngoại ngữ, Chứng chỉ khi input / CV có.
 - **Short Bio:** đạt `write-bio.md` §5.
 - **Core Skills:** nhãn domain in đậm; skill chính (framework / platform, ngôn ngữ, database, cloud) có số năm hoặc `(_… năm/tháng_)`, skill phụ chỉ ghi tên, skill JD yêu cầu số năm ghi theo JD (`output.md` §2); có JD thì domain khớp JD đứng trước; số năm không vượt tổng.
-- **Project Examples:** chỉ có khi input có dự án; 1–2 dự án; nhãn `Tính năng đảm nhiệm` chỉ chứa phần member làm; Tech Stack là stack thật.
+- **Projects:** chỉ có khi input có dự án; 1–2 dự án; Mô tả đạt checklist `projects.md` §6 (ý thiếu nằm trong khối nhắc); `Vai trò trong dự án` chỉ chứa việc member làm; Tech Stack là stack thật (`projects.md` §5).
 - **File:** đúng mẫu tên `short-bio-[ten-kebab]-[YYYY-MM-DD].md`, không tạo file nào khác.
 - **Khối nhắc:** đủ placeholder, ý suy luận, điều chỉnh theo JD và yêu cầu checklist chưa có bằng chứng.

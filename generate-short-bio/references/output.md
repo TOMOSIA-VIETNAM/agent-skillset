@@ -1,6 +1,6 @@
-# Xuất + lưu file (bước 7)
+# Xuất + lưu file (bước 8)
 
-Mục lục: §1 Template · §2 Core Skills · §3 Project Examples · §4 Lưu file & khối nhắc · §5 Bản en / ja · §6 Nhãn theo ngôn ngữ
+Mục lục: §1 Template · §2 Core Skills · §3 Projects · §4 Lưu file & khối nhắc · §5 Bản en / ja · §6 Nhãn theo ngôn ngữ
 
 ---
 
@@ -38,24 +38,18 @@ In nội dung file ra màn hình rồi lưu (§4). Giữ đúng thứ tự:
 
 ---
 
-## Project Examples   ← chỉ khi đầu vào có dự án
+## Projects   ← chỉ khi đầu vào có dự án; mẫu và cách viết: `projects.md` §5
 
 ### Project 1 — [Tên dự án]
-**Thời gian:** [X tháng / X năm Y tháng]
-**Vị trí:** [Vai trò trong dự án]
-**Mô tả:** [2–3 câu: sản phẩm làm gì, cho ai, giá trị chính]
-**Tính năng đảm nhiệm:**
-- [Tính năng member làm 1]
-- [Tính năng member làm 2]
-**Tech Stack:** [Stack thật của dự án]
+...
 
 ### Project 2 — [Tên dự án]
 ...
 ```
 
-**Placeholder:** field thiếu ở header hoặc Project Examples → `_(chưa có — vui lòng bổ sung)_`, vẫn giữ dòng đó. Email là field bắt buộc nên không bao giờ là placeholder.
+**Placeholder:** field thiếu ở header hoặc Projects → `_(chưa có — vui lòng bổ sung)_`, vẫn giữ dòng đó. Email là field bắt buộc nên không bao giờ là placeholder.
 
-**Ngôn ngữ nội dung:** toàn bộ theo ngôn ngữ của bản đó, kể cả nội dung lấy từ CV viết bằng ngôn ngữ khác (CV tiếng Anh, bản vi → dịch Mô tả, Tính năng đảm nhiệm). Giữ nguyên tên dự án, tên công nghệ.
+**Ngôn ngữ nội dung:** toàn bộ theo ngôn ngữ của bản đó, kể cả nội dung lấy từ CV viết bằng ngôn ngữ khác (CV tiếng Anh, bản vi → dịch Mô tả, Vai trò trong dự án). Giữ nguyên tên dự án, tên công nghệ.
 
 ---
 
@@ -108,22 +102,9 @@ VD:
 
 ---
 
-## §3 — Project Examples
+## §3 — Projects
 
-**Khi nào có section:** đầu vào (form hoặc CV) có ít nhất 1 dự án có tên → có. Không có dự án → bỏ hẳn section.
-
-**Số dự án:** 1–2, chọn tiêu biểu. Không JD: ưu tiên gần đây, có kết quả, quy mô lớn. Có JD: ưu tiên dự án khớp JD.
-
-| Field | Lấy từ | Thiếu |
-|---|---|---|
-| Tên | Input / CV, giữ tên gốc | Không có tên → không tính là dự án |
-| Thời gian | Tính từ mốc (VD `02/2025 – 12/2025` → `10 tháng`). Đang làm → tính tới ngày tạo file, kèm `(đang làm)` | Placeholder |
-| Vị trí | Vai trò trong dự án ghi ở input / CV hoặc member chọn ở tự vấn | Placeholder — không tự lấy role tổng của member |
-| Mô tả | Mô tả trong input / CV, viết gọn lại, không thêm chi tiết | Placeholder |
-| Tính năng đảm nhiệm | **Chỉ tính năng member làm / phụ trách** theo input, CV, hoặc member chọn ở tự vấn. Tối đa 5 mục; input ít hơn thì giữ đúng số đó | Placeholder — không tự suy |
-| Tech Stack | Stack thật của dự án — **kể cả khi có JD, không thay theo JD** | Placeholder |
-
-Tính năng đảm nhiệm khác tính năng của sản phẩm: khách hỏi "phần này anh/chị làm thế nào?" thì member phải trả lời được, nên chỉ ghi phần member thực sự làm.
+Chọn dự án, form hỏi member và cách viết từng field: `projects.md` (bước 6). Ở bước này chỉ rà lại: có dự án thì có section `## Projects` (1–2 dự án), không có thì bỏ hẳn; dòng Vai trò trong dự án chỉ chứa việc member làm; Tech Stack là stack thật.
 
 ---
 
@@ -141,7 +122,7 @@ Tính năng đảm nhiệm khác tính năng của sản phẩm: khách hỏi "p
 ⚠ File [tên file] cần kiểm tra trước khi gửi khách:
 - Header: Ngày sinh
 - Core Skills: số năm của Vue
-- Project 1 — LabPortal: Thời gian, Tính năng đảm nhiệm
+- Project 1 — LabPortal: Thời gian, Vai trò trong dự án
 - Short Bio (suy luận): "quản lý kho y tế" suy từ tên dự án MediVault
 - Thêm theo JD (chưa có trong profile): AWS (2 năm), Docker — chuẩn bị nếu khách hỏi
 - Điều chỉnh theo JD: tổng số năm 4 → 5 năm; Vue → React
@@ -161,7 +142,7 @@ Tên file chèn `-en` / `-ja` trước ngày, theo cùng hậu tố với bản 
 
 ## §6 — Nhãn theo ngôn ngữ
 
-Heading `Short Bio` / `Core Skills` / `Project Examples` giữ nguyên ở mọi bản.
+Heading `Short Bio` / `Core Skills` / `Projects` giữ nguyên ở mọi bản.
 
 | vi | en | ja |
 |---|---|---|
@@ -172,7 +153,9 @@ Heading `Short Bio` / `Core Skills` / `Project Examples` giữ nguyên ở mọi
 | Chứng chỉ | Certifications | 資格 |
 | Thời gian | Duration | 期間 |
 | Mô tả | Description | 概要 |
-| Tính năng đảm nhiệm | Features Delivered | 担当機能 |
+| Team size | Team size | チーム規模 |
+| Vai trò trong dự án | Responsibilities | 担当業務 |
+| N người | N members | N名 |
 | Tech Stack | Tech Stack | 技術スタック |
 | X năm / X tháng | X years / X months | X年 / Xヶ月 |
 | _(chưa có — vui lòng bổ sung)_ | _(not provided — please fill in)_ | _（未記入 — ご記入ください）_ |

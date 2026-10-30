@@ -1,9 +1,0 @@
-schema_version: "1.1"
-name: cross-role-fe-to-mobile-jd
-context:
-  scaffold_script: place-files.sh
-expected_outcome: |
-  A Frontend member applies to a React Native mobile JD at relative match. The bio is written fully as a
-  Mobile (React Native) engineer with no FE-web background, FE-only skills (Next.js, Tailwind) are removed
-  from Core Skills, RN companion skills are added and listed in the reminder, React Native gets 3 years (80% of the JD 4, not React's 5) while total years stay 5,
-  and Project Examples keeps MediBook with its real web stack and the features the member built.

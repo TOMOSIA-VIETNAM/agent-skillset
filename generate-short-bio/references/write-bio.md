@@ -1,4 +1,4 @@
-# Viết Short Bio (bước 6)
+# Viết Short Bio (bước 7)
 
 Mục lục: §1 Số đoạn & cấu trúc · §2 Ý cần có · §3 Viết thế nào · §4 Humanize · §5 Kiểm tra trước khi xuất · §6 Văn phong vi / en / ja
 
@@ -43,7 +43,7 @@ Mỗi đoạn 2–3 câu. en / ja độ dài tương đương.
 2. Loại sản phẩm / domain đã test, coverage, công cụ nổi bật, vị trí trong dev cycle. **Không nhắc CI/CD setup.**
 3. Tư duy chất lượng, phối hợp dev, phát hiện bug sớm, cải tiến quy trình.
 
-**Toàn bộ bio nói về năng lực tổng hợp, không về một dự án.** Không gọi tên dự án, không kể riêng từng dự án. Gom theo loại sản phẩm / domain / quy mô (VD "đã làm hệ thống cloud cho kế toán, web app chat AI và nền tảng quản lý công việc"). Chi tiết từng dự án nằm ở Project Examples.
+**Toàn bộ bio nói về năng lực tổng hợp, không về một dự án.** Không gọi tên dự án, không kể riêng từng dự án. Gom theo loại sản phẩm / domain / quy mô (VD "đã làm hệ thống cloud cho kế toán, web app chat AI và nền tảng quản lý công việc"). Chi tiết từng dự án nằm ở phần Projects.
 
 ---
 
@@ -103,7 +103,7 @@ Bản nháp đầu thường còn dấu hiệu văn AI (mở đầu giống nhau
 1. Viết nháp Short Bio theo §1–§3.
 2. Gọi skill `humanizer` ở **embedded mode** cho riêng các đoạn Short Bio — chỉ lấy văn bản cuối, không in bản nháp hay danh sách pattern cho member.
 3. **Ràng buộc của skill này ưu tiên hơn humanizer.** Sau humanize kiểm tra lại: số liệu, số năm, stack giữ nguyên; không thêm chi tiết mới, không tên dự án; không đại từ, không gọi tên, không câu bị động; đúng số đoạn, số câu, độ dài.
-4. Core Skills, Project Examples, heading, nhãn: không humanize.
+4. Core Skills, Projects, heading, nhãn: không humanize.
 
 **Không có skill `humanizer`** → tự áp dụng:
 - Đa dạng mở đầu ("Trong X năm...", "Với nền tảng...", "Đã xây dựng..."), không phải lúc nào cũng "Sở hữu X năm...".
