@@ -147,6 +147,6 @@ Rà trước khi lưu, sai thì sửa rồi mới lưu:
 - **Header:** đủ Vị trí (role dạng đầy đủ), Email, Ngày sinh hoặc placeholder; dòng Ngoại ngữ, Chứng chỉ khi input / CV có.
 - **Short Bio:** đạt `write-bio.md` §5.
 - **Core Skills:** nhãn domain in đậm; skill chính (framework / platform, ngôn ngữ, database, cloud) có số năm hoặc `(_… năm/tháng_)`, skill phụ chỉ ghi tên, skill JD yêu cầu số năm ghi theo JD (`output.md` §2); có JD thì domain khớp JD đứng trước; số năm không vượt tổng.
-- **Projects:** chỉ có khi input có dự án; 1–2 dự án; Mô tả đạt checklist `projects.md` §6 (ý thiếu nằm trong khối nhắc); `Vai trò trong dự án` chỉ chứa việc member làm; Tech Stack là stack thật (`projects.md` §5).
+- **Projects:** chỉ có khi input có dự án; 1–2 dự án; tiêu đề mô tả, cả section không có tên thật của dự án / sản phẩm / khách (`projects.md` §5, §6 D3); Mô tả đạt checklist `projects.md` §6 (ý thiếu nằm trong khối nhắc); `Vai trò trong dự án` chỉ chứa việc member làm; Tech Stack là stack thật (`projects.md` §5).
 - **File:** đúng mẫu tên `short-bio-[ten-kebab]-[YYYY-MM-DD].md`, không tạo file nào khác.
 - **Khối nhắc:** đủ placeholder, ý suy luận, điều chỉnh theo JD và yêu cầu checklist chưa có bằng chứng.

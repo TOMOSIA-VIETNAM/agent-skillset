@@ -4,6 +4,8 @@ Mục lục: §1 Khi nào chạy · §2 Chọn dự án · §3 Rà từng dự �
 
 Phần Projects là chỗ khách hỏi sâu nhất trong buổi phỏng vấn: "dự án này làm gì, anh/chị làm phần nào, dùng công nghệ gì?". CV skill sheet thường chỉ ghi giai đoạn (Basic design, Implementation) hoặc mô tả sản phẩm, nên nếu chép thẳng thì phần này mỏng và member khó nói tiếp. Bước này chọn 1–2 dự án, rà chỗ còn mỏng, rồi hỏi member bằng form có lựa chọn gợi ý sẵn.
 
+**Không dùng tên thật trong file.** Tên dự án, tên sản phẩm hay tên công ty khách thường đủ để người ngoài nhận ra khách hàng của Tomosia, và bio được chuyển qua nhiều bên. Trong file, mỗi dự án có **tiêu đề mô tả** (§5) thay cho tên thật; Mô tả và Vai trò trong dự án cũng không nhắc tên (§6 D3). Tên thật chỉ dùng khi nói chuyện với member (tóm tắt CV, form) và trong khối nhắc để member biết Project 1 / 2 là dự án nào.
+
 ---
 
 ## §1 — Khi nào chạy
@@ -84,7 +86,7 @@ Heading section là `## Projects` ở mọi bản ngôn ngữ. Nhãn theo `outpu
 ```
 ## Projects
 
-### Project 1 — [Tên dự án]
+### Project 1 — [Tiêu đề mô tả]
 **Thời gian:** [X tháng | X năm Y tháng] ([MM/YYYY] – [MM/YYYY])
 **Vị trí:** [Vị trí trong dự án]
 **Team size:** [N người]   ← chỉ khi có
@@ -100,12 +102,12 @@ Luôn để 1 dòng trống giữa gạch đầu dòng cuối và `**Tech Stack:
 
 | Field | Cách viết | Thiếu |
 |---|---|---|
-| Tên | Giữ tên gốc | Không có tên → không tính là dự án |
+| Tiêu đề | **Tiêu đề mô tả, không tên thật.** Khung `[Loại sản phẩm] [lĩnh vực / người dùng]`, ≤ ~10 từ, theo ngôn ngữ của bản đó, lấy từ mô tả trong CV / câu trả lời của member (VD `Nền tảng đặt lịch cho salon làm đẹp`, `Hệ thống quản lý tồn kho cho chuỗi bán lẻ`). Hai dự án cùng loại → thêm điểm khác (thị trường, người dùng) để không trùng tiêu đề | Input không có tên dự án → không tính là dự án. Có tên nhưng không rõ sản phẩm là gì → `_(chưa có — vui lòng bổ sung)_`, khối nhắc ghi tên thật để member tự đặt tiêu đề; không suy loại sản phẩm từ tên |
 | Thời gian | Số tháng = (năm cuối − năm đầu) × 12 + (tháng cuối − tháng đầu), kèm mốc. Đang làm → tính tới ngày tạo file, thêm `(đang làm)` | Placeholder |
 | Vị trí | Như CV hoặc member chọn; sửa lỗi chính tả rõ ràng (`Fulstack` → `Fullstack`) | Placeholder — không lấy role tổng |
 | Team size | `N người` | Bỏ dòng |
 | Mô tả | Viết theo khung và rà theo checklist §6 | Không có ý nào → placeholder; thiếu một phần → viết phần có, ý thiếu vào khối nhắc |
-| Vai trò trong dự án | 2–5 gạch đầu dòng, mỗi dòng một việc cụ thể mở đầu bằng động từ, kèm kỹ thuật nếu input có (VD `Xử lý file CSV lớn bằng background job`). Giai đoạn gộp 1 dòng (`Tham gia basic design và thiết kế database`). Chỉ việc member làm | Placeholder — không tự suy |
+| Vai trò trong dự án | 2–5 gạch đầu dòng, mỗi dòng một việc cụ thể mở đầu bằng động từ, kèm kỹ thuật nếu input có (VD `Xử lý file CSV lớn bằng background job`). Giai đoạn gộp 1 dòng (`Tham gia basic design và thiết kế database`). Chỉ việc member làm; không tên dự án, sản phẩm hay khách | Placeholder — không tự suy |
 | Tech Stack | Stack CV + công nghệ member chọn ở Câu 3. **Giữ stack thật kể cả khi có JD** | Placeholder |
 
 Khách sẽ hỏi "phần này anh/chị làm thế nào?", nên dòng Vai trò trong dự án chỉ chứa việc member trả lời được.
@@ -139,7 +141,7 @@ Mô tả trả lời câu khách hỏi đầu tiên về dự án: "đây là s�
 **D. Không lấn sang chỗ khác, không bịa**:
 - [ ] D1. Không kể việc member làm (thuộc `Vai trò trong dự án`), không động từ ngôi member ("phát triển", "phụ trách").
 - [ ] D2. Không lặp Tech Stack, Thời gian, Team size, Vị trí. Chỉ nhắc công nghệ khi nó là bản chất sản phẩm (VD "chatbot AI").
-- [ ] D3. Không tên công ty khách hàng trừ khi CV ghi và đã công khai; mặc định gọi theo loại (VD "một công ty influencer marketing Nhật Bản").
+- [ ] D3. Không tên dự án, tên sản phẩm, tên công ty hay thương hiệu của khách, kể cả khi CV ghi; gọi theo loại (VD "một công ty influencer marketing Nhật Bản"). Tên dịch vụ bên thứ ba phổ biến mà sản phẩm tích hợp (Amazon, LINE, Stripe) giữ được, vì không chỉ ra khách hàng.
 - [ ] D4. Không từ phóng đại / quảng cáo ("hiện đại", "mạnh mẽ", "hàng đầu", "tối ưu").
 - [ ] D5. Mỗi ý truy được về CV hoặc câu trả lời của member; ý suy luận (VD người dùng suy từ tên dự án) → khối nhắc.
 

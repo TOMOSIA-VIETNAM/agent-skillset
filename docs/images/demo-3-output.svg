@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1137" width="800" height="1137" role="img" aria-label="Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, PHP và MySQL suy từ thời gian dự án), Projects giữ stack thật và dùng câu trả lời của member ở form dự án, dòng Đã lưu và khối nhắc liệt kê mọi điều chỉnh">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1158" width="800" height="1158" role="img" aria-label="Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, PHP và MySQL suy từ thời gian dự án), Projects giữ stack thật và dùng câu trả lời của member ở form dự án, dòng Đã lưu và khối nhắc liệt kê mọi điều chỉnh">
 <style>
   text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; font-size: 13px; }
   .win { fill: #ffffff; stroke: #d0d7de; } .bar { fill: #f6f8fa; } .sep { stroke: #d0d7de; }
@@ -16,13 +16,13 @@
     .box-warn { fill: #272115; stroke: #9e6a03; } .box-file { fill: #151b23; stroke: #3d444d; } .box-form { fill: #0c2d4a; stroke: #1f6feb; }
   }
 </style>
-<rect class="win" x="0.5" y="0.5" width="799" height="1136" rx="10"/>
+<rect class="win" x="0.5" y="0.5" width="799" height="1157" rx="10"/>
 <path class="bar" d="M1 11a10 10 0 0 1 10-10h778a10 10 0 0 1 10 10v23H1z"/>
 <line class="sep" x1="1" y1="34" x2="799" y2="34"/>
 <circle cx="20" cy="17.5" r="6" fill="#ff5f57"/><circle cx="40" cy="17.5" r="6" fill="#febc2e"/><circle cx="60" cy="17.5" r="6" fill="#28c840"/>
 <text class="title" x="400" y="22" text-anchor="middle">Đầu ra · file bio + khối nhắc</text>
 <rect class="box-file" x="24" y="48" width="752" height="734" rx="6"/>
-<rect class="box-warn" x="24" y="815" width="752" height="302" rx="6"/>
+<rect class="box-warn" x="24" y="815" width="752" height="323" rx="6"/>
 <text x="42" y="67" xml:space="preserve"><tspan class="fileh">short-bio-nguyen-van-d-2026-10-27.md</tspan></text>
 <text x="42" y="88" xml:space="preserve"><tspan class="head"># Nguyễn Văn D</tspan></text>
 <text x="42" y="109" xml:space="preserve"><tspan class="label">Vị trí: </tspan><tspan class="ink">Backend Developer</tspan><tspan class="muted">  ·  </tspan><tspan class="label">Email: </tspan><tspan class="ink">d.nguyen@example.com</tspan></text>
@@ -46,13 +46,13 @@
 <text x="42" y="499" xml:space="preserve"><tspan class="label">Caching &amp; Queue: </tspan><tspan class="ink">Redis</tspan><tspan class="muted">  ·  </tspan><tspan class="label">Testing: </tspan><tspan class="ink">PHPUnit</tspan></text>
 <text x="42" y="520" xml:space="preserve"><tspan class="label">DevOps/CI/CD: </tspan><tspan class="ink">Docker, GitHub Actions</tspan><tspan class="muted">  ·  </tspan><tspan class="label">API Integration: </tspan><tspan class="ink">RESTful API</tspan></text>
 <text x="42" y="541" xml:space="preserve"><tspan class="head">## Projects</tspan></text>
-<text x="42" y="562" xml:space="preserve"><tspan class="sub">### Project 1 — HANAYOYAKU</tspan></text>
+<text x="42" y="562" xml:space="preserve"><tspan class="sub">### Project 1 — Nền tảng đặt lịch cho salon làm đẹp</tspan></text>
 <text x="42" y="583" xml:space="preserve"><tspan class="label">Thời gian: </tspan><tspan class="ink">2 năm 7 tháng (03/2024 – nay, đang làm)</tspan><tspan class="muted">  ·  </tspan><tspan class="label">Vị trí: </tspan><tspan class="ink">Backend Developer</tspan></text>
 <text x="42" y="604" xml:space="preserve"><tspan class="label">Team size: </tspan><tspan class="ink">6 người</tspan></text>
 <text x="42" y="625" xml:space="preserve"><tspan class="label">Vai trò trong dự án: </tspan><tspan class="ink">Xây API đặt và hủy lịch · Xếp ca làm việc cho nhân viên ·</tspan></text>
 <text x="42" y="646" xml:space="preserve"><tspan class="ink">Gửi thông báo email / LINE qua queue (Redis)</tspan></text>
 <text x="42" y="667" xml:space="preserve"><tspan class="label">Tech Stack: </tspan><tspan class="ink">PHP 8, Laravel 10, MySQL, Redis, Docker</tspan><tspan class="anno">   ← giữ stack thật</tspan></text>
-<text x="42" y="688" xml:space="preserve"><tspan class="sub">### Project 2 — ZAIKO-NAVI</tspan></text>
+<text x="42" y="688" xml:space="preserve"><tspan class="sub">### Project 2 — Hệ thống quản lý tồn kho cho chuỗi bán lẻ</tspan></text>
 <text x="42" y="709" xml:space="preserve"><tspan class="label">Thời gian: </tspan><tspan class="ink">2 năm 8 tháng (06/2021 – 02/2024)</tspan><tspan class="muted">  ·  </tspan><tspan class="label">Vị trí: </tspan><tspan class="ink">Backend Developer</tspan><tspan class="anno">  ← form dự án</tspan></text>
 <text x="42" y="730" xml:space="preserve"><tspan class="label">Team size: </tspan><tspan class="ink">10 người</tspan></text>
 <text x="42" y="751" xml:space="preserve"><tspan class="label">Vai trò trong dự án: </tspan><tspan class="ink">Làm nhập / xuất kho · Import dữ liệu CSV</tspan><tspan class="anno">   ← member chọn ở form</tspan></text>
@@ -62,14 +62,15 @@
 <text x="42" y="855" xml:space="preserve"><tspan class="ink">- Thêm theo JD (chưa có trong profile): AWS (3 năm) với EC2, RDS, S3 (Short Bio có</tspan></text>
 <text x="42" y="876" xml:space="preserve"><tspan class="ink">  câu deploy lên AWS), GitHub Actions. Bạn nên chuẩn bị trước, vì khách thường hỏi</tspan></text>
 <text x="42" y="897" xml:space="preserve"><tspan class="ink">  sâu về AWS.</tspan></text>
-<text x="42" y="918" xml:space="preserve"><tspan class="ink">- Companion skill thêm vào (CV chưa ghi): Eloquent ORM.</tspan></text>
-<text x="42" y="939" xml:space="preserve"><tspan class="ink">- Điều chỉnh theo JD: Vue.js và Git bị bỏ khỏi Core Skills vì JD không yêu cầu</tspan></text>
-<text x="42" y="960" xml:space="preserve"><tspan class="ink">  (vẫn giữ ở Tech Stack của ZAIKO-NAVI).</tspan></text>
-<text x="42" y="981" xml:space="preserve"><tspan class="ink">- Điều chỉnh theo câu trả lời của bạn: tổng kinh nghiệm 4 → 5 năm (CV ghi 4).</tspan></text>
-<text x="42" y="1002" xml:space="preserve"><tspan class="ink">- Suy luận: Laravel, PHP và MySQL 5 năm. CV ghi Laravel 4 năm, còn số 5 năm tính</tspan></text>
-<text x="42" y="1023" xml:space="preserve"><tspan class="ink">  theo mốc 06/2021 vì cả hai dự án đều dùng các công nghệ này.</tspan></text>
-<text x="42" y="1044" xml:space="preserve"><tspan class="ink">- Chưa thể hiện (yêu cầu Senior Backend): review code cho team, dẫn dắt / mentor</tspan></text>
-<text x="42" y="1065" xml:space="preserve"><tspan class="ink">  thành viên, làm requirement / estimate với khách, xử lý sự cố / hiệu năng</tspan></text>
-<text x="42" y="1086" xml:space="preserve"><tspan class="ink">  production. …</tspan></text>
-<text x="42" y="1107" xml:space="preserve"><tspan class="ink">Bổ sung trực tiếp vào file trước khi gửi khách hàng.</tspan></text>
+<text x="42" y="918" xml:space="preserve"><tspan class="ink">- Projects (tiêu đề đã thay tên thật): Project 1 = HANAYOYAKU, Project 2 = ZAIKO-NAVI</tspan></text>
+<text x="42" y="939" xml:space="preserve"><tspan class="ink">- Companion skill thêm vào (CV chưa ghi): Eloquent ORM.</tspan></text>
+<text x="42" y="960" xml:space="preserve"><tspan class="ink">- Điều chỉnh theo JD: Vue.js và Git bị bỏ khỏi Core Skills vì JD không yêu cầu</tspan></text>
+<text x="42" y="981" xml:space="preserve"><tspan class="ink">  (vẫn giữ ở Tech Stack của Project 2).</tspan></text>
+<text x="42" y="1002" xml:space="preserve"><tspan class="ink">- Điều chỉnh theo câu trả lời của bạn: tổng kinh nghiệm 4 → 5 năm (CV ghi 4).</tspan></text>
+<text x="42" y="1023" xml:space="preserve"><tspan class="ink">- Suy luận: Laravel, PHP và MySQL 5 năm. CV ghi Laravel 4 năm, còn số 5 năm tính</tspan></text>
+<text x="42" y="1044" xml:space="preserve"><tspan class="ink">  theo mốc 06/2021 vì cả hai dự án đều dùng các công nghệ này.</tspan></text>
+<text x="42" y="1065" xml:space="preserve"><tspan class="ink">- Chưa thể hiện (yêu cầu Senior Backend): review code cho team, dẫn dắt / mentor</tspan></text>
+<text x="42" y="1086" xml:space="preserve"><tspan class="ink">  thành viên, làm requirement / estimate với khách, xử lý sự cố / hiệu năng</tspan></text>
+<text x="42" y="1107" xml:space="preserve"><tspan class="ink">  production. …</tspan></text>
+<text x="42" y="1128" xml:space="preserve"><tspan class="ink">Bổ sung trực tiếp vào file trước khi gửi khách hàng.</tspan></text>
 </svg>

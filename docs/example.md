@@ -45,7 +45,7 @@ Gắn bó gần 3 năm với một hệ thống chấm công – tính lương t
 
 ## Projects
 
-### Project 1 — Kintai Cloud
+### Project 1 — Hệ thống chấm công và tính lương cho doanh nghiệp Nhật
 **Thời gian:** 2 năm 11 tháng (04/2022 – 03/2025)
 **Vị trí:** Backend Developer
 **Team size:** 8 người
@@ -63,6 +63,7 @@ Gắn bó gần 3 năm với một hệ thống chấm công – tính lương t
 ```text
 ⚠ File short-bio-nguyen-van-b-2026-10-27.md cần kiểm tra trước khi gửi khách:
 - Header: Ngày sinh
+- Projects (tiêu đề đã thay tên thật): Project 1 = Kintai Cloud
 - Short Bio (suy luận): "Redis ở tầng ứng dụng", "dịch vụ chạy trong Docker" — diễn giải từ stack, input không nói dùng vào việc gì
 - Chưa thể hiện (yêu cầu Senior Backend): thiết kế kiến trúc / chọn công nghệ, review code cho team, dẫn dắt / mentor
   thành viên, làm requirement / estimate với khách — bổ sung nếu đã làm
@@ -73,5 +74,5 @@ Vài điểm đáng chú ý:
 
 - **Số năm** ghi ở các skill chính: Laravel (framework), PHP (ngôn ngữ), MySQL (database). Redis và Docker là skill phụ đi kèm nên chỉ ghi tên.
 - **Thời gian dự án** `04/2022 – 03/2025` được tính thành `2 năm 11 tháng`.
-- **Tên dự án** không xuất hiện trong Short Bio, chỉ ở phần Projects.
+- **Tên thật của dự án** (Kintai Cloud) không xuất hiện ở đâu trong file: phần Projects dùng tiêu đề mô tả, còn khối nhắc cho member biết Project 1 là dự án nào.
 - Member không xác nhận việc nào của Level Senior, nên bio **không tự viết** về kiến trúc hay mentor; các việc đó nằm ở khối nhắc.

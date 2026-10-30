@@ -40,16 +40,16 @@ In nội dung file ra màn hình rồi lưu (§4). Giữ đúng thứ tự:
 
 ## Projects   ← chỉ khi đầu vào có dự án; mẫu và cách viết: `projects.md` §5
 
-### Project 1 — [Tên dự án]
+### Project 1 — [Tiêu đề mô tả, không tên thật — `projects.md` §5]
 ...
 
-### Project 2 — [Tên dự án]
+### Project 2 — [Tiêu đề mô tả]
 ...
 ```
 
 **Placeholder:** field thiếu ở header hoặc Projects → `_(chưa có — vui lòng bổ sung)_`, vẫn giữ dòng đó. Email là field bắt buộc nên không bao giờ là placeholder.
 
-**Ngôn ngữ nội dung:** toàn bộ theo ngôn ngữ của bản đó, kể cả nội dung lấy từ CV viết bằng ngôn ngữ khác (CV tiếng Anh, bản vi → dịch Mô tả, Vai trò trong dự án). Giữ nguyên tên dự án, tên công nghệ.
+**Ngôn ngữ nội dung:** toàn bộ theo ngôn ngữ của bản đó, kể cả nội dung lấy từ CV viết bằng ngôn ngữ khác (CV tiếng Anh, bản vi → dịch Mô tả, Vai trò trong dự án). Giữ nguyên tên công nghệ; tiêu đề dự án viết theo ngôn ngữ của bản đó.
 
 ---
 
@@ -117,11 +117,12 @@ Chọn dự án, form hỏi member và cách viết từng field: `projects.md` 
 2. Trùng tên → form (header `File`): `File [tên] đã có rồi. Bạn muốn làm gì?` · `Tạo bản mới [tên-v2].md (Đề xuất)` — description `giữ bản cũ` · `Ghi đè file cũ`. Hậu tố `-v2`, `-v3`... đặt trước `.md`, lấy số nhỏ nhất chưa dùng (file gốc tính là v1).
 3. In đúng 1 dòng riêng `Đã lưu: [tên file]` hoặc `Đã ghi đè: [tên file]` — mọi trường hợp, kể cả bản `-vN`; không diễn đạt lại thành câu văn ("đã lưu thành...") vì member dò dòng này để biết file nào là bản mới. Lời nhắn ngoài file xưng "mình", gọi member là "bạn", không "tôi".
 
-**Khối nhắc** — in sau khi lưu nếu file còn placeholder, bio có ý suy luận, có điều chỉnh theo JD (`jd-match.md` §5), hoặc có yêu cầu role × cấp chưa có bằng chứng (`checklist.md` §1). Không phải câu hỏi, gom mọi thứ một chỗ:
+**Khối nhắc** — in sau khi lưu nếu file còn placeholder, bio có ý suy luận, có điều chỉnh theo JD (`jd-match.md` §5), hoặc có yêu cầu role × cấp chưa có bằng chứng (`checklist.md` §1). Có phần Projects thì luôn có dòng ghép tiêu đề với tên thật của dự án — khối nhắc chỉ in ra màn hình, không nằm trong file. Không phải câu hỏi, gom mọi thứ một chỗ:
 ```
 ⚠ File [tên file] cần kiểm tra trước khi gửi khách:
 - Header: Ngày sinh
 - Core Skills: số năm của Vue
+- Projects (tiêu đề đã thay tên thật): Project 1 = LabPortal, Project 2 = MediVault
 - Project 1 — LabPortal: Thời gian, Vai trò trong dự án
 - Short Bio (suy luận): "quản lý kho y tế" suy từ tên dự án MediVault
 - Thêm theo JD (chưa có trong profile): AWS (2 năm), Docker — chuẩn bị nếu khách hỏi

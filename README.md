@@ -34,7 +34,7 @@ Dưới đây là một lần chạy thật với CV Backend 4 năm và JD Senio
 **3. Đầu ra.** File bio dùng đúng câu trả lời của member. Việc member xác nhận ở form được viết vào Short Bio, việc đã làm ở dự án cũ lấy từ lựa chọn trong form dự án, JLPT N3 nằm ở header. Laravel lên 5 năm theo số năm member chọn, AWS được thêm theo JD, còn Tech Stack của từng dự án giữ nguyên. Khối nhắc cuối file liệt kê mọi điều chỉnh để member kiểm tra trước khi gửi.
 
 <p align="center">
-  <img src="docs/images/demo-3-output.svg?v=5" width="760" alt="Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, PHP và MySQL suy từ thời gian dự án), Projects giữ stack thật và dùng câu trả lời của member ở form dự án, dòng Đã lưu và khối nhắc liệt kê mọi điều chỉnh">
+  <img src="docs/images/demo-3-output.svg?v=6" width="760" alt="Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, PHP và MySQL suy từ thời gian dự án), Projects giữ stack thật và dùng câu trả lời của member ở form dự án, dòng Đã lưu và khối nhắc liệt kê mọi điều chỉnh">
 </p>
 
 Chữ tím in nghiêng trong ảnh là chú thích thêm, không phải output. Trong Claude Code, các câu hỏi hiện dạng form để bấm chọn; ảnh ghi lại cùng nội dung ở dạng danh sách. Xem thêm [một ví dụ khác](./docs/example.md).
@@ -47,7 +47,7 @@ Chữ tím in nghiêng trong ảnh là chú thích thêm, không phải output. 
 - Khi có JD, bạn chọn mức bám sát. Số năm kinh nghiệm chỉ được nâng lên theo JD, không bao giờ bị hạ xuống, và skill xử lý được cả trường hợp bạn ứng tuyển sang Role khác.
 - Ý nào trong bio cũng lấy từ CV, thông tin bạn nhập hoặc JD. Thiếu thông tin thì skill để trống và nhắc bạn điền.
 - Chứng chỉ ngoại ngữ (JLPT, TOEIC, IELTS...) và chứng chỉ chuyên môn (AWS Certified, PMP...) có trong CV được đưa vào hồ sơ đúng như bạn ghi. Học vấn, lương và thông tin cá nhân khác thì bỏ qua.
-- Bio viết theo kiểu giới thiệu hồ sơ: không xưng "tôi", không nêu tên dự án, nói skill dùng để làm gì thay vì chỉ liệt kê, và được chạy qua [humanizer](https://github.com/blader/humanizer) để bớt giọng máy.
+- Bio viết theo kiểu giới thiệu hồ sơ: không xưng "tôi", không nêu tên thật của dự án hay khách hàng (phần Projects dùng tiêu đề mô tả như "Hệ thống chấm công cho doanh nghiệp Nhật"), nói skill dùng để làm gì thay vì chỉ liệt kê, và được chạy qua [humanizer](https://github.com/blader/humanizer) để bớt giọng máy.
 
 ## Cài đặt
 

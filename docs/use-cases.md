@@ -174,7 +174,7 @@ Quy tắc đầy đủ: `projects.md` (bước 6).
 Ví dụ (dự án giả định):
 
 ```
-### Project 1 — ShopNow
+### Project 1 — Website thương mại điện tử đồ gia dụng tại Nhật
 **Thời gian:** 10 tháng (02/2025 – 12/2025)
 **Vị trí:** Frontend Developer
 **Team size:** 5 người
@@ -191,7 +191,8 @@ Ví dụ (dự án giả định):
 - **Vai trò trong dự án** chỉ gồm việc member làm (Q16), 2–5 dòng mở đầu bằng động từ; không tự suy.
 - **Vị trí** thiếu → hỏi ở form dự án; bỏ qua → placeholder, không tự lấy role tổng (Q9).
 - **Team size** chỉ ghi khi input / CV có; không có thì bỏ dòng.
-- **Ngôn ngữ:** nội dung theo ngôn ngữ output, giữ nguyên tên dự án, tên công nghệ. Nhãn theo Q11.
+- **Tiêu đề:** tiêu đề mô tả `[Loại sản phẩm] [lĩnh vực / người dùng]`, không tên thật của dự án (ShopNow), sản phẩm hay khách; khối nhắc ghép tiêu đề với tên thật cho member. Mô tả và Vai trò trong dự án cũng không nhắc tên.
+- **Ngôn ngữ:** nội dung theo ngôn ngữ output, giữ nguyên tên công nghệ. Nhãn theo Q11.
 
 ---
 

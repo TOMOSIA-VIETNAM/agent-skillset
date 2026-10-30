@@ -82,6 +82,7 @@ Flow: lấy thông tin → bổ sung / tự vấn → kiểm tra role → JD →
 | Core Skills: nhãn domain in đậm; **skill chính luôn có số năm** (framework / platform, ngôn ngữ, database, cloud chính): lấy từ input → suy từ thời gian dự án → hỏi ở tự vấn → framework chính dùng tổng số năm, skill chính khác để `(_… năm/tháng_)` + khối nhắc; **skill phụ đi kèm chỉ ghi tên**; skill JD ghi số năm theo JD; chỉ ghi tên công nghệ / công cụ cụ thể | Ở phần skill, khách quan tâm số năm của skill chính; số năm ở mọi thư viện, công cụ làm rối; tên hoạt động ("Caching") không phải skill |
 | Luôn đề xuất 2 dòng AI cuối Core Skills (`AI / AI-assisted Development`, `AI-driven Software Development`, nội dung cố định ở `output.md` §2): input chưa có → câu `AI` ở form tự vấn ngay sau câu bắt buộc; member chọn mới thêm; role develop (không QA) có thêm đoạn AI 2 câu cuối Short Bio theo mẫu ở `write-bio.md` §1; giữ ở mọi mức match | Khách quan tâm cách member dùng AI trong phát triển; không tự thêm khi member chưa xác nhận |
 | Projects (bước 6, `projects.md`): chọn 1–2 dự án sau khi có JD; rà Mô tả theo checklist `projects.md` §6 (ý bắt buộc: sản phẩm / người dùng / chức năng chính; 2–3 câu, không lặp vai trò / stack), "Vai trò trong dự án", Tech Stack; mỗi dự án một form ≤ 4 câu, lựa chọn gợi ý lấy từ CV (vai trò, stack: multiSelect). "Vai trò trong dự án" chỉ chứa việc member làm; stack chỉ thêm công nghệ member chọn, giữ stack thật kể cả khi có JD | Khách hỏi sâu nhất ở phần dự án; CV skill sheet thường chỉ ghi giai đoạn nên chép thẳng sẽ mỏng |
+| Không tên thật của dự án / sản phẩm / công ty khách ở bất kỳ đâu trong file: phần Projects dùng tiêu đề mô tả `[Loại sản phẩm] [lĩnh vực / người dùng]`; khối nhắc ghép tiêu đề với tên thật cho member | Tránh lộ thông tin khách hàng — bio được chuyển qua BD và khách khác |
 | JD adjustment chỉ nâng số năm, không hạ (`max(thực tế, mốc theo mức)`) | Không hạ giá trị member senior |
 | Hoàn toàn khớp: chỉ skill / domain khớp JD, bỏ cả Git / Docker / Jira nếu JD không nhắc và không phải companion | Mức này nghĩa là chỉ nêu cái JD cần |
 | Nice to have member chưa có → chỉ Core Skills + khối nhắc, không viết vào bio | JD tự coi là điểm cộng; viết thành kinh nghiệm là nói quá |
@@ -124,7 +125,7 @@ Template đầy đủ ở `references/output.md` §1. Tóm tắt:
 **AI / AI-assisted Development:** Claude, Cursor, MCP, ...   (2 dòng AI, khi member chọn)
 ---
 ## Projects   (1–2 dự án, chỉ khi đầu vào có dự án)
-### Project 1 — [Tên]
+### Project 1 — [Tiêu đề mô tả, không tên thật]
 Thời gian (kèm mốc) / Vị trí / Team size / Mô tả / Vai trò trong dự án / Tech Stack
 ```
 
