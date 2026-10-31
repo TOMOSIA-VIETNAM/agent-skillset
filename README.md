@@ -25,16 +25,16 @@ Dưới đây là một lần chạy thật với CV Backend 4 năm và JD Senio
   <img src="docs/images/demo-1-input.svg?v=2" width="760" alt="Đầu vào: lệnh gọi skill kèm file CV (Laravel 4 năm, có JLPT N3 được giữ, học vấn và số điện thoại bị bỏ qua, dự án ZAIKO-NAVI chưa rõ vai trò và phần đã làm) và file JD Senior Backend yêu cầu 5+ năm và 3 năm AWS">
 </p>
 
-**2. Quy trình.** Skill tóm tắt CV và chỉ ra chỗ chưa khớp: CV ghi 4 năm, nhưng các dự án kéo dài khoảng 5 năm. Mọi chỗ còn thiếu về hồ sơ được gom vào một form có đáp án gợi ý (các việc theo Level, số năm kinh nghiệm). Member chỉ cần chọn, rồi chọn tiếp mức bám sát JD. Sau đó skill hỏi riêng về dự án cũ còn mỏng: việc đã làm, vị trí và stack, với lựa chọn lấy từ CV.
+**2. Quy trình.** Skill tóm tắt CV và chỉ ra chỗ chưa khớp: CV ghi 4 năm, nhưng các dự án kéo dài khoảng 5 năm. Mọi chỗ còn thiếu về hồ sơ được gom vào một form có đáp án gợi ý (có dùng AI không, các việc theo Level, lĩnh vực, số năm kinh nghiệm). Member chỉ cần chọn, rồi chọn tiếp mức bám sát JD. Sau đó skill hỏi từng dự án bằng form riêng với lựa chọn lấy từ CV: dự án đã đủ thông tin chỉ được hỏi thêm stack, dự án còn mỏng được hỏi việc đã làm, stack và vị trí.
 
 <p align="center">
-  <img src="docs/images/demo-2-process.svg?v=4" width="760" alt="Quy trình: skill tóm tắt CV (có JLPT N3) và nêu chỗ chưa khớp về số năm, hỏi một form tự vấn có đáp án đề xuất, member trả lời bằng cách chọn, skill so hồ sơ với JD và hỏi mức match, member chọn Hoàn toàn khớp, skill hỏi form dự án ZAIKO-NAVI (việc đã làm, vị trí, stack), rồi in dòng xác nhận">
+  <img src="docs/images/demo-2-process.svg?v=5" width="760" alt="Quy trình: skill tóm tắt CV (có JLPT N3) và nêu chỗ chưa khớp về số năm, hỏi một form tự vấn có câu AI và đáp án đề xuất, member chọn, skill hỏi mức match, member chọn Hoàn toàn khớp, skill hỏi form dự án cho HANAYOYAKU (stack) và ZAIKO-NAVI (việc đã làm, stack, vị trí), rồi in dòng xác nhận">
 </p>
 
-**3. Đầu ra.** File bio dùng đúng câu trả lời của member. Việc member xác nhận ở form được viết vào Short Bio, việc đã làm ở dự án cũ lấy từ lựa chọn trong form dự án, JLPT N3 nằm ở header. Laravel lên 5 năm theo số năm member chọn, AWS được thêm theo JD, còn Tech Stack của từng dự án giữ nguyên. Khối nhắc cuối file liệt kê mọi điều chỉnh để member kiểm tra trước khi gửi.
+**3. Đầu ra.** File bio dùng đúng câu trả lời của member. Việc member xác nhận ở form được viết vào Short Bio, việc đã làm ở dự án cũ lấy từ lựa chọn trong form dự án, JLPT N3 nằm ở header. Laravel lên 5 năm theo số năm member chọn, AWS được thêm theo JD, 2 dòng AI và đoạn AI cuối Short Bio có vì member chọn. Phần Projects dùng tiêu đề mô tả thay cho tên thật (HANAYOYAKU, ZAIKO-NAVI), có Mô tả, Vai trò trong dự án và giữ nguyên Tech Stack thật. Khối nhắc in sau khi lưu cho member biết mỗi tiêu đề là dự án nào và liệt kê mọi điều chỉnh để kiểm tra trước khi gửi.
 
 <p align="center">
-  <img src="docs/images/demo-3-output.svg?v=6" width="760" alt="Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, PHP và MySQL suy từ thời gian dự án), Projects giữ stack thật và dùng câu trả lời của member ở form dự án, dòng Đã lưu và khối nhắc liệt kê mọi điều chỉnh">
+  <img src="docs/images/demo-3-output.svg?v=7" width="760" alt="Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận cộng đoạn AI, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, 2 dòng AI), Projects dùng tiêu đề mô tả thay tên thật, có Mô tả, Vai trò trong dự án và stack thật, dòng Đã lưu và khối nhắc ghép tiêu đề với tên thật cùng mọi điều chỉnh">
 </p>
 
 Chữ tím in nghiêng trong ảnh là chú thích thêm, không phải output. Trong Claude Code, các câu hỏi hiện dạng form để bấm chọn; ảnh ghi lại cùng nội dung ở dạng danh sách. Xem thêm [một ví dụ khác](./docs/example.md).
