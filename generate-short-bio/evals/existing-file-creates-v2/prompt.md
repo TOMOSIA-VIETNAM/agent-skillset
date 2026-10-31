@@ -1,9 +1,0 @@
----
-tags: [skill-creator]
-max_turns: 30
-timeout_seconds: 900
-append_system_prompt: "Eval mode: no human is available to answer. Whenever the skill would ask the member a question (form or numbered list), first write the full question with all its options and the (Đề xuất) markers in your visible reply text, then answer it yourself by picking the option marked (Đề xuất) — or, if none, the option that skips / leaves the field blank — unless the member's message already answers it. State the chosen answer in one line and continue the flow to the end in the same turn without stopping."
-allowed_tools: [Read, Glob, Grep, Skill, Write, Edit, Bash, AskUserQuestion]
----
-
-/generate-short-bio Nguyễn Văn F, f.nguyen@example.com, QA, 4 năm, Selenium, Playwright, Postman, JMeter, Jira. Dự án: PayLink — ví điện tử cho đối tác Nhật, 01/2023 – 12/2024, QA Engineer, mình viết test case, automation E2E bằng Playwright và test hiệu năng API bằng JMeter. Không có JD. Nếu file đã có thì tạo bản mới, đừng ghi đè.

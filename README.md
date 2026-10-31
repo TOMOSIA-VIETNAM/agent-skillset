@@ -2,7 +2,7 @@
 
 <p align="center">
   <strong>Short bio</strong><br>
-  <sub>Short Bio · Core Skills · Project Examples, xuất bằng 🇻🇳 Tiếng Việt · 🇬🇧 English · 🇯🇵 日本語</sub><br>
+  <sub>Short Bio · Core Skills · Projects, xuất bằng 🇻🇳 Tiếng Việt · 🇬🇧 English · 🇯🇵 日本語</sub><br>
   <code>/generate-short-bio</code>
 </p>
 
@@ -25,16 +25,16 @@ Dưới đây là một lần chạy thật với CV Backend 4 năm và JD Senio
   <img src="docs/images/demo-1-input.svg?v=2" width="760" alt="Đầu vào: lệnh gọi skill kèm file CV (Laravel 4 năm, có JLPT N3 được giữ, học vấn và số điện thoại bị bỏ qua, dự án ZAIKO-NAVI chưa rõ vai trò và phần đã làm) và file JD Senior Backend yêu cầu 5+ năm và 3 năm AWS">
 </p>
 
-**2. Quy trình.** Skill tóm tắt CV và chỉ ra chỗ chưa khớp: CV ghi 4 năm, nhưng các dự án kéo dài khoảng 5 năm. Mọi chỗ còn thiếu được gom vào một form có đáp án gợi ý, gồm các việc theo Level, tính năng và vai trò ở dự án cũ, số năm kinh nghiệm. Member chỉ cần chọn, rồi chọn tiếp mức bám sát JD.
+**2. Quy trình.** Skill tóm tắt CV và chỉ ra chỗ chưa khớp: CV ghi 4 năm, nhưng các dự án kéo dài khoảng 5 năm. Mọi chỗ còn thiếu về hồ sơ được gom vào một form có đáp án gợi ý (có dùng AI không, các việc theo Level, lĩnh vực, số năm kinh nghiệm). Member chỉ cần chọn, rồi chọn tiếp mức bám sát JD. Sau đó skill hỏi từng dự án bằng form riêng với lựa chọn lấy từ CV: dự án đã đủ thông tin chỉ được hỏi thêm stack, dự án còn mỏng được hỏi việc đã làm, stack và vị trí.
 
 <p align="center">
-  <img src="docs/images/demo-2-process.svg?v=2" width="760" alt="Quy trình: skill tóm tắt CV (có JLPT N3) và nêu chỗ chưa khớp về số năm, hỏi một form tự vấn 4 câu có đáp án đề xuất, member trả lời bằng cách chọn, skill so hồ sơ với JD và hỏi mức match, member chọn Hoàn toàn khớp, skill in dòng xác nhận">
+  <img src="docs/images/demo-2-process.svg?v=5" width="760" alt="Quy trình: skill tóm tắt CV (có JLPT N3) và nêu chỗ chưa khớp về số năm, hỏi một form tự vấn có câu AI và đáp án đề xuất, member chọn, skill hỏi mức match, member chọn Hoàn toàn khớp, skill hỏi form dự án cho HANAYOYAKU (stack) và ZAIKO-NAVI (việc đã làm, stack, vị trí), rồi in dòng xác nhận">
 </p>
 
-**3. Đầu ra.** File bio dùng đúng câu trả lời của member. Việc member xác nhận ở form được viết vào Short Bio, tính năng ở dự án cũ lấy từ lựa chọn trong form, JLPT N3 nằm ở header. Laravel lên 5 năm theo số năm member chọn, AWS được thêm theo JD, còn Tech Stack của từng dự án giữ nguyên. Khối nhắc cuối file liệt kê mọi điều chỉnh để member kiểm tra trước khi gửi.
+**3. Đầu ra.** File bio dùng đúng câu trả lời của member. Việc member xác nhận ở form được viết vào Short Bio, việc đã làm ở dự án cũ lấy từ lựa chọn trong form dự án, JLPT N3 nằm ở header. Laravel lên 5 năm theo số năm member chọn, AWS được thêm theo JD, 2 dòng AI và đoạn AI cuối Short Bio có vì member chọn. Phần Projects dùng tiêu đề mô tả thay cho tên thật (HANAYOYAKU, ZAIKO-NAVI), có Mô tả, Vai trò trong dự án và giữ nguyên Tech Stack thật. Khối nhắc in sau khi lưu cho member biết mỗi tiêu đề là dự án nào và liệt kê mọi điều chỉnh để kiểm tra trước khi gửi.
 
 <p align="center">
-  <img src="docs/images/demo-3-output.svg?v=2" width="760" alt="Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, PHP và MySQL suy từ thời gian dự án), Project Examples giữ stack thật và dùng câu trả lời của member, dòng Đã lưu và khối nhắc liệt kê mọi điều chỉnh">
+  <img src="docs/images/demo-3-output.svg?v=7" width="760" alt="Đầu ra: file bio với header có dòng Ngoại ngữ JLPT N3, Short Bio 3 đoạn dùng việc member đã xác nhận cộng đoạn AI, Core Skills (Laravel 5 năm, thêm AWS 3 năm theo JD, 2 dòng AI), Projects dùng tiêu đề mô tả thay tên thật, có Mô tả, Vai trò trong dự án và stack thật, dòng Đã lưu và khối nhắc ghép tiêu đề với tên thật cùng mọi điều chỉnh">
 </p>
 
 Chữ tím in nghiêng trong ảnh là chú thích thêm, không phải output. Trong Claude Code, các câu hỏi hiện dạng form để bấm chọn; ảnh ghi lại cùng nội dung ở dạng danh sách. Xem thêm [một ví dụ khác](./docs/example.md).
@@ -47,7 +47,7 @@ Chữ tím in nghiêng trong ảnh là chú thích thêm, không phải output. 
 - Khi có JD, bạn chọn mức bám sát. Số năm kinh nghiệm chỉ được nâng lên theo JD, không bao giờ bị hạ xuống, và skill xử lý được cả trường hợp bạn ứng tuyển sang Role khác.
 - Ý nào trong bio cũng lấy từ CV, thông tin bạn nhập hoặc JD. Thiếu thông tin thì skill để trống và nhắc bạn điền.
 - Chứng chỉ ngoại ngữ (JLPT, TOEIC, IELTS...) và chứng chỉ chuyên môn (AWS Certified, PMP...) có trong CV được đưa vào hồ sơ đúng như bạn ghi. Học vấn, lương và thông tin cá nhân khác thì bỏ qua.
-- Bio viết theo kiểu giới thiệu hồ sơ: không xưng "tôi", không nêu tên dự án, nói skill dùng để làm gì thay vì chỉ liệt kê, và được chạy qua [humanizer](https://github.com/blader/humanizer) để bớt giọng máy.
+- Bio viết theo kiểu giới thiệu hồ sơ: không xưng "tôi", không nêu tên thật của dự án hay khách hàng (phần Projects dùng tiêu đề mô tả như "Hệ thống chấm công cho doanh nghiệp Nhật"), nói skill dùng để làm gì thay vì chỉ liệt kê, và được chạy qua [humanizer](https://github.com/blader/humanizer) để bớt giọng máy.
 
 ## Cài đặt
 
@@ -78,10 +78,10 @@ Skill cần ít nhất họ tên, Role, số năm kinh nghiệm, tech stack và 
 ## Cách hoạt động
 
 <p align="center">
-  <img src="docs/images/flow.svg" width="720" alt="Flow 7 bước: lấy thông tin, tự vấn, kiểm tra Role, JD, mức match (chỉ khi có JD), sinh bio, rà checklist và lưu file. Mỗi bước chỉ đọc đúng file reference của nó.">
+  <img src="docs/images/flow.svg" width="720" alt="Flow 8 bước: lấy thông tin, tự vấn, kiểm tra Role, JD, mức match (chỉ khi có JD), dự án, sinh bio, rà checklist và lưu file. Mỗi bước chỉ đọc đúng file reference của nó.">
 </p>
 
-Mỗi lần thực thi skill đều sẽ đi qua 7 bước này theo đúng thứ tự. Nếu không có JD, skill bỏ qua bước 5. Trước khi viết bio ở bước 6, skill in một dòng tóm tắt `Xác nhận: [Tên] · Role · Mức độ · JD · Match · File` để bạn biết nó sắp làm gì, rồi làm tiếp luôn mà không chờ bạn trả lời.
+Mỗi lần thực thi skill đều sẽ đi qua 8 bước này theo đúng thứ tự. Nếu không có JD, skill bỏ qua bước 5; nếu không có dự án, skill bỏ qua bước 6. Ở bước 6, skill chọn 1–2 dự án tiêu biểu (khớp JD nếu có) và hỏi bạn từng dự án bằng form có gợi ý lấy từ CV: bạn làm những việc gì, mô tả còn thiếu ý nào, dự án có dùng thêm công nghệ nào. Trước khi viết bio ở bước 7, skill in một dòng tóm tắt `Xác nhận: [Tên] · Role · Mức độ · JD · Match · File` để bạn biết nó sắp làm gì, rồi làm tiếp luôn mà không chờ bạn trả lời.
 
 Khi có JD, mức bám sát quyết định số năm ghi trong bio (T là số năm thực tế, N là số năm JD yêu cầu):
 
@@ -91,7 +91,7 @@ Khi có JD, mức bám sát quyết định số năm ghi trong bio (T là số 
 | Tương đối khớp | `max(T, 80% × N)` | Đưa skill khớp JD lên trước, vẫn giữ các điểm mạnh khác | Còn thiếu khá nhiều skill, hoặc ứng tuyển sang Role khác |
 | Tổng quát | `T` | Giữ mọi điểm mạnh, JD chỉ để tham khảo | JD chỉ liên quan một phần nhỏ tới hồ sơ |
 
-Phần Project Examples luôn giữ đúng stack thật của dự án, vì khách hàng có thể hỏi lại. Nếu bạn ứng tuyển sang Role khác (ví dụ từ Frontend sang Mobile), số năm của framework mới được tính theo JD chứ không lấy số năm của framework cũ. Từng trường hợp cụ thể được mô tả trong [docs/use-cases.md](./docs/use-cases.md).
+Phần Projects luôn giữ đúng stack thật của dự án, vì khách hàng có thể hỏi lại. Nếu bạn ứng tuyển sang Role khác (ví dụ từ Frontend sang Mobile), số năm của framework mới được tính theo JD chứ không lấy số năm của framework cũ. Từng trường hợp cụ thể được mô tả trong [docs/use-cases.md](./docs/use-cases.md).
 
 > [!IMPORTANT]
 > Khi bám theo JD, bio có thể ghi số năm cao hơn thực tế hoặc thêm những skill bạn chưa dùng nhiều. Mọi điều chỉnh này đều được liệt kê trong khối nhắc, nên hãy đọc kỹ và chuẩn bị sẵn câu trả lời trước khi gửi cho khách hàng. Người chịu trách nhiệm cuối cùng về nội dung hồ sơ vẫn là bạn.
@@ -104,17 +104,19 @@ Phần Project Examples luôn giữ đúng stack thật của dự án, vì khá
 ```bash
 git clone https://github.com/TOMOSIA-VIETNAM/agent-skillset.git && cd agent-skillset
 bash install.sh                                  # symlink skill vào ~/.claude/skills/, sửa là có hiệu lực ngay
-cd generate-short-bio && claude plugin eval .    # chạy 10 test case trong evals/
+evals/run.sh generate-short-bio                  # chạy 10 test case trong evals/generate-short-bio/
 ```
 
 ```text
 agent-skillset/
 ├── README.md · AGENTS.md · LICENSE · install.sh
 ├── docs/                    use case, ví dụ output, kịch bản demo, hình
+├── evals/
+│   ├── run.sh               chạy `claude plugin eval` cho một skill
+│   └── generate-short-bio/  test case của skill
 └── generate-short-bio/      skill (tên thư mục = name trong SKILL.md)
-    ├── SKILL.md             nguyên tắc, flow 7 bước, cách hỏi
-    ├── references/          quy tắc chi tiết, mỗi bước đọc đúng file của nó
-    └── evals/               test case cho `claude plugin eval`
+    ├── SKILL.md             nguyên tắc, flow 8 bước, cách hỏi
+    └── references/          quy tắc chi tiết, mỗi bước đọc đúng file của nó
 ```
 
 Nếu muốn sửa skill hoặc đóng góp, hãy đọc [AGENTS.md](./AGENTS.md) trước. File này ghi các quy tắc cần giữ (kèm lý do), cách chạy evals, và những chỗ phải sửa khi thêm Role mới.

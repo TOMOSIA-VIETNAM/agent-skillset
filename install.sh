@@ -17,13 +17,13 @@ SKILLS_HOME="$HOME/.claude/skills"
 SKILL_DIR="$SKILLS_HOME/$NAME"
 
 # File được cài — thêm / đổi tên file trong references/ thì sửa ở đây (download mode chỉ tải file có trong danh sách).
-# evals/ không liệt kê → không lọt vào thư mục skill đã cài.
 FILES=(
   SKILL.md
   references/collect-info.md
   references/checklist.md
   references/jd-match.md
   references/companions.md
+  references/projects.md
   references/write-bio.md
   references/output.md
 )

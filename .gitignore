@@ -5,5 +5,5 @@ profile-*.md
 docs/demo/
 .DS_Store
 # Kết quả chạy eval (transcript, report)
-generate-short-bio/evals/results/
+evals/*/results/
 __pycache__/

@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: cv-laravel-jd-full-match
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  Member gives a local CV (Laravel backend, 4 years) and a JD asking for 5+ years Laravel and 3 years AWS,
+  and wants the closest match. The skill reads the CV, ignores education, keeps JLPT N3 as a header language line, runs a self-check form
+  for profile gaps, asks the match level, then a separate project form for ZAIKO-NAVI (position, work the member did,
+  extra stack) with options taken from the CV, applies full match (5 years, AWS 3 years
+  added), writes a pronoun-free 3-paragraph bio, bold Core Skills with years on main skills (Laravel, PHP, MySQL, AWS per JD) and names only on secondary tools, JD-year
+  skills, a "## Projects" section with real stacks and "Vai trò trong dự án", saves
+  short-bio-nguyen-van-d-<date>.md and prints a reminder block listing AWS and the raised years.

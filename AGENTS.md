@@ -1,6 +1,6 @@
 # agent-skillset — Project Context
 
-Repo chứa một skill là `generate-short-bio`, nằm trong thư mục cùng tên `generate-short-bio/` (`SKILL.md`, `references/`, `evals/`), đúng spec Agent Skills (tên thư mục = `name`). README, AGENTS.md, LICENSE, `install.sh` và `docs/` (tài liệu cho người) chỉ đặt ở gốc repo. Thêm skill sau này thì tạo thư mục cùng cấp.
+Repo chứa một skill là `generate-short-bio`, nằm trong thư mục cùng tên `generate-short-bio/` (`SKILL.md`, `references/`), đúng spec Agent Skills (tên thư mục = `name`). Test case nằm ngoài thư mục skill, ở `evals/generate-short-bio/`. README, AGENTS.md, LICENSE, `install.sh`, `evals/` và `docs/` (tài liệu cho người) chỉ đặt ở gốc repo. Thêm skill sau này thì tạo thư mục skill cùng cấp và `evals/<tên skill>/`.
 
 ## Quy ước chung
 
@@ -10,18 +10,20 @@ Repo chứa một skill là `generate-short-bio`, nằm trong thư mục cùng t
 | Frontmatter giữ `license`, `compatibility`; field riêng Claude Code (`argument-hint`) chỉ dùng khi cần | claude.ai / Skills API chỉ nhận `name`, `description`, `license`, `compatibility`, `metadata`, `allowed-tools` |
 | Thư mục skill chỉ chứa thứ thuộc skill; tài liệu cho người để ở `docs/` gốc | Zip / copy thư mục skill là dùng được, không kéo theo file repo |
 | File cần cài liệt kê trong mảng `FILES` của `install.sh`; dependency (`humanizer`) cài bằng `install_humanizer` | Download mode chỉ tải file có trong danh sách; quên thêm → bản cài từ GitHub thiếu file |
-| `evals/` không nằm trong `FILES` (đường dẫn trong `FILES` tính từ thư mục skill) | Không lọt vào thư mục skill đã cài |
+| Test case để ở `evals/<tên skill>/` gốc repo, không trong thư mục skill; chạy bằng `evals/run.sh` | Thư mục skill chỉ còn file cần cài; `claude plugin eval` không nhận case ngoài thư mục skill nên `run.sh` dựng bản tạm có `evals/` rồi chép kết quả về |
 | Mỗi file ≤ ~200 dòng; dài hơn → tách thêm file reference | Giữ ngữ cảnh nạp vào gọn |
-| File bio / output sinh ra khi thử skill, `generate-short-bio/evals/results/`, `docs/demo/` (kịch bản demo, dữ liệu CV thật, output dự phòng) không commit (`.gitignore`) | Tránh lọt dữ liệu thử nghiệm và CV thật của member |
+| File bio / output sinh ra khi thử skill, `evals/*/results/`, `docs/demo/` (kịch bản demo, dữ liệu CV thật, output dự phòng) không commit (`.gitignore`) | Tránh lọt dữ liệu thử nghiệm và CV thật của member |
 | Tài liệu commit (README, docs, evals) chỉ dùng dữ liệu giả lập; dữ liệu thật chỉ ở file đã ignore, gọi bằng nhãn | Repo để public |
 
 ## Chạy evals
 
 ```bash
-cd generate-short-bio   # eval tìm case trong evals/ của thư mục skill
-claude plugin eval . --runs 1 --ablation none --scaffold --trust-plugin \
+evals/run.sh generate-short-bio --runs 1 --ablation none --scaffold --trust-plugin \
   --allow-tools Bash Write Edit --threshold 0 --no-publish
 ```
+
+- `run.sh` chép `generate-short-bio/` và `evals/generate-short-bio/` vào một thư mục tạm (dạng `<skill>/evals/`), chạy `claude plugin eval .` ở đó với tham số truyền vào, rồi chép kết quả về `evals/generate-short-bio/results/`. Đường dẫn `Report:` in ra trỏ vào thư mục tạm đã xóa; mở report trong `results/`.
+- `claude plugin eval` từ chối `--eval-dir` có `..` và symlink `evals` trỏ ra ngoài thư mục skill, nên không chạy thẳng được từ gốc repo.
 
 - Eval chạy headless, không có người trả lời `AskUserQuestion`. Mỗi `prompt.md` có `append_system_prompt` để agent tự chọn đáp án `(Đề xuất)` và chạy hết flow. Case cần câu trả lời cụ thể (VD email) ghi thêm "Simulated member answers" trong đó.
 - Ở chế độ tự trả lời, câu hỏi thường không hiện trong transcript, nên grader chấm form / câu hỏi kém tin cậy. Grader chấm file bio thì tin được.
@@ -32,7 +34,7 @@ claude plugin eval . --runs 1 --ablation none --scaffold --trust-plugin \
 
 ### Mục đích
 
-Skill giúp **member Tomosia tự tạo Short Bio + Core Skills + Project Examples** của chính mình. Người dùng là member — tự nhập thông tin bản thân; output là hồ sơ năng lực của member, viết theo phong cách profile không đại từ, dùng để gửi khách hàng Nhật Bản và quốc tế. Không phải CV đầy đủ.
+Skill giúp **member Tomosia tự tạo Short Bio + Core Skills + Projects** của chính mình. Người dùng là member — tự nhập thông tin bản thân; output là hồ sơ năng lực của member, viết theo phong cách profile không đại từ, dùng để gửi khách hàng Nhật Bản và quốc tế. Không phải CV đầy đủ.
 
 ### Triết lý cốt lõi
 
@@ -42,26 +44,27 @@ Skill giúp **member Tomosia tự tạo Short Bio + Core Skills + Project Exampl
 
 **Bio là câu chuyện, không phải danh sách.** Output phải đọc như con người viết — diễn giải skill thành năng lực, gom các dự án theo mảng sản phẩm / domain / quy mô (không kể riêng hay gọi tên dự án), có transition giữa các đoạn.
 
-**Hỏi ít, chọn nhiều.** Ưu tiên form `AskUserQuestion` có lựa chọn đề xuất `(Đề xuất)`; mọi thông tin cần hỏi ở một bước đều hiện trong form của bước đó, kể cả field chỉ gõ tay được (họ tên, email, tech stack → 1 câu gộp, gõ ở ô Other). Chỉ hỏi bằng dòng chữ cho Câu 1, nội dung JD, mô tả dự án. Sau khi lưu bio không hỏi tạo bản en/ja — member tự yêu cầu. Đây là feedback đã xác nhận từ người dùng (thay cho quy tắc "hỏi tuần tự bằng text" của bản trước).
+**Hỏi ít, chọn nhiều.** Ưu tiên form `AskUserQuestion` có lựa chọn đề xuất `(Đề xuất)`; mọi thông tin cần hỏi ở một bước đều hiện trong form của bước đó, kể cả field chỉ gõ tay được (họ tên, email, tech stack → 1 câu gộp, gõ ở ô Other). Chỉ hỏi bằng dòng chữ cho Câu 1, nội dung JD, mô tả dự án khi member chọn bổ sung dự án ở bước 2. Sau khi lưu bio không hỏi tạo bản en/ja — member tự yêu cầu. Đây là feedback đã xác nhận từ người dùng (thay cho quy tắc "hỏi tuần tự bằng text" của bản trước).
 
 ### Cấu trúc skill
 
-Đường dẫn dưới đây tính từ `generate-short-bio/` (trừ `docs/` ở gốc repo). `SKILL.md` chỉ giữ nguyên tắc cốt lõi, flow 7 bước, cách hỏi và phạm vi. Quy tắc chi tiết tách theo chức năng trong `references/` — mỗi bước chỉ đọc file của bước đó.
+Đường dẫn dưới đây tính từ `generate-short-bio/` (trừ `docs/` ở gốc repo). `SKILL.md` chỉ giữ nguyên tắc cốt lõi, flow 8 bước, cách hỏi và phạm vi. Quy tắc chi tiết tách theo chức năng trong `references/` — mỗi bước chỉ đọc file của bước đó.
 
 ```
-SKILL.md                 nguyên tắc, flow 7 bước, cách hỏi, ngoài phạm vi
+SKILL.md                 nguyên tắc, flow 8 bước, cách hỏi, ngoài phạm vi
 references/
   collect-info.md        bước 1–3: Câu 1, đọc CV, field bắt buộc, mức chi tiết, tự vấn, kiểm tra role
-  checklist.md           bước 2 + 7: yêu cầu nội dung theo role × cấp (Junior / Middle / Senior)
-  jd-match.md            bước 4–6: nhận JD, mức match, JD adjustment, cross-role, ghi nhận khối nhắc
-  companions.md          bước 6: companion skills theo role × số năm (chỉ khi có JD)
-  write-bio.md           bước 6: cấu trúc đoạn, ý cần có, cách viết, humanize, kiểm tra, văn phong vi/en/ja
-  output.md              bước 7: template, Core Skills, Project Examples, lưu file, khối nhắc, bản en/ja
-evals/                   test case cho skill-creator (prompt, file đầu vào, graders)
+  checklist.md           bước 2 + 8: yêu cầu nội dung theo role × cấp (Junior / Middle / Senior)
+  jd-match.md            bước 4–5 + 7: nhận JD, mức match, JD adjustment, cross-role, ghi nhận khối nhắc
+  projects.md            bước 6: chọn 1–2 dự án, rà mô tả / vai trò / stack, form dự án, cách viết phần Projects
+  companions.md          bước 7: companion skills theo role × số năm (chỉ khi có JD)
+  write-bio.md           bước 7: cấu trúc đoạn, ý cần có, cách viết, humanize, kiểm tra, văn phong vi/en/ja
+  output.md              bước 8: template, Core Skills, lưu file, khối nhắc, bản en/ja
+../evals/generate-short-bio/  (gốc repo) test case cho `claude plugin eval` (prompt, file đầu vào, graders); chạy bằng ../evals/run.sh
 ../docs/                 (gốc repo) use case, ví dụ output, ảnh README + script dựng ảnh (images/src/); mục lục ở docs/README.md
 ```
 
-Flow: lấy thông tin → bổ sung / tự vấn → kiểm tra role → JD → mức match → sinh bio → rà checklist + xuất + lưu. Spec chi tiết theo use case: `docs/use-cases.md`.
+Flow: lấy thông tin → bổ sung / tự vấn → kiểm tra role → JD → mức match → dự án → sinh bio → rà checklist + xuất + lưu. Spec chi tiết theo use case: `docs/use-cases.md`.
 
 **Giới hạn độ dài:** mỗi file ≤ 200 dòng, trừ khi thật sự cần. File sắp vượt → tách thêm file reference thay vì nhồi.
 
@@ -70,20 +73,22 @@ Flow: lấy thông tin → bổ sung / tự vấn → kiểm tra role → JD →
 | Quy tắc | Lý do |
 |---------|-------|
 | Ưu tiên form có lựa chọn đề xuất; 2–4 lựa chọn thật mỗi câu, tối đa 4 câu mỗi form; câu chỉ gõ tay được → `Để trống, mình điền sau` · `Gõ vào ô Other` | Member chọn nhanh hơn gõ; lựa chọn đề xuất cho thấy skill đã hiểu gì |
-| Gom câu trong cùng một bước, không gom xuyên bước — câu JD (bước 4) và mức match (bước 5) luôn hỏi riêng | Mức match cần profile đã chốt mới đề xuất đúng |
-| 5 field bắt buộc: họ tên, role, số năm, tech stack, **email**; field thiếu luôn nằm trong form tự vấn (gõ tay → 1 câu gộp ở ô Other), chiếm suất trước câu không bắt buộc | Email cần để khách liên hệ — không bao giờ là placeholder; member thấy đủ chỗ thiếu ở một form |
+| Gom câu trong cùng một bước, không gom xuyên bước — câu JD (bước 4) và mức match (bước 5) luôn hỏi riêng; câu dự án (bước 6) mỗi dự án một form | Mức match cần profile đã chốt mới đề xuất đúng; dự án được chọn phụ thuộc JD |
+| 5 field bắt buộc: họ tên, role, số năm, tech stack, **email**; field thiếu luôn nằm trong form tự vấn (gõ tay → 1 câu gộp ở ô Other), chiếm suất trước câu không bắt buộc; email thiếu mà đã có họ tên → câu riêng đề xuất `tên.họ@tomosia.com` (`collect-info.md` §3) | Email cần để khách liên hệ — không bao giờ là placeholder; member thấy đủ chỗ thiếu ở một form |
 | Tự vấn ở bước 2: tự rà thông tin thiếu theo bảng ưu tiên, hỏi gộp 1 form | Không để bio thiếu, không bịa cho đủ |
 | Checklist role × cấp: cấp tính từ số năm **thực tế** (Junior < 3, Middle 3–< 5, Senior ≥ 5); chỉ hỏi yêu cầu của đúng cấp hiện tại; tối đa 3 mục / câu multiSelect | Bio Senior phải khác bio Junior cùng stack |
 | Việc member xác nhận ở checklist chỉ vào bio, không vào Core Skills (trừ khi member gõ tên công cụ) | Core Skills là danh sách công cụ, không phải hoạt động |
 | Cross-role + JD đã biết ở bước 2 → checklist chỉ hỏi việc dùng chung giữa hai role | Yêu cầu riêng của role cũ sẽ bị xóa khi cross-role |
 | Core Skills: nhãn domain in đậm; **skill chính luôn có số năm** (framework / platform, ngôn ngữ, database, cloud chính): lấy từ input → suy từ thời gian dự án → hỏi ở tự vấn → framework chính dùng tổng số năm, skill chính khác để `(_… năm/tháng_)` + khối nhắc; **skill phụ đi kèm chỉ ghi tên**; skill JD ghi số năm theo JD; chỉ ghi tên công nghệ / công cụ cụ thể | Ở phần skill, khách quan tâm số năm của skill chính; số năm ở mọi thư viện, công cụ làm rối; tên hoạt động ("Caching") không phải skill |
-| Project Examples: "Tính năng đảm nhiệm" — chỉ phần member làm; giữ stack thật kể cả khi có JD | Khách sẽ hỏi lại phần member làm |
+| Luôn đề xuất 2 dòng AI cuối Core Skills (`AI / AI-assisted Development`, `AI-driven Software Development`, nội dung cố định ở `output.md` §2): input chưa có → câu `AI` ở form tự vấn ngay sau câu bắt buộc; member chọn mới thêm; role develop (không QA) có thêm đoạn AI 2 câu cuối Short Bio theo mẫu ở `write-bio.md` §1; giữ ở mọi mức match | Khách quan tâm cách member dùng AI trong phát triển; không tự thêm khi member chưa xác nhận |
+| Projects (bước 6, `projects.md`): chọn 1–2 dự án sau khi có JD; rà Mô tả theo checklist `projects.md` §6 (ý bắt buộc: sản phẩm / người dùng / chức năng chính; 2–3 câu, không lặp vai trò / stack), "Vai trò trong dự án", Tech Stack; mỗi dự án một form ≤ 4 câu, lựa chọn gợi ý lấy từ CV (vai trò, stack: multiSelect). "Vai trò trong dự án" chỉ chứa việc member làm; stack chỉ thêm công nghệ member chọn, giữ stack thật kể cả khi có JD | Khách hỏi sâu nhất ở phần dự án; CV skill sheet thường chỉ ghi giai đoạn nên chép thẳng sẽ mỏng |
+| Không tên thật của dự án / sản phẩm / công ty khách ở bất kỳ đâu trong file: phần Projects dùng tiêu đề mô tả `[Loại sản phẩm] [lĩnh vực / người dùng]`; khối nhắc ghép tiêu đề với tên thật cho member | Tránh lộ thông tin khách hàng — bio được chuyển qua BD và khách khác |
 | JD adjustment chỉ nâng số năm, không hạ (`max(thực tế, mốc theo mức)`) | Không hạ giá trị member senior |
 | Hoàn toàn khớp: chỉ skill / domain khớp JD, bỏ cả Git / Docker / Jira nếu JD không nhắc và không phải companion | Mức này nghĩa là chỉ nêu cái JD cần |
 | Nice to have member chưa có → chỉ Core Skills + khối nhắc, không viết vào bio | JD tự coi là điểm cộng; viết thành kinh nghiệm là nói quá |
 | Cross-role: xóa skill role cũ, sinh mới theo role JD; số năm framework mới = N / 80% × N / placeholder, không lấy số năm framework cũ; dự án role cũ chỉ nhắc như nghiệp vụ / domain | Không pha trộn role; không đưa con số member không bảo vệ được |
 | Companion skills scale theo số năm (đủ 4 mốc 1-2 / 3-4 / 5-6 / 7+) | Tránh skill 1 năm mà có microservices |
-| Bio: 3 đoạn / ~110–160 từ (chi tiết) hoặc 2 đoạn / ~80–120 từ (sơ sài), 2–3 câu mỗi đoạn; không đại từ, không tên member, không tên dự án, không câu bị động | Hợp cả 3 ngôn ngữ, đúng dù member tự gửi hay BD chuyển cho khách |
+| Bio: 3 đoạn / ~110–160 từ (chi tiết) hoặc 2 đoạn / ~80–120 từ (sơ sài), 2–3 câu mỗi đoạn, cộng đoạn AI nếu có; không đại từ, không tên member, không tên dự án, không câu bị động | Hợp cả 3 ngôn ngữ, đúng dù member tự gửi hay BD chuyển cho khách |
 | Luôn humanize Short Bio qua skill `humanizer` (embedded mode) | Ràng buộc của skill (số liệu, không đại từ, số câu) ưu tiên hơn humanizer |
 | Output chỉ có file bio `short-bio-[ten-kebab]-[YYYY-MM-DD].md`; trùng tên → form ghi đè / tạo `-vN` | Member chủ động, không mất bản cũ |
 | Khối nhắc sau khi lưu: placeholder, ý suy luận, điều chỉnh theo JD, skill thêm chưa có, yêu cầu theo cấp chưa có bằng chứng | Member biết chỗ cần kiểm tra trước khi gửi khách |
@@ -117,10 +122,11 @@ Template đầy đủ ở `references/output.md` §1. Tóm tắt:
 **Backend/Framework:** Laravel (5 năm), PHP (5 năm), Eloquent ORM
 **Database:** MySQL (5 năm)
 **Caching & Queue:** Redis
+**AI / AI-assisted Development:** Claude, Cursor, MCP, ...   (2 dòng AI, khi member chọn)
 ---
-## Project Examples   (1–2 dự án, chỉ khi đầu vào có dự án)
-### Project 1 — [Tên]
-Thời gian / Vị trí / Mô tả / Tính năng đảm nhiệm / Tech Stack
+## Projects   (1–2 dự án, chỉ khi đầu vào có dự án)
+### Project 1 — [Tiêu đề mô tả, không tên thật]
+Thời gian (kèm mốc) / Vị trí / Team size / Mô tả / Vai trò trong dự án / Tech Stack
 ```
 
 Skill không nhận flag (`--cv`, `--jd`...) và không tạo file profile. Nội dung gõ kèm lệnh (`/generate-short-bio [link CV | thông tin member]`) được coi là câu trả lời Câu 1.
